@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Neatladies | Soft Luxury Jewelry for Everyday Elegance</title>
+  <meta name="description" content="Neatladies curates soft luxury jewelry for women — elegant hoops, diamond studs, feminine necklaces, and statement pieces with a polished boutique feel." />
+  <link rel="canonical" href="https://neatladies.dedyn.io/" />
+
+  <meta property="og:title" content="Neatladies | Soft Luxury Jewelry" />
+  <meta property="og:description" content="Curated feminine jewelry with a soft luxury aesthetic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neatladies.dedyn.io/" />
+  <meta property="og:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Neatladies | Soft Luxury Jewelry" />
+  <meta name="twitter:description" content="Curated feminine jewelry with a soft luxury aesthetic." />
+  <meta name="twitter:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Neatladies | Soft Luxury Jewelry",
+    "description": "Curated feminine jewelry with a soft luxury aesthetic.",
+    "url": "https://neatladies.dedyn.io/"
+  }
+  </script>
+
+  <!-- Pinterest Tag -->
+  <script>
+    !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};
+    var n=window.pintrk;n.queue=[],n.version="3.0";
+    var t=document.createElement("script");t.async=!0,t.src=e;
+    var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+    pintrk('load', 'YOUR_PINTEREST_TAG_ID');
+    pintrk('page');
+  </script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,sans-serif;background:#f6efe7;color:#241812}
+    img{width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    header{padding:24px 6%;display:flex;align-items:center;justify-content:space-between;background:#130f0c;position:sticky;top:0;z-index:10}
+    .logo img{width:230px;max-width:62vw}
+    nav{display:flex;gap:26px}
+    nav a{color:#f4d8a8;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+
+    .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1.05fr;gap:54px;align-items:center;padding:70px 6%;background:linear-gradient(135deg,#17110d 0%,#3a2a1e 50%,#f6efe7 50%)}
+    .hero-copy{color:#fff5df}
+    .eyebrow{letter-spacing:.22em;text-transform:uppercase;color:#d6ad69;font-size:.78rem;margin-bottom:20px}
+    h1{font-family:"Cormorant Garamond",serif;font-size:5.2rem;line-height:.92;margin-bottom:24px}
+    .hero-copy p{max-width:560px;line-height:1.9;color:#e8d6bc;margin-bottom:34px}
+    .btn{display:inline-block;padding:15px 30px;border-radius:999px;background:#c99855;color:#1b120c;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;font-weight:700}
+    .hero-visual{display:grid;grid-template-columns:.78fr 1fr;gap:18px;align-items:end}
+    .hero-visual img{border-radius:30px;box-shadow:0 24px 70px rgba(0,0,0,.25)}
+    .hero-visual img:first-child{margin-bottom:80px}
+
+    section{padding:95px 6%}
+    .center{max-width:780px;margin:0 auto 64px;text-align:center}
+    .center h2,.split h2{font-family:"Cormorant Garamond",serif;font-size:4rem;line-height:1}
+    .center p,.split p{color:#6d5645;line-height:1.9;margin-top:18px}
+
+    .editorial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .piece{background:#efe2d2;border-radius:32px;overflow:hidden}
+    .piece img{height:420px;object-fit:cover}
+    .piece-text{padding:26px}
+    .piece h3{font-family:"Cormorant Garamond",serif;font-size:2rem;margin-bottom:10px}
+    .piece p{color:#6d5645;line-height:1.75;margin-bottom:22px}
+    .piece a{color:#9d6c35;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .split img{border-radius:34px}
+    .dark{background:#17110d;color:#fff5df}
+    .dark .split p{color:#d7c3a7}
+
+    .mosaic{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+    .mosaic img{height:390px;object-fit:cover;border-radius:28px}
+
+    footer{background:#100c09;color:#d8b981;text-align:center;padding:55px 6%}
+    footer img{width:210px;margin:0 auto 28px}
+    .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+    .footer-links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+    .disclosure{max-width:820px;margin:0 auto;color:#bca27d;font-size:.82rem;line-height:1.8}
+
+    @media(max-width:900px){
+      nav{display:none}
+      .hero,.split{grid-template-columns:1fr}
+      .hero{background:#17110d}
+      h1{font-size:3.8rem}
+      .editorial-grid,.mosaic{grid-template-columns:1fr}
+      .center h2,.split h2{font-size:3rem}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    <img src="images/main-neatladies-logo.webp" alt="Neatladies luxury jewelry logo">
+  </a>
+  <nav>
+    <a href="#everyday">Everyday</a>
+    <a href="#gift">Gift</a>
+    <a href="#statement">Statement</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Curated soft luxury</div>
+    <h1>Jewelry that feels expensive without trying too hard.</h1>
+    <p>Neatladies curates elegant feminine pieces with a boutique feel — polished hoops, sparkling studs, soft necklaces, and statement accents made for everyday confidence.</p>
+    <a class="btn" href="#everyday">Explore Pieces</a>
+  </div>
+
+  <div class="hero-visual">
+    <img src="images/gilded-main-7.webp" alt="Gold channel hoop earrings worn by a woman">
+    <img src="images/gilded-main-1.webp" alt="Gilded gold hoop earrings close-up">
+  </div>
+</section>
+
+<section id="everyday">
+  <div class="center">
+    <h2>Everyday Luxury</h2>
+    <p>Clean gold tones, soft sparkle, and wearable pieces selected for a polished feminine look.</p>
+  </div>
+
+  <div class="editorial-grid">
+    <article class="piece">
+      <img src="images/gilded-main-4.webp" alt="Gilded channel hoop earrings size and design details">
+      <div class="piece-text">
+        <h3>Gilded Channel Hoops</h3>
+        <p>Sleek gold hoops with a refined sparkle, made for everyday luxury styling.</p>
+        <a href="https://amzn.to/4dhC5qm" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      </div>
+    </article>
+
+    <article class="piece">
+      <img src="images/stud-main-4.webp" alt="Lab grown diamond stud earrings worn on ear">
+      <div class="piece-text">
+        <h3>Diamond Stud Earrings</h3>
+        <p>Classic sparkle with a minimal, polished look that never feels overdone.</p>
+        <a href="https://amzn.to/4d1eMSW" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      </div>
+    </article>
+
+    <article class="piece">
+      <img src="images/fanglcy-main-3.webp" alt="Gold hoop earrings worn by model">
+      <div class="piece-text">
+        <h3>Fanglcy Gold Hoops</h3>
+        <p>Soft gold hoops for simple styling, daily outfits, and quiet feminine polish.</p>
+        <a href="https://amzn.to/4u2yjIC" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="dark" id="gift">
+  <div class="split">
+    <img src="images/cross-main-5.webp" alt="Woman wearing gold cross necklace">
+    <div>
+      <div class="eyebrow">Gift-ready elegance</div>
+      <h2>A soft jewelry gift that feels personal.</h2>
+      <p>The moissanite cross necklace brings a sentimental, feminine gift angle with a presentation box and warm gold finish.</p>
+      <a class="btn" href="https://amzn.to/4nES5b3" target="_blank" rel="nofollow sponsored noopener">View Gift Pick</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mosaic">
+    <img src="images/cross-main-2.webp" alt="Gold cross necklace light-up surprise box">
+    <img src="images/solitaire-main-3.webp" alt="Solitaire diamond necklace worn by model">
+    <img src="images/vnox-main-2.webp" alt="VNOX black crystal statement ring worn on hand">
+  </div>
+</section>
+
+<section id="statement">
+  <div class="center">
+    <h2>Polished Details</h2>
+    <p>From delicate solitaire pieces to bold black crystal accents, Neatladies keeps the styling feminine, curated, and visually elevated.</p>
+  </div>
+
+  <div class="editorial-grid">
+    <article class="piece">
+      <img src="images/solitaire-main-1.webp" alt="Amazon Essentials solitaire diamond necklace">
+      <div class="piece-text">
+        <h3>Solitaire Necklace</h3>
+        <p>A delicate pendant for soft everyday elegance and polished minimal styling.</p>
+        <a href="https://amzn.to/4wn6qfS" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      </div>
+    </article>
+
+    <article class="piece">
+      <img src="images/vnox-main-1.webp" alt="VNOX black and gold statement ring">
+      <div class="piece-text">
+        <h3>VNOX Statement Ring</h3>
+        <p>A bold black-and-gold accent for outfits that need one confident detail.</p>
+        <a href="https://amzn.to/3R10qth" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      </div>
+    </article>
+
+    <article class="piece">
+      <img src="images/gilded-main-5.webp" alt="Elegant jewelry gift box">
+      <div class="piece-text">
+        <h3>Gift Presentation</h3>
+        <p>Curated pieces with a cleaner, more premium feel than ordinary product picks.</p>
+        <a href="#everyday">Explore Collection</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="images/main-neatladies-logo.webp" alt="Neatladies logo">
+
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+
+  <div class="disclosure">
+    Affiliate disclosure: Neatladies may earn a commission when you purchase through links on this site. This does not change your price.
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href*="amzn.to"]').forEach(function(link){
+    link.addEventListener('click', function(){
+      if (typeof pintrk === 'function') {
+        pintrk('track', 'checkout', {
+          value: 0,
+          currency: 'USD'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
