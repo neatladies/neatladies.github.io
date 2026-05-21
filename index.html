@@ -13,12 +13,12 @@
   <meta property="og:description" content="Gold hoops, studs, necklaces, and gift-ready jewelry finds with a soft luxury feel." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://neatladies.dedyn.io/" />
-  <meta property="og:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
+  <meta property="og:image" content="https://neatladies.dedyn.io/images/gilded-main-7.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Neatladies | Elegant Jewelry Finds" />
   <meta name="twitter:description" content="Gold hoops, studs, necklaces, and gift-ready jewelry finds with a soft luxury feel." />
-  <meta name="twitter:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
+  <meta name="twitter:image" content="https://neatladies.dedyn.io/images/gilded-main-7.webp" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
@@ -62,14 +62,13 @@
     :root{
       --ink:#24130d;
       --black:#120c09;
-      --brown:#2d1d14;
-      --brown-soft:#60422d;
+      --brown:#2f1e14;
       --cream:#f8efe4;
       --cream-2:#efe0cf;
       --paper:#fffaf3;
       --gold:#c89449;
       --gold-soft:#efd4a2;
-      --muted:#6f5746;
+      --muted:#705847;
       --line:rgba(67,42,26,.15);
       --shadow:0 28px 80px rgba(45,28,17,.15);
     }
@@ -89,12 +88,12 @@
       position:sticky;
       top:0;
       z-index:50;
-      height:62px;
+      height:60px;
       padding:0 5%;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:26px;
+      gap:24px;
       background:rgba(18,12,9,.96);
       border-bottom:1px solid rgba(239,212,162,.12);
       backdrop-filter:blur(14px);
@@ -103,12 +102,12 @@
     .logo{
       display:flex;
       align-items:center;
+      height:60px;
       flex:0 0 auto;
-      height:62px;
     }
 
     .logo img{
-      width:148px;
+      width:138px;
       height:auto;
       object-fit:contain;
     }
@@ -117,13 +116,13 @@
       display:flex;
       align-items:center;
       justify-content:flex-end;
-      gap:26px;
+      gap:24px;
     }
 
     nav a{
       color:var(--gold-soft);
-      font-size:.64rem;
-      letter-spacing:.17em;
+      font-size:.63rem;
+      letter-spacing:.16em;
       text-transform:uppercase;
       opacity:.88;
       transition:.2s ease;
@@ -139,20 +138,20 @@
     }
 
     .hero{
-      min-height:calc(100vh - 62px);
+      min-height:calc(100vh - 60px);
       display:grid;
-      grid-template-columns:minmax(0,1.05fr) minmax(360px,.9fr);
-      gap:54px;
+      grid-template-columns:minmax(0,1fr) minmax(430px,.82fr);
+      gap:58px;
       align-items:center;
-      padding:70px 6% 74px;
+      padding:72px 6% 78px;
       background:
-        radial-gradient(circle at 82% 25%, rgba(200,148,73,.18), transparent 27%),
-        linear-gradient(115deg, #130c09 0%, #24170f 53%, var(--cream) 53.2%, var(--cream) 100%);
+        radial-gradient(circle at 82% 22%, rgba(200,148,73,.18), transparent 27%),
+        linear-gradient(114deg, #120c09 0%, #24170f 55%, #f7eddf 55.2%, #f7eddf 100%);
     }
 
     .hero-copy{
       color:#fff2d7;
-      max-width:720px;
+      max-width:735px;
     }
 
     .eyebrow{
@@ -167,14 +166,14 @@
 
     h1{
       font-family:"Cormorant Garamond",serif;
-      font-size:clamp(3.5rem,6vw,6.1rem);
+      font-size:clamp(3.5rem,6vw,6.15rem);
       line-height:.9;
       letter-spacing:-.045em;
       margin-bottom:24px;
     }
 
     .hero-copy p{
-      max-width:585px;
+      max-width:590px;
       color:#e2caaa;
       font-size:1.02rem;
       line-height:1.9;
@@ -214,7 +213,7 @@
 
     .hero-art{
       display:grid;
-      grid-template-columns:.72fr 1fr;
+      grid-template-columns:1fr .78fr;
       gap:16px;
       align-items:end;
     }
@@ -227,12 +226,12 @@
     }
 
     .hero-art img:first-child{
-      height:410px;
-      margin-bottom:68px;
+      height:595px;
     }
 
     .hero-art img:last-child{
-      height:570px;
+      height:420px;
+      margin-bottom:76px;
     }
 
     .intro-bar{
@@ -246,7 +245,7 @@
       max-width:1120px;
       margin:auto;
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
+      grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
 
@@ -295,104 +294,93 @@
     }
 
     .section-head p,
-    .story-text p,
-    .guide-text p{
+    .feature-text p,
+    .gift-text p{
       color:var(--muted);
       line-height:1.9;
       margin-top:18px;
       font-size:1rem;
     }
 
-    .story-list{
+    .feature-layout{
       max-width:1220px;
       margin:auto;
-      border-top:1px solid var(--line);
-    }
-
-    .story{
       display:grid;
-      grid-template-columns:.9fr 1.1fr;
+      grid-template-columns:1.1fr .9fr;
       gap:56px;
       align-items:center;
-      padding:62px 0;
-      border-bottom:1px solid var(--line);
     }
 
-    .story:nth-child(even){
-      grid-template-columns:1.1fr .9fr;
+    .feature-collage{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:end;
     }
 
-    .story:nth-child(even) .story-media{
-      order:2;
-    }
-
-    .story-media{
-      overflow:hidden;
-      border-radius:36px;
+    .feature-collage img{
+      border-radius:34px;
+      object-fit:cover;
       background:#e4d1bd;
       box-shadow:0 22px 70px rgba(48,29,18,.12);
     }
 
-    .story-media img{
-      height:500px;
-      object-fit:cover;
-      transition:.35s ease;
+    .feature-collage img:nth-child(1){
+      height:560px;
     }
 
-    .story:hover .story-media img{
-      transform:scale(1.025);
+    .feature-collage img:nth-child(2){
+      height:420px;
+      margin-bottom:64px;
     }
 
-    .kicker{
-      display:block;
-      margin-bottom:14px;
-      color:#a97332;
-      font-size:.68rem;
-      font-weight:900;
-      letter-spacing:.2em;
-      text-transform:uppercase;
+    .feature-text h2{
+      margin-bottom:18px;
     }
 
-    .story-text h3{
-      font-family:"Cormorant Garamond",serif;
-      font-size:clamp(2.35rem,4vw,4.1rem);
-      line-height:.98;
-      letter-spacing:-.036em;
-      margin-bottom:16px;
-      color:var(--ink);
-    }
-
-    .story-text p{
-      max-width:590px;
-      margin-top:0;
-    }
-
-    .quick-notes{
+    .feature-list{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:13px;
-      max-width:640px;
-      margin:28px 0 30px;
+      gap:18px;
+      margin:30px 0 32px;
     }
 
-    .note{
-      padding:15px 14px;
-      border-radius:19px;
-      background:#fff8ef;
-      border:1px solid rgba(67,42,26,.12);
+    .feature-list a{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:20px;
+      align-items:center;
+      padding:20px 0;
+      border-bottom:1px solid var(--line);
+      transition:.2s ease;
     }
 
-    .note strong{
+    .feature-list a:hover{
+      padding-left:8px;
+    }
+
+    .feature-list strong{
       display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.9rem;
+      line-height:1;
       margin-bottom:6px;
       color:#2b1b12;
-      font-size:.8rem;
     }
 
-    .note span{
-      color:#735c49;
-      line-height:1.55;
-      font-size:.77rem;
+    .feature-list span{
+      display:block;
+      color:#715947;
+      line-height:1.6;
+      font-size:.92rem;
+    }
+
+    .feature-list small{
+      color:#a97332;
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:.68rem;
+      white-space:nowrap;
     }
 
     .text-link{
@@ -506,24 +494,26 @@
       font-size:.92rem;
     }
 
-    .mood{
+    .journal{
       padding-top:0;
     }
 
-    .mood-grid{
+    .journal-grid{
       display:grid;
       grid-template-columns:1.05fr .9fr 1.05fr;
       gap:18px;
+      align-items:start;
     }
 
-    .mood-grid img{
+    .journal-grid img{
       height:430px;
       object-fit:cover;
       border-radius:34px;
       box-shadow:0 20px 58px rgba(48,29,18,.12);
+      background:#e4d1bd;
     }
 
-    .mood-grid img:nth-child(2){
+    .journal-grid img:nth-child(2){
       margin-top:44px;
     }
 
@@ -540,24 +530,6 @@
       max-width:680px;
     }
 
-    .affiliate-note{
-      padding:44px 6%;
-      background:#fff8ef;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .affiliate-note p{
-      max-width:960px;
-      margin:auto;
-      color:#6e5745;
-      line-height:1.85;
-      text-align:center;
-      font-size:.9rem;
-    }
-
-    .affiliate-note strong{color:#21150f}
-
     footer{
       padding:52px 6%;
       text-align:center;
@@ -566,9 +538,9 @@
     }
 
     footer img{
-      width:220px;
+      width:210px;
       max-width:80vw;
-      margin:0 auto 25px;
+      margin:0 auto 24px;
     }
 
     .footer-links{
@@ -576,7 +548,7 @@
       flex-wrap:wrap;
       justify-content:center;
       gap:23px;
-      margin-bottom:21px;
+      margin-bottom:20px;
     }
 
     .footer-links a{
@@ -590,14 +562,27 @@
 
     .footer-note{
       max-width:760px;
-      margin:auto;
+      margin:0 auto 14px;
       color:#bca27d;
       line-height:1.75;
       font-size:.81rem;
     }
 
+    .footer-disclosure{
+      max-width:850px;
+      margin:auto;
+      color:#9f8561;
+      line-height:1.7;
+      font-size:.76rem;
+    }
+
+    .footer-disclosure strong{
+      color:#c8aa78;
+    }
+
     @media(max-width:1050px){
       .hero,
+      .feature-layout,
       .gift-guide{
         grid-template-columns:1fr;
       }
@@ -610,15 +595,6 @@
         max-width:780px;
       }
 
-      .story,
-      .story:nth-child(even){
-        grid-template-columns:1fr;
-      }
-
-      .story:nth-child(even) .story-media{
-        order:0;
-      }
-
       .occasion-grid{
         grid-template-columns:1fr;
       }
@@ -627,25 +603,25 @@
     @media(max-width:760px){
       header{
         height:auto;
-        min-height:58px;
+        min-height:56px;
         padding:9px 18px 12px;
         flex-direction:column;
-        gap:9px;
+        gap:8px;
       }
 
       .logo{height:auto}
-      .logo img{width:132px}
+      .logo img{width:126px}
 
       nav{
         width:100%;
         justify-content:center;
-        gap:13px;
+        gap:12px;
         flex-wrap:wrap;
       }
 
       nav a{
-        font-size:.58rem;
-        letter-spacing:.11em;
+        font-size:.56rem;
+        letter-spacing:.1em;
       }
 
       .nav-pill{
@@ -658,7 +634,7 @@
       }
 
       h1{
-        font-size:3.25rem;
+        font-size:3.2rem;
         line-height:.92;
       }
 
@@ -671,18 +647,20 @@
       .btn{width:100%}
 
       .hero-art,
-      .quick-notes,
       .intro-inner,
+      .feature-collage,
       .gift-media,
-      .mood-grid{
+      .journal-grid{
         grid-template-columns:1fr;
       }
 
       .hero-art img:first-child,
       .hero-art img:last-child,
+      .feature-collage img:nth-child(1),
+      .feature-collage img:nth-child(2),
       .gift-media img:first-child,
       .gift-media img:last-child,
-      .mood-grid img{
+      .journal-grid img{
         height:auto;
         margin:0;
       }
@@ -695,15 +673,11 @@
         margin-bottom:40px;
       }
 
-      h2{font-size:2.95rem}
+      h2{font-size:2.9rem}
 
-      .story{
-        gap:28px;
-        padding:46px 0;
-      }
-
-      .story-media img{
-        height:auto;
+      .feature-list a{
+        grid-template-columns:1fr;
+        gap:8px;
       }
     }
   </style>
@@ -717,10 +691,10 @@
   </a>
 
   <nav aria-label="Primary navigation">
-    <a href="#featured">Featured</a>
+    <a href="#edit">The Edit</a>
     <a href="#occasions">Occasions</a>
     <a href="#gift">Gifts</a>
-    <a class="nav-pill" href="#featured">Explore</a>
+    <a class="nav-pill" href="#explore">Explore</a>
   </nav>
 </header>
 
@@ -732,14 +706,14 @@
     <h1>Elegant pieces for everyday polish.</h1>
     <p>Discover feminine jewelry finds with a boutique feel — polished hoops, classic sparkle, delicate necklaces, and gift-ready accents chosen for simple outfits, special moments, and quiet confidence.</p>
     <div class="actions">
-      <a class="btn" href="#featured">Explore Jewelry Finds</a>
+      <a class="btn" href="#edit">Explore the Edit</a>
       <a class="btn ghost" href="#gift">Gift Ideas</a>
     </div>
   </div>
 
   <div class="hero-art" aria-label="Neatladies jewelry editorial images">
     <img src="images/gilded-main-7.webp" alt="Gold hoop earrings styled on a woman">
-    <img src="images/gilded-main-1.webp" alt="Close-up of gold channel hoop earrings">
+    <img src="images/cross-main-5.webp" alt="Woman wearing a gold cross necklace">
   </div>
 </section>
 
@@ -760,100 +734,46 @@
   </div>
 </div>
 
-<section id="featured">
-  <div class="section-head">
-    <span class="eyebrow">Featured edit</span>
-    <h2>Jewelry worth a closer look.</h2>
-    <p>A curated selection of soft gold tones, classic sparkle, and polished pieces that work beautifully for everyday style or thoughtful gifting.</p>
-  </div>
+<section id="edit">
+  <div class="feature-layout">
+    <div class="feature-collage">
+      <img src="images/solitaire-main-3.webp" alt="Solitaire necklace styled on a model">
+      <img src="images/vnox-main-2.webp" alt="Black crystal statement ring worn on hand">
+    </div>
 
-  <div class="story-list">
-    <article class="story">
-      <a class="story-media" href="gilded-channel-hoops.html" aria-label="Read more about Gilded Channel Hoops">
-        <img src="images/gilded-main-4.webp" alt="Gilded channel hoop earrings design details">
-      </a>
+    <div class="feature-text">
+      <span class="eyebrow">The edit</span>
+      <h2>Start with the style, then choose the piece.</h2>
+      <p>The strongest jewelry finds do not just sit in a product grid. They help complete a mood — soft gold, clean sparkle, delicate gifting, or one bold detail.</p>
 
-      <div class="story-text">
-        <span class="kicker">Everyday gold</span>
-        <h3>Gilded Channel Hoops</h3>
-        <p>A polished gold hoop style for days when your outfit needs one clean, elegant finishing touch.</p>
-
-        <div class="quick-notes">
-          <div class="note">
-            <strong>Style mood</strong>
-            <span>Warm, polished, feminine.</span>
+      <div class="feature-list" id="explore">
+        <a href="gilded-channel-hoops.html">
+          <div>
+            <strong>Gold hoops with a polished finish</strong>
+            <span>For simple outfits, warm styling, and everyday elegance.</span>
           </div>
-          <div class="note">
-            <strong>Best with</strong>
-            <span>Blazers, soft knits, simple dresses.</span>
-          </div>
-          <div class="note">
-            <strong>Good for</strong>
-            <span>Daily wear and refined gifting.</span>
-          </div>
-        </div>
+          <small>Explore</small>
+        </a>
 
-        <a class="text-link" href="gilded-channel-hoops.html">See the details</a>
+        <a href="diamond-stud-earrings.html">
+          <div>
+            <strong>Classic sparkle that stays easy</strong>
+            <span>For clean looks, simple gifts, and timeless feminine style.</span>
+          </div>
+          <small>Explore</small>
+        </a>
+
+        <a href="gold-cross-necklace.html">
+          <div>
+            <strong>A delicate necklace with a gift-ready feel</strong>
+            <span>For softer moments, thoughtful gifting, and quiet shine.</span>
+          </div>
+          <small>Explore</small>
+        </a>
       </div>
-    </article>
 
-    <article class="story">
-      <a class="story-media" href="diamond-stud-earrings.html" aria-label="Read more about Diamond Stud Earrings">
-        <img src="images/stud-main-4.webp" alt="Diamond stud earrings worn on ear">
-      </a>
-
-      <div class="story-text">
-        <span class="kicker">Classic sparkle</span>
-        <h3>Diamond Stud Earrings</h3>
-        <p>A timeless stud look for clean sparkle that feels easy, feminine, and polished without trying too hard.</p>
-
-        <div class="quick-notes">
-          <div class="note">
-            <strong>Style mood</strong>
-            <span>Classic, minimal, bright.</span>
-          </div>
-          <div class="note">
-            <strong>Best with</strong>
-            <span>Workwear, evening basics, casual chic.</span>
-          </div>
-          <div class="note">
-            <strong>Good for</strong>
-            <span>Simple gifts and everyday elegance.</span>
-          </div>
-        </div>
-
-        <a class="text-link" href="diamond-stud-earrings.html">See the details</a>
-      </div>
-    </article>
-
-    <article class="story">
-      <a class="story-media" href="fanglcy-gold-hoops.html" aria-label="Read more about Fanglcy Gold Hoops">
-        <img src="images/fanglcy-main-3.webp" alt="Gold hoop earrings worn by model">
-      </a>
-
-      <div class="story-text">
-        <span class="kicker">Soft hoop style</span>
-        <h3>Fanglcy Gold Hoops</h3>
-        <p>A simple hoop choice for soft gold styling, casual outfits, and easy everyday shine.</p>
-
-        <div class="quick-notes">
-          <div class="note">
-            <strong>Style mood</strong>
-            <span>Simple, warm, wearable.</span>
-          </div>
-          <div class="note">
-            <strong>Best with</strong>
-            <span>White shirts, denim, neutral outfits.</span>
-          </div>
-          <div class="note">
-            <strong>Good for</strong>
-            <span>Low-effort everyday polish.</span>
-          </div>
-        </div>
-
-        <a class="text-link" href="fanglcy-gold-hoops.html">See the details</a>
-      </div>
-    </article>
+      <a class="text-link" href="#gift">Browse gift ideas</a>
+    </div>
   </div>
 </section>
 
@@ -889,7 +809,7 @@
       <img src="images/cross-main-2.webp" alt="Gold cross necklace in a presentation box">
     </div>
 
-    <div class="guide-text">
+    <div class="gift-text">
       <span class="eyebrow">Gift-ready jewelry</span>
       <h2>A small piece can still feel personal.</h2>
       <p>Gift jewelry works best when it feels thoughtful, wearable, and easy to imagine on the person receiving it. A delicate necklace or classic pair of earrings can feel more meaningful than something oversized or complicated.</p>
@@ -914,10 +834,10 @@
   </div>
 </section>
 
-<section class="mood" aria-label="Neatladies jewelry moodboard">
-  <div class="mood-grid">
-    <img src="images/solitaire-main-3.webp" alt="Solitaire necklace styled on a model">
-    <img src="images/vnox-main-2.webp" alt="Black crystal statement ring worn on hand">
+<section class="journal" aria-label="Neatladies jewelry inspiration">
+  <div class="journal-grid">
+    <img src="images/gilded-main-1.webp" alt="Close-up of gold hoop earrings">
+    <img src="images/stud-main-4.webp" alt="Diamond stud earrings worn on ear">
     <img src="images/gilded-main-5.webp" alt="Jewelry gift presentation box">
   </div>
 </section>
@@ -934,10 +854,6 @@
   </div>
 </section>
 
-<section class="affiliate-note" aria-label="Affiliate disclosure">
-  <p><strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.</p>
-</section>
-
 </main>
 
 <footer>
@@ -952,6 +868,10 @@
 
   <div class="footer-note">
     Elegant jewelry finds for soft everyday luxury, feminine styling, and thoughtful gifts.
+  </div>
+
+  <div class="footer-disclosure">
+    <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
   </div>
 </footer>
 
