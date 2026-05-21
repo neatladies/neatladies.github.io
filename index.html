@@ -67,11 +67,13 @@
     :root{
       --ink:#24130d;
       --black:#120c09;
+      --black-2:#1b120d;
       --brown:#2b1b12;
       --cream:#f8efe4;
       --paper:#fffaf3;
       --gold:#c89449;
       --gold-soft:#efd4a2;
+      --gold-fade:rgba(239,212,162,.16);
       --muted:#705847;
       --line:rgba(67,42,26,.15);
       --shadow:0 28px 80px rgba(45,28,17,.15);
@@ -88,17 +90,43 @@
     img{display:block;width:100%}
     a{text-decoration:none;color:inherit}
 
+    @keyframes floatY{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+    @keyframes floatYSoft{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-6px)}
+    }
+    @keyframes pulseGlow{
+      0%,100%{opacity:.45;transform:scale(1)}
+      50%{opacity:.75;transform:scale(1.08)}
+    }
+    @keyframes shineMove{
+      0%{transform:translateX(-140%) skewX(-18deg)}
+      100%{transform:translateX(190%) skewX(-18deg)}
+    }
+    @keyframes drift{
+      0%,100%{transform:translate(0,0)}
+      33%{transform:translate(12px,-10px)}
+      66%{transform:translate(-8px,8px)}
+    }
+    @keyframes softPan{
+      0%,100%{transform:scale(1.03) translateY(0)}
+      50%{transform:scale(1.07) translateY(-8px)}
+    }
+
     header{
       position:sticky;
       top:0;
-      z-index:50;
+      z-index:60;
       min-height:58px;
       padding:0 5%;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:24px;
-      background:rgba(18,12,9,.96);
+      background:rgba(18,12,9,.94);
       border-bottom:1px solid rgba(239,212,162,.12);
       backdrop-filter:blur(14px);
     }
@@ -121,6 +149,7 @@
       align-items:center;
       justify-content:flex-end;
       gap:22px;
+      flex-wrap:wrap;
     }
 
     nav a{
@@ -142,18 +171,52 @@
     }
 
     .hero{
+      position:relative;
       min-height:calc(100vh - 58px);
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(360px,.78fr);
-      gap:58px;
+      grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+      gap:54px;
       align-items:center;
-      padding:74px 6% 78px;
+      padding:78px 6% 100px;
       background:
-        radial-gradient(circle at 83% 22%, rgba(200,148,73,.16), transparent 28%),
-        linear-gradient(114deg, #120c09 0%, #24170f 56%, #f7eddf 56.2%, #f7eddf 100%);
+        radial-gradient(circle at 13% 18%, rgba(200,148,73,.18), transparent 22%),
+        radial-gradient(circle at 78% 22%, rgba(200,148,73,.13), transparent 25%),
+        linear-gradient(115deg, var(--black) 0%, var(--black-2) 53%, #f7eddf 53.2%, #f7eddf 100%);
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(10px);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .hero::before{
+      width:340px;
+      height:340px;
+      background:rgba(200,148,73,.12);
+      top:8%;
+      right:17%;
+      animation:pulseGlow 8s ease-in-out infinite;
+    }
+
+    .hero::after{
+      width:220px;
+      height:220px;
+      background:rgba(255,255,255,.05);
+      bottom:12%;
+      left:4%;
+      animation:drift 10s ease-in-out infinite;
     }
 
     .hero-copy{
+      position:relative;
+      z-index:2;
       color:#fff2d7;
       max-width:760px;
     }
@@ -170,17 +233,18 @@
 
     h1{
       font-family:"Cormorant Garamond",serif;
-      font-size:clamp(3.35rem,6vw,6.25rem);
-      line-height:.9;
+      font-size:clamp(3.35rem,6vw,6.2rem);
+      line-height:.88;
       letter-spacing:-.045em;
       margin-bottom:24px;
+      max-width:760px;
     }
 
     .hero-copy p{
       max-width:610px;
       color:#e2caaa;
-      font-size:1.02rem;
-      line-height:1.9;
+      font-size:1.03rem;
+      line-height:1.92;
       margin-bottom:32px;
     }
 
@@ -189,16 +253,17 @@
       align-items:center;
       gap:14px;
       flex-wrap:wrap;
+      margin-bottom:26px;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:45px;
+      min-height:46px;
       padding:13px 22px;
       border-radius:999px;
-      background:linear-gradient(135deg,#dfb66f,#b77b35);
+      background:linear-gradient(135deg,#e0b770,#b77b35);
       color:#1a100a;
       font-size:.7rem;
       font-weight:900;
@@ -206,6 +271,7 @@
       text-transform:uppercase;
       border:1px solid rgba(255,255,255,.12);
       transition:.2s ease;
+      box-shadow:0 14px 36px rgba(0,0,0,.18);
     }
 
     .btn:hover{transform:translateY(-2px)}
@@ -214,63 +280,176 @@
       background:transparent;
       color:#f0d6a4;
       border-color:rgba(239,212,162,.32);
+      box-shadow:none;
     }
 
-    .hero-art{
-      display:grid;
-      grid-template-columns:1fr;
+    .hero-quicklinks{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      max-width:640px;
     }
 
-    .hero-frame{
+    .hero-quicklinks a{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(239,212,162,.16);
+      color:#f2dcc0;
+      font-size:.68rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      transition:.2s ease;
+      backdrop-filter:blur(8px);
+    }
+
+    .hero-quicklinks a:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.08);
+    }
+
+    .hero-showcase{
+      position:relative;
+      z-index:2;
+      min-height:640px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .showcase-backdrop{
+      position:absolute;
+      inset:10% 6% 10% 16%;
+      border-radius:42px;
+      background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.1));
+      box-shadow:0 26px 70px rgba(31,18,12,.18);
+      backdrop-filter:blur(10px);
+      overflow:hidden;
+    }
+
+    .showcase-backdrop::before{
+      content:"";
+      position:absolute;
+      top:-30%;
+      left:-30%;
+      width:60%;
+      height:160%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);
+      animation:shineMove 7s linear infinite;
+    }
+
+    .showcase-frame{
+      position:relative;
+      width:min(440px,84%);
+      aspect-ratio:4/5;
       border-radius:38px;
       overflow:hidden;
       background:#e7d5bf;
-      box-shadow:var(--shadow);
-      aspect-ratio:4/5;
-      max-height:650px;
+      box-shadow:0 30px 80px rgba(37,22,13,.24);
+      transform:translateX(12px);
     }
 
-    .hero-frame img{
+    .showcase-frame img{
       width:100%;
       height:100%;
       object-fit:cover;
       object-position:center;
+      animation:softPan 12s ease-in-out infinite;
     }
 
-    .intro-bar{
-      padding:28px 6%;
-      background:#fff8ef;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
+    .float-chip{
+      position:absolute;
+      z-index:3;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 15px;
+      border-radius:18px;
+      background:rgba(24,16,11,.84);
+      color:#f7e1bb;
+      border:1px solid rgba(239,212,162,.2);
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      backdrop-filter:blur(10px);
+      min-width:150px;
+      animation:floatY 6s ease-in-out infinite;
     }
 
-    .intro-inner{
-      max-width:1120px;
-      margin:auto;
+    .float-chip strong{
+      display:block;
+      font-size:.78rem;
+      letter-spacing:.02em;
+      line-height:1.1;
+    }
+
+    .float-chip span{
+      display:block;
+      font-size:.67rem;
+      color:#d8c2a4;
+      line-height:1.35;
+      margin-top:4px;
+    }
+
+    .chip-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#f3d8a4,#c89449);
+      flex:0 0 auto;
+      box-shadow:0 0 0 4px rgba(200,148,73,.12);
+    }
+
+    .chip-1{top:9%; left:0; animation-delay:0s}
+    .chip-2{top:31%; right:0; animation-delay:1s}
+    .chip-3{bottom:24%; left:4%; animation-delay:2s}
+    .chip-4{bottom:3%; right:8%; animation-delay:3s}
+
+    .hero-scroll{
+      position:absolute;
+      left:6%;
+      right:6%;
+      bottom:28px;
+      z-index:3;
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
+      grid-template-columns:repeat(6,1fr);
+      gap:12px;
     }
 
-    .intro-item{
+    .scroll-link{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:12px 14px;
+      border-radius:20px;
+      background:rgba(255,250,243,.72);
+      border:1px solid rgba(67,42,26,.1);
+      box-shadow:0 16px 38px rgba(45,28,17,.08);
+      backdrop-filter:blur(8px);
+      transition:.2s ease;
       text-align:center;
-      padding:8px 18px;
     }
 
-    .intro-item strong{
+    .scroll-link:hover{
+      transform:translateY(-3px);
+      background:#fff8ef;
+    }
+
+    .scroll-link strong{
       display:block;
       font-family:"Cormorant Garamond",serif;
-      font-size:1.45rem;
+      font-size:1.18rem;
       line-height:1;
-      margin-bottom:8px;
       color:#2b1b12;
     }
 
-    .intro-item span{
+    .scroll-link span{
       display:block;
-      color:#715947;
-      font-size:.86rem;
-      line-height:1.65;
+      margin-top:3px;
+      color:#785f4d;
+      font-size:.67rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
     }
 
     section{
@@ -488,15 +667,15 @@
     }
 
     footer{
-      padding:52px 6%;
+      padding:54px 6%;
       text-align:center;
       background:#100c09;
       color:#d8b981;
     }
 
     footer img{
-      width:210px;
-      max-width:80vw;
+      width:238px;
+      max-width:82vw;
       margin:0 auto 24px;
     }
 
@@ -535,19 +714,24 @@
 
     .footer-disclosure strong{color:#c8aa78}
 
-    @media(max-width:1050px){
-      .hero,
-      .feature-layout{
-        grid-template-columns:1fr;
-      }
-
+    @media(max-width:1150px){
       .hero{
+        grid-template-columns:1fr;
+        padding-bottom:150px;
         background:#17100c;
       }
 
-      .hero-art,
+      .hero-showcase,
       .feature-image{
-        max-width:620px;
+        max-width:680px;
+      }
+
+      .hero-scroll{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .feature-layout{
+        grid-template-columns:1fr;
       }
 
       .collections-grid{
@@ -587,7 +771,7 @@
 
       .hero{
         min-height:auto;
-        padding:46px 22px 60px;
+        padding:46px 22px 150px;
       }
 
       h1{
@@ -599,6 +783,44 @@
 
       .actions{align-items:stretch}
       .btn{width:100%}
+
+      .hero-quicklinks{
+        gap:8px;
+      }
+
+      .hero-quicklinks a{
+        font-size:.63rem;
+      }
+
+      .hero-showcase{
+        min-height:520px;
+      }
+
+      .showcase-backdrop{
+        inset:10% 3% 9% 3%;
+      }
+
+      .showcase-frame{
+        width:min(360px,86%);
+        transform:none;
+      }
+
+      .float-chip{
+        min-width:132px;
+        padding:10px 12px;
+      }
+
+      .chip-1{top:3%; left:1%}
+      .chip-2{top:26%; right:1%}
+      .chip-3{bottom:20%; left:1%}
+      .chip-4{bottom:2%; right:1%}
+
+      .hero-scroll{
+        grid-template-columns:repeat(2,1fr);
+        left:22px;
+        right:22px;
+        bottom:18px;
+      }
 
       .intro-inner,
       .collections-grid{
@@ -617,6 +839,10 @@
       .feature-list a{
         grid-template-columns:1fr;
         gap:8px;
+      }
+
+      footer img{
+        width:228px;
       }
     }
   </style>
@@ -643,42 +869,108 @@
   <div class="hero-copy">
     <span class="eyebrow">Curated feminine finds</span>
     <h1>Elegant little upgrades for beauty, style, and gifting.</h1>
-    <p>Neatladies brings together soft premium finds across jewelry, beauty, nails, thoughtful gifts, and refined picks for him — chosen for women who like polished details without clutter.</p>
+    <p>Neatladies brings together refined finds across jewelry, beauty, nails, thoughtful gifts, and a small premium gifts-for-him section — all arranged to feel inspiring, polished, and easy to explore.</p>
+
     <div class="actions">
       <a class="btn" href="#collections">Explore Collections</a>
       <a class="btn ghost" href="editors-picks.html">Editor’s Picks</a>
     </div>
+
+    <div class="hero-quicklinks">
+      <a href="jewelry.html">Jewelry</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="nails.html">Nails</a>
+      <a href="small-luxury-gifts.html">Small Luxury Gifts</a>
+      <a href="gifts-for-him.html">Gifts for Him</a>
+      <a href="editors-picks.html">Editor’s Picks</a>
+    </div>
   </div>
 
-  <div class="hero-art" aria-label="Neatladies editorial lifestyle image">
-    <div class="hero-frame">
-      <img src="images/cross-main-5.webp" alt="Elegant lifestyle jewelry styling">
+  <div class="hero-showcase" aria-label="Neatladies animated hero showcase">
+    <div class="showcase-backdrop"></div>
+
+    <div class="float-chip chip-1">
+      <div class="chip-dot"></div>
+      <div>
+        <strong>Jewelry</strong>
+        <span>Polished everyday shine</span>
+      </div>
     </div>
+
+    <div class="float-chip chip-2">
+      <div class="chip-dot"></div>
+      <div>
+        <strong>Beauty</strong>
+        <span>Soft premium upgrades</span>
+      </div>
+    </div>
+
+    <div class="float-chip chip-3">
+      <div class="chip-dot"></div>
+      <div>
+        <strong>Nails</strong>
+        <span>Clean feminine details</span>
+      </div>
+    </div>
+
+    <div class="float-chip chip-4">
+      <div class="chip-dot"></div>
+      <div>
+        <strong>Gifts</strong>
+        <span>Thoughtful little luxuries</span>
+      </div>
+    </div>
+
+    <div class="showcase-frame">
+      <img src="images/cross-main-5.webp" alt="Elegant lifestyle styling for the Neatladies homepage">
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <a class="scroll-link" href="jewelry.html">
+      <div>
+        <strong>Jewelry</strong>
+        <span>Elegant shine</span>
+      </div>
+    </a>
+    <a class="scroll-link" href="beauty.html">
+      <div>
+        <strong>Beauty</strong>
+        <span>Refined routine</span>
+      </div>
+    </a>
+    <a class="scroll-link" href="nails.html">
+      <div>
+        <strong>Nails</strong>
+        <span>Polished detail</span>
+      </div>
+    </a>
+    <a class="scroll-link" href="small-luxury-gifts.html">
+      <div>
+        <strong>Luxury Gifts</strong>
+        <span>Small but special</span>
+      </div>
+    </a>
+    <a class="scroll-link" href="gifts-for-him.html">
+      <div>
+        <strong>Gifts for Him</strong>
+        <span>Small premium picks</span>
+      </div>
+    </a>
+    <a class="scroll-link" href="editors-picks.html">
+      <div>
+        <strong>Editor’s Picks</strong>
+        <span>Best of the site</span>
+      </div>
+    </a>
   </div>
 </section>
-
-<div class="intro-bar">
-  <div class="intro-inner">
-    <div class="intro-item">
-      <strong>Beauty & style</strong>
-      <span>Small upgrades that make everyday routines feel more polished.</span>
-    </div>
-    <div class="intro-item">
-      <strong>Giftable finds</strong>
-      <span>Thoughtful picks that feel personal, useful, and visually refined.</span>
-    </div>
-    <div class="intro-item">
-      <strong>Curated only</strong>
-      <span>No cluttered marketplace feeling — just selected collections.</span>
-    </div>
-  </div>
-</div>
 
 <section id="collections">
   <div class="section-head">
     <span class="eyebrow">Collections</span>
     <h2>Choose where you want to start.</h2>
-    <p>The homepage is the gateway. Each collection leads to focused product pages with stronger details, images, and buying context.</p>
+    <p>The homepage acts as the main gateway. Each collection leads to more focused pages, stronger product selection, and better buying context before Amazon.</p>
   </div>
 
   <div class="collections-grid">
@@ -780,25 +1072,25 @@
 
 <section class="dark">
   <div class="section-head">
-    <span class="eyebrow">How products will be chosen</span>
-    <h2>Only strong finds deserve the homepage.</h2>
-    <p>Weak product photos stay out of the index. The homepage should show collections and strong visual direction, while product pages handle the deeper details.</p>
+    <span class="eyebrow">Homepage direction</span>
+    <h2>Only strong finds deserve the front page.</h2>
+    <p>The homepage should carry the overall brand direction, while dedicated collection pages and product pages handle the deeper detail.</p>
   </div>
 
   <div class="season-grid">
     <div class="season">
       <strong>Strong images first</strong>
-      <p>No cut-off text, broken crops, cheap product dumps, or messy Amazon graphics on the index.</p>
+      <p>No broken crops, no messy Amazon-style product dumps, and no weak visuals on the index.</p>
     </div>
 
     <div class="season">
       <strong>Clear collection fit</strong>
-      <p>Every product goes into the right collection before it gets a dedicated page.</p>
+      <p>Every product should belong to the right collection before it gets pushed forward.</p>
     </div>
 
     <div class="season">
-      <strong>Dedicated product pages</strong>
-      <p>Visitors should understand the product before they continue to Amazon.</p>
+      <strong>Better buying flow</strong>
+      <p>Visitors should understand the product in context before they ever continue to Amazon.</p>
     </div>
   </div>
 </section>
