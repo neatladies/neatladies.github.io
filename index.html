@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Neatladies | Soft Luxury Jewelry for Everyday Elegance</title>
-  <meta name="description" content="Neatladies curates soft luxury jewelry for women — elegant hoops, diamond studs, feminine necklaces, and statement pieces with a polished boutique feel." />
+  <title>Neatladies | Curated Amazon Jewelry Finds for Soft Everyday Luxury</title>
+  <meta name="description" content="Neatladies is a curated Amazon affiliate jewelry guide for elegant women’s jewelry finds, soft luxury styling, gift-ready pieces, gold hoops, studs, necklaces, and statement accents." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://neatladies.dedyn.io/" />
 
-  <meta property="og:title" content="Neatladies | Soft Luxury Jewelry" />
-  <meta property="og:description" content="Curated feminine jewelry with a soft luxury aesthetic." />
+  <meta property="og:title" content="Neatladies | Curated Amazon Jewelry Finds" />
+  <meta property="og:description" content="Soft luxury jewelry picks curated before you click through to Amazon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://neatladies.dedyn.io/" />
   <meta property="og:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Neatladies | Soft Luxury Jewelry" />
-  <meta name="twitter:description" content="Curated feminine jewelry with a soft luxury aesthetic." />
+  <meta name="twitter:title" content="Neatladies | Curated Amazon Jewelry Finds" />
+  <meta name="twitter:description" content="Soft luxury jewelry picks curated before you click through to Amazon." />
   <meta name="twitter:image" content="https://neatladies.dedyn.io/images/gilded-main-1.webp" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
@@ -27,15 +28,24 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Neatladies | Soft Luxury Jewelry",
-    "description": "Curated feminine jewelry with a soft luxury aesthetic.",
-    "url": "https://neatladies.dedyn.io/"
+    "@type": "WebSite",
+    "name": "Neatladies",
+    "url": "https://neatladies.dedyn.io/",
+    "description": "A curated Amazon affiliate jewelry guide for soft luxury women’s jewelry finds.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Neatladies",
+      "url": "https://neatladies.dedyn.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://neatladies.dedyn.io/images/main-neatladies-logo.webp"
+      }
+    }
   }
   </script>
 
@@ -49,117 +59,831 @@
   </script>
 
   <style>
+    :root{
+      --ink:#20140e;
+      --espresso:#120d0a;
+      --coffee:#2f2118;
+      --brown:#5e422e;
+      --gold:#c69552;
+      --soft-gold:#efd4a2;
+      --cream:#fbf4ea;
+      --sand:#f2e2cf;
+      --rose:#ead4c8;
+      --muted:#725b49;
+      --line:rgba(83,55,35,.16);
+      --shadow:0 28px 80px rgba(44,27,17,.18);
+    }
+
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Inter,sans-serif;background:#f6efe7;color:#241812}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,sans-serif;
+      background:var(--cream);
+      color:var(--ink);
+      overflow-x:hidden;
+    }
     img{width:100%;display:block}
     a{text-decoration:none;color:inherit}
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
 
     header{
-      padding:14px 4%;
+      min-height:86px;
+      padding:14px 5%;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      background:#130f0c;
+      gap:24px;
+      background:rgba(18,13,10,.96);
+      border-bottom:1px solid rgba(239,212,162,.16);
       position:sticky;
       top:0;
       z-index:100;
-      height:92px;
-      overflow:hidden;
+      backdrop-filter:blur(18px);
     }
 
     .logo{
       display:flex;
       align-items:center;
-      height:100%;
+      flex:0 0 auto;
     }
 
     .logo img{
-      width:260px;
+      width:248px;
       height:auto;
-      display:block;
       object-fit:contain;
-      margin-top:4px;
     }
 
     nav{
       display:flex;
       align-items:center;
-      gap:38px;
+      justify-content:flex-end;
+      gap:30px;
+      flex-wrap:wrap;
     }
 
     nav a{
-      color:#f4d8a8;
+      color:var(--soft-gold);
       font-size:.72rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      transition:.25s ease;
+      opacity:.92;
+    }
+
+    nav a:hover{opacity:.62}
+
+    .nav-cta{
+      border:1px solid rgba(239,212,162,.42);
+      padding:11px 16px;
+      border-radius:999px;
+    }
+
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 86px);
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(420px,.95fr);
+      gap:56px;
+      align-items:center;
+      padding:76px 6% 82px;
+      background:
+        radial-gradient(circle at 78% 18%, rgba(198,149,82,.34), transparent 26%),
+        linear-gradient(128deg, #130d09 0%, #251911 48%, #f8eddf 48.2%, #f8eddf 100%);
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:auto -12% -34% auto;
+      width:560px;
+      height:560px;
+      border-radius:50%;
+      background:rgba(198,149,82,.13);
+      filter:blur(12px);
+      pointer-events:none;
+    }
+
+    .hero-copy{
+      position:relative;
+      z-index:2;
+      color:#fff4df;
+      max-width:690px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
       letter-spacing:.22em;
       text-transform:uppercase;
+      color:#d8ad6a;
+      font-size:.76rem;
+      font-weight:700;
+      margin-bottom:22px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:38px;
+      height:1px;
+      background:#d8ad6a;
+      opacity:.75;
+    }
+
+    h1{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(3.4rem,6vw,6.25rem);
+      line-height:.88;
+      letter-spacing:-.045em;
+      margin-bottom:26px;
+      max-width:760px;
+    }
+
+    .hero-copy p{
+      max-width:590px;
+      line-height:1.9;
+      color:#e6d2b7;
+      margin-bottom:34px;
+      font-size:1.02rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:34px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:15px 26px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#e1b66f,#bd833e);
+      color:#1a100a;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:.76rem;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 18px 38px rgba(0,0,0,.18);
       transition:.25s ease;
     }
 
-    nav a:hover{
-      opacity:.7;
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 24px 48px rgba(0,0,0,.22);
     }
 
-    .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1.05fr;gap:54px;align-items:center;padding:70px 6%;background:linear-gradient(135deg,#17110d 0%,#3a2a1e 50%,#f6efe7 50%)}
-    .hero-copy{color:#fff5df}
-    .eyebrow{letter-spacing:.22em;text-transform:uppercase;color:#d6ad69;font-size:.78rem;margin-bottom:20px}
-    h1{font-family:"Cormorant Garamond",serif;font-size:5.2rem;line-height:.92;margin-bottom:24px}
-    .hero-copy p{max-width:560px;line-height:1.9;color:#e8d6bc;margin-bottom:34px}
-    .btn{display:inline-block;padding:15px 30px;border-radius:999px;background:#c99855;color:#1b120c;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;font-weight:700}
-    .hero-visual{display:grid;grid-template-columns:.78fr 1fr;gap:18px;align-items:end}
-    .hero-visual img{border-radius:30px;box-shadow:0 24px 70px rgba(0,0,0,.25)}
-    .hero-visual img:first-child{margin-bottom:80px}
+    .btn.secondary{
+      background:rgba(255,244,223,.06);
+      color:#ffe4ae;
+      border-color:rgba(255,228,174,.28);
+      box-shadow:none;
+    }
 
-    section{padding:95px 6%}
-    .center{max-width:780px;margin:0 auto 64px;text-align:center}
-    .center h2,.split h2{font-family:"Cormorant Garamond",serif;font-size:4rem;line-height:1}
-    .center p,.split p{color:#6d5645;line-height:1.9;margin-top:18px}
+    .mini-proof{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      max-width:620px;
+    }
 
-    .editorial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .piece{background:#efe2d2;border-radius:32px;overflow:hidden}
-    .piece img{height:420px;object-fit:cover}
-    .piece-text{padding:26px}
-    .piece h3{font-family:"Cormorant Garamond",serif;font-size:2rem;margin-bottom:10px}
-    .piece p{color:#6d5645;line-height:1.75;margin-bottom:22px}
-    .piece a{color:#9d6c35;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+    .proof-card{
+      padding:16px 16px;
+      border-radius:20px;
+      background:rgba(255,244,223,.075);
+      border:1px solid rgba(255,244,223,.13);
+      color:#f2dcc0;
+    }
 
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-    .split img{border-radius:34px}
-    .dark{background:#17110d;color:#fff5df}
-    .dark .split p{color:#d7c3a7}
+    .proof-card strong{
+      display:block;
+      color:#fff1d3;
+      font-size:.82rem;
+      margin-bottom:6px;
+    }
 
-    .mosaic{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-    .mosaic img{height:390px;object-fit:cover;border-radius:28px}
+    .proof-card span{
+      color:#ceb89d;
+      font-size:.76rem;
+      line-height:1.55;
+    }
 
-    footer{background:#100c09;color:#d8b981;text-align:center;padding:55px 6%}
-    footer img{width:300px;max-width:85vw;margin:0 auto 28px}
-    .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
-    .footer-links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-    .disclosure{max-width:820px;margin:0 auto;color:#bca27d;font-size:.82rem;line-height:1.8}
+    .hero-visual{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:.78fr 1fr;
+      gap:18px;
+      align-items:end;
+    }
 
-    @media(max-width:900px){
+    .hero-visual figure{
+      position:relative;
+      border-radius:34px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#dcc4aa;
+    }
+
+    .hero-visual figure:first-child{
+      transform:translateY(70px);
+    }
+
+    .hero-visual img{
+      height:570px;
+      object-fit:cover;
+      transition:.35s ease;
+    }
+
+    .hero-visual figure:first-child img{
+      height:430px;
+    }
+
+    .hero-badge{
+      position:absolute;
+      right:-16px;
+      bottom:38px;
+      width:min(238px,48%);
+      padding:18px 18px;
+      border-radius:24px;
+      background:rgba(19,13,9,.88);
+      color:#ffe5b2;
+      border:1px solid rgba(239,212,162,.28);
+      box-shadow:0 26px 60px rgba(0,0,0,.28);
+      backdrop-filter:blur(14px);
+    }
+
+    .hero-badge strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.45rem;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .hero-badge span{
+      display:block;
+      color:#dbc3a2;
+      font-size:.76rem;
+      line-height:1.6;
+    }
+
+    section{padding:96px 6%}
+    .section-head{
+      max-width:820px;
+      margin:0 auto 54px;
+      text-align:center;
+    }
+
+    .section-head.left{
+      margin-left:0;
+      text-align:left;
+    }
+
+    h2{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(2.8rem,5vw,4.7rem);
+      line-height:.95;
+      letter-spacing:-.035em;
+      color:var(--ink);
+    }
+
+    .dark h2{color:#fff1d3}
+
+    .section-head p,
+    .split-copy p,
+    .product-copy p{
+      color:var(--muted);
+      line-height:1.9;
+      margin-top:18px;
+      font-size:1rem;
+    }
+
+    .dark .section-head p,
+    .dark .split-copy p{
+      color:#d4bea0;
+    }
+
+    .curation-strip{
+      padding:30px 6%;
+      background:#fff8ee;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .strip-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      max-width:1180px;
+      margin:0 auto;
+    }
+
+    .strip-item{
+      padding:18px 18px;
+      border-radius:22px;
+      background:var(--cream);
+      border:1px solid var(--line);
+    }
+
+    .strip-item strong{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.35rem;
+      margin-bottom:7px;
+    }
+
+    .strip-item span{
+      color:var(--muted);
+      font-size:.82rem;
+      line-height:1.55;
+    }
+
+    .featured{
+      background:linear-gradient(180deg,#fbf4ea 0%,#f2e2cf 100%);
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+      align-items:stretch;
+    }
+
+    .product-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      overflow:hidden;
+      border-radius:34px;
+      background:#fff8ef;
+      border:1px solid rgba(83,55,35,.13);
+      box-shadow:0 20px 60px rgba(87,57,35,.10);
+      transition:.28s ease;
+    }
+
+    .product-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 28px 78px rgba(87,57,35,.16);
+    }
+
+    .product-media{
+      position:relative;
+      overflow:hidden;
+      background:#e8d5bf;
+    }
+
+    .product-media img{
+      height:390px;
+      object-fit:cover;
+      transition:.35s ease;
+    }
+
+    .product-card:hover .product-media img{
+      transform:scale(1.035);
+    }
+
+    .label{
+      position:absolute;
+      top:18px;
+      left:18px;
+      z-index:2;
+      display:inline-flex;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(18,13,10,.78);
+      color:#ffe3ad;
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-weight:800;
+      backdrop-filter:blur(12px);
+    }
+
+    .product-copy{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      padding:28px;
+    }
+
+    .product-copy h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:2.18rem;
+      line-height:1;
+      letter-spacing:-.02em;
+      margin-bottom:12px;
+    }
+
+    .product-copy p{
+      margin-top:0;
+      margin-bottom:22px;
+    }
+
+    .product-notes{
+      display:grid;
+      gap:10px;
+      margin:0 0 26px;
+      list-style:none;
+      color:#624a39;
+      font-size:.88rem;
+      line-height:1.55;
+    }
+
+    .product-notes li{
+      position:relative;
+      padding-left:18px;
+    }
+
+    .product-notes li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.65em;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--gold);
+    }
+
+    .product-link{
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:48px;
+      border-radius:999px;
+      background:#1a110c;
+      color:#f6d9a4;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.72rem;
+      font-weight:800;
+      transition:.25s ease;
+    }
+
+    .product-link:hover{
+      background:#3a271a;
+    }
+
+    .decision{
+      background:#160f0b;
+      color:#fff1d3;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .decision::before{
+      content:"";
+      position:absolute;
+      inset:-20% auto auto -12%;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      background:rgba(198,149,82,.13);
+      filter:blur(8px);
+    }
+
+    .decision-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:58px;
+      align-items:center;
+    }
+
+    .decision-card{
+      padding:38px;
+      border-radius:34px;
+      background:rgba(255,244,223,.065);
+      border:1px solid rgba(255,244,223,.13);
+      box-shadow:0 24px 70px rgba(0,0,0,.18);
+    }
+
+    .steps{
+      display:grid;
+      gap:18px;
+      counter-reset:steps;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:50px 1fr;
+      gap:16px;
+      align-items:start;
+      padding:20px;
+      border-radius:24px;
+      background:rgba(255,244,223,.055);
+      border:1px solid rgba(255,244,223,.11);
+      counter-increment:steps;
+    }
+
+    .step::before{
+      content:counter(steps);
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#e6bc76,#a56f32);
+      color:#160f0b;
+      font-weight:900;
+    }
+
+    .step strong{
+      display:block;
+      color:#fff1d3;
+      margin-bottom:6px;
+    }
+
+    .step span{
+      color:#d2b99a;
+      line-height:1.65;
+      font-size:.9rem;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:58px;
+      align-items:center;
+    }
+
+    .split-media{
+      position:relative;
+    }
+
+    .split-media img{
+      border-radius:36px;
+      box-shadow:var(--shadow);
+      object-fit:cover;
+      min-height:480px;
+    }
+
+    .floating-note{
+      position:absolute;
+      right:-20px;
+      bottom:30px;
+      max-width:250px;
+      padding:20px;
+      border-radius:26px;
+      background:#fff8ef;
+      border:1px solid var(--line);
+      box-shadow:0 22px 60px rgba(62,38,24,.17);
+    }
+
+    .floating-note strong{
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.45rem;
+      display:block;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .floating-note span{
+      color:var(--muted);
+      line-height:1.55;
+      font-size:.82rem;
+    }
+
+    .mosaic{
+      display:grid;
+      grid-template-columns:1.1fr .9fr 1.1fr;
+      gap:18px;
+    }
+
+    .mosaic img{
+      height:420px;
+      object-fit:cover;
+      border-radius:30px;
+      box-shadow:0 18px 50px rgba(87,57,35,.12);
+    }
+
+    .mosaic img:nth-child(2){
+      transform:translateY(34px);
+    }
+
+    .disclosure-section{
+      background:#fff8ef;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:52px 6%;
+    }
+
+    .disclosure-box{
+      max-width:960px;
+      margin:0 auto;
+      padding:26px 30px;
+      border-radius:28px;
+      background:var(--cream);
+      border:1px solid var(--line);
+      color:#6f5846;
+      line-height:1.85;
+      text-align:center;
+      font-size:.92rem;
+    }
+
+    .disclosure-box strong{
+      color:var(--ink);
+    }
+
+    footer{
+      background:#100c09;
+      color:#d8b981;
+      text-align:center;
+      padding:58px 6%;
+    }
+
+    footer img{
+      width:300px;
+      max-width:84vw;
+      margin:0 auto 30px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:24px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:24px;
+    }
+
+    .footer-links a{
+      font-size:.78rem;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      opacity:.9;
+    }
+
+    .footer-links a:hover{opacity:.62}
+
+    .footer-note{
+      max-width:820px;
+      margin:0 auto;
+      color:#bca27d;
+      font-size:.82rem;
+      line-height:1.8;
+    }
+
+    @media(max-width:1100px){
+      .hero{
+        grid-template-columns:1fr;
+        background:#17110d;
+      }
+      .hero-visual{
+        max-width:760px;
+      }
+      .strip-grid,
+      .product-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .decision-grid,
+      .split{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:760px){
       header{
-        padding:12px 18px;
-        height:78px;
+        min-height:auto;
+        padding:12px 18px 16px;
+        flex-direction:column;
       }
 
-      .logo img{
-        width:185px;
-      }
+      .logo img{width:196px}
 
       nav{
+        width:100%;
+        justify-content:center;
         gap:14px;
       }
 
       nav a{
-        font-size:.58rem;
-        letter-spacing:.16em;
+        font-size:.61rem;
+        letter-spacing:.13em;
       }
 
-      .hero,.split{grid-template-columns:1fr}
-      .hero{background:#17110d}
-      h1{font-size:3.8rem}
-      .editorial-grid,.mosaic{grid-template-columns:1fr}
-      .center h2,.split h2{font-size:3rem}
+      .nav-cta{
+        padding:8px 11px;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:52px 22px 70px;
+      }
+
+      h1{
+        font-size:3.38rem;
+        line-height:.92;
+      }
+
+      .hero-copy p{
+        font-size:.96rem;
+      }
+
+      .hero-actions{
+        align-items:stretch;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .mini-proof,
+      .strip-grid,
+      .product-grid,
+      .mosaic{
+        grid-template-columns:1fr;
+      }
+
+      .proof-card{
+        padding:14px;
+      }
+
+      .hero-visual{
+        grid-template-columns:1fr;
+      }
+
+      .hero-visual figure:first-child{
+        transform:none;
+      }
+
+      .hero-visual img,
+      .hero-visual figure:first-child img{
+        height:auto;
+        max-height:540px;
+      }
+
+      .hero-badge{
+        position:static;
+        width:100%;
+        margin-top:14px;
+      }
+
+      section{
+        padding:72px 22px;
+      }
+
+      .section-head{
+        margin-bottom:38px;
+      }
+
+      h2{
+        font-size:3rem;
+      }
+
+      .product-media img{
+        height:auto;
+      }
+
+      .decision-card{
+        padding:26px;
+      }
+
+      .step{
+        grid-template-columns:42px 1fr;
+        padding:16px;
+      }
+
+      .step::before{
+        width:42px;
+        height:42px;
+      }
+
+      .split-media img{
+        min-height:auto;
+      }
+
+      .floating-note{
+        position:static;
+        max-width:none;
+        margin-top:16px;
+      }
+
+      .mosaic img,
+      .mosaic img:nth-child(2){
+        height:auto;
+        transform:none;
+      }
     }
   </style>
 </head>
@@ -167,13 +891,15 @@
 <body>
 
 <header>
-  <a class="logo" href="index.html">
+  <a class="logo" href="index.html" aria-label="Neatladies homepage">
     <img src="images/main-neatladies-logo.webp" alt="Neatladies luxury jewelry logo">
   </a>
-  <nav>
-    <a href="#everyday">Everyday</a>
-    <a href="#gift">Gift</a>
-    <a href="#statement">Statement</a>
+
+  <nav aria-label="Primary navigation">
+    <a href="#curation">Curation</a>
+    <a href="#featured">Featured</a>
+    <a href="#gift">Gift Guide</a>
+    <a class="nav-cta" href="#featured">Start Here</a>
   </nav>
 </header>
 
@@ -181,107 +907,252 @@
 
 <section class="hero">
   <div class="hero-copy">
-    <div class="eyebrow">Curated soft luxury</div>
-    <h1>Jewelry that feels expensive without trying too hard.</h1>
-    <p>Neatladies curates elegant feminine pieces with a boutique feel — polished hoops, sparkling studs, soft necklaces, and statement accents made for everyday confidence.</p>
-    <a class="btn" href="#everyday">Explore Pieces</a>
-  </div>
+    <div class="eyebrow">Amazon jewelry, curated first</div>
+    <h1>Soft luxury jewelry picks worth reading before you click.</h1>
+    <p>Neatladies is an editorial-style Amazon affiliate guide for feminine jewelry finds. Each featured piece is presented with styling notes, visual details, and buying context so the final Amazon click feels informed — not random.</p>
 
-  <div class="hero-visual">
-    <img src="images/gilded-main-7.webp" alt="Gold channel hoop earrings worn by a woman">
-    <img src="images/gilded-main-1.webp" alt="Gilded gold hoop earrings close-up">
-  </div>
-</section>
+    <div class="hero-actions">
+      <a class="btn" href="#featured">Explore Curated Picks</a>
+      <a class="btn secondary" href="#curation">How We Curate</a>
+    </div>
 
-<section id="everyday">
-  <div class="center">
-    <h2>Everyday Luxury</h2>
-    <p>Clean gold tones, soft sparkle, and wearable pieces selected for a polished feminine look.</p>
-  </div>
-
-  <div class="editorial-grid">
-    <article class="piece">
-      <img src="images/gilded-main-4.webp" alt="Gilded channel hoop earrings size and design details">
-      <div class="piece-text">
-        <h3>Gilded Channel Hoops</h3>
-        <p>Sleek gold hoops with a refined sparkle, made for everyday luxury styling.</p>
-        <a href="https://amzn.to/4dhC5qm" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    <div class="mini-proof" aria-label="Neatladies curation highlights">
+      <div class="proof-card">
+        <strong>Affiliate guide</strong>
+        <span>We do not sell products directly from this page.</span>
       </div>
-    </article>
-
-    <article class="piece">
-      <img src="images/stud-main-4.webp" alt="Lab grown diamond stud earrings worn on ear">
-      <div class="piece-text">
-        <h3>Diamond Stud Earrings</h3>
-        <p>Classic sparkle with a minimal, polished look that never feels overdone.</p>
-        <a href="https://amzn.to/4d1eMSW" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      <div class="proof-card">
+        <strong>Product pages first</strong>
+        <span>Each pick gets context before sending visitors to Amazon.</span>
       </div>
-    </article>
-
-    <article class="piece">
-      <img src="images/fanglcy-main-3.webp" alt="Gold hoop earrings worn by model">
-      <div class="piece-text">
-        <h3>Fanglcy Gold Hoops</h3>
-        <p>Soft gold hoops for simple styling, daily outfits, and quiet feminine polish.</p>
-        <a href="https://amzn.to/4u2yjIC" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+      <div class="proof-card">
+        <strong>Soft luxury style</strong>
+        <span>Elegant pieces selected for a polished feminine look.</span>
       </div>
-    </article>
+    </div>
   </div>
-</section>
 
-<section class="dark" id="gift">
-  <div class="split">
-    <img src="images/cross-main-5.webp" alt="Woman wearing gold cross necklace">
-    <div>
-      <div class="eyebrow">Gift-ready elegance</div>
-      <h2>A soft jewelry gift that feels personal.</h2>
-      <p>The moissanite cross necklace brings a sentimental, feminine gift angle with a presentation box and warm gold finish.</p>
-      <a class="btn" href="https://amzn.to/4nES5b3" target="_blank" rel="nofollow sponsored noopener">View Gift Pick</a>
+  <div class="hero-visual" aria-label="Featured Neatladies jewelry visuals">
+    <figure>
+      <img src="images/gilded-main-7.webp" alt="Gold hoop earrings styled on a woman">
+    </figure>
+    <figure>
+      <img src="images/gilded-main-1.webp" alt="Close-up of polished gold hoop earrings">
+    </figure>
+
+    <div class="hero-badge">
+      <strong>Read first. Click later.</strong>
+      <span>Designed to warm up the visitor before the Amazon product page.</span>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="mosaic">
-    <img src="images/cross-main-2.webp" alt="Gold cross necklace light-up surprise box">
-    <img src="images/solitaire-main-3.webp" alt="Solitaire diamond necklace worn by model">
-    <img src="images/vnox-main-2.webp" alt="VNOX black crystal statement ring worn on hand">
+<section class="curation-strip" id="curation" aria-label="Neatladies curation principles">
+  <div class="strip-grid">
+    <div class="strip-item">
+      <strong>Visual appeal</strong>
+      <span>Pieces are presented with large imagery and clear styling context.</span>
+    </div>
+    <div class="strip-item">
+      <strong>Wearability</strong>
+      <span>Everyday, gift-ready, and statement pieces stay easy to understand.</span>
+    </div>
+    <div class="strip-item">
+      <strong>No direct checkout</strong>
+      <span>The page guides visitors before they continue to Amazon.</span>
+    </div>
+    <div class="strip-item">
+      <strong>Pinterest-ready</strong>
+      <span>Built for visual discovery, pin traffic, and product-focused SEO.</span>
+    </div>
   </div>
 </section>
 
-<section id="statement">
-  <div class="center">
-    <h2>Polished Details</h2>
-    <p>From delicate solitaire pieces to bold black crystal accents, Neatladies keeps the styling feminine, curated, and visually elevated.</p>
+<section class="featured" id="featured">
+  <div class="section-head">
+    <div class="eyebrow">Featured jewelry guide</div>
+    <h2>Curated picks that deserve their own product page.</h2>
+    <p>The homepage should act like a beautiful discovery hub. Each card leads to a dedicated Neatladies product page with more images, styling notes, decision points, and then a clear Amazon affiliate click.</p>
   </div>
 
-  <div class="editorial-grid">
-    <article class="piece">
-      <img src="images/solitaire-main-1.webp" alt="Amazon Essentials solitaire diamond necklace">
-      <div class="piece-text">
+  <div class="product-grid">
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Everyday gold</span>
+        <img src="images/gilded-main-4.webp" alt="Gilded channel hoop earrings design details">
+      </div>
+      <div class="product-copy">
+        <h3>Gilded Channel Hoops</h3>
+        <p>A polished gold hoop pick for women who want a clean everyday shine without the look feeling too loud.</p>
+        <ul class="product-notes">
+          <li>Best positioned as the core everyday jewelry pick.</li>
+          <li>Strong visual fit for Pinterest pins and outfit boards.</li>
+          <li>Dedicated page should compare styling, size feel, and gift use.</li>
+        </ul>
+        <a class="product-link" href="gilded-channel-hoops.html">Read the Full Pick</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Classic sparkle</span>
+        <img src="images/stud-main-4.webp" alt="Diamond stud earrings worn on ear">
+      </div>
+      <div class="product-copy">
+        <h3>Diamond Stud Earrings</h3>
+        <p>A timeless stud-style pick for simple sparkle, clean outfits, and feminine styling that does not need heavy effort.</p>
+        <ul class="product-notes">
+          <li>Best for classic jewelry search intent and gift shoppers.</li>
+          <li>Product page should focus on look, size impression, and occasions.</li>
+          <li>Keep claims visual and editorial, not exaggerated.</li>
+        </ul>
+        <a class="product-link" href="diamond-stud-earrings.html">Read the Full Pick</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Soft hoop style</span>
+        <img src="images/fanglcy-main-3.webp" alt="Gold hoop earrings worn by model">
+      </div>
+      <div class="product-copy">
+        <h3>Fanglcy Gold Hoops</h3>
+        <p>A simple gold hoop option for outfit polish, daily wear styling, and a softer alternative to bolder statement pieces.</p>
+        <ul class="product-notes">
+          <li>Good for Pinterest boards around minimal gold jewelry.</li>
+          <li>Dedicated page should explain who this style fits best.</li>
+          <li>CTA should lead to Amazon only after the reader is warmed up.</li>
+        </ul>
+        <a class="product-link" href="fanglcy-gold-hoops.html">Read the Full Pick</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="decision dark">
+  <div class="decision-grid">
+    <div class="section-head left">
+      <div class="eyebrow">Affiliate UX strategy</div>
+      <h2>The Amazon click should be the last step, not the first step.</h2>
+      <p>Neatladies is built to reduce hesitation before the visitor lands on Amazon. The homepage creates discovery, the product page builds confidence, and the affiliate button appears after the reader understands why the piece is worth checking.</p>
+    </div>
+
+    <div class="decision-card">
+      <div class="steps">
+        <div class="step">
+          <div>
+            <strong>Discover the style</strong>
+            <span>The visitor first sees a polished visual category: everyday, gift, classic sparkle, or statement.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <strong>Read the product page</strong>
+            <span>The dedicated page explains the look, best use cases, styling ideas, and visual details without pretending to sell directly.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <strong>Click to Amazon with intent</strong>
+            <span>The final affiliate click should feel like a confident next step, not a blind redirect.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gift">
+  <div class="split">
+    <div class="split-media">
+      <img src="images/cross-main-5.webp" alt="Woman wearing a gold cross necklace">
+      <div class="floating-note">
+        <strong>Gift page angle</strong>
+        <span>Use emotional context, presentation details, and occasion ideas before the Amazon CTA.</span>
+      </div>
+    </div>
+
+    <div class="split-copy">
+      <div class="eyebrow">Gift-ready jewelry</div>
+      <h2>Product pages should feel like mini buying guides.</h2>
+      <p>For gift-friendly pieces like the cross necklace, the product page should do more than show one image and one button. It should explain why the piece works as a gift, what kind of woman it suits, how it looks styled, and what to check before buying on Amazon.</p>
+      <div class="hero-actions" style="margin-top:28px;margin-bottom:0">
+        <a class="btn" href="gold-cross-necklace.html">Plan Gift Page</a>
+        <a class="btn secondary" href="#statement">View More Picks</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Neatladies visual moodboard">
+  <div class="mosaic">
+    <img src="images/cross-main-2.webp" alt="Gold cross necklace in a light-up presentation box">
+    <img src="images/solitaire-main-3.webp" alt="Solitaire necklace styled on a model">
+    <img src="images/vnox-main-2.webp" alt="Black crystal statement ring worn on hand">
+  </div>
+</section>
+
+<section class="featured" id="statement">
+  <div class="section-head">
+    <div class="eyebrow">More page opportunities</div>
+    <h2>Build the site around focused product stories.</h2>
+    <p>Each product deserves a separate page with its own SEO title, Pinterest image angle, clean affiliate disclosure, and one strong outbound Amazon CTA after the reader has enough context.</p>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Minimal pendant</span>
+        <img src="images/solitaire-main-1.webp" alt="Solitaire diamond necklace product image">
+      </div>
+      <div class="product-copy">
         <h3>Solitaire Necklace</h3>
-        <p>A delicate pendant for soft everyday elegance and polished minimal styling.</p>
-        <a href="https://amzn.to/4wn6qfS" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        <p>A delicate pendant pick for minimal outfits, soft sparkle, and simple everyday styling.</p>
+        <ul class="product-notes">
+          <li>Strong angle for delicate necklace and everyday pendant searches.</li>
+          <li>Works well for neutral outfit boards on Pinterest.</li>
+        </ul>
+        <a class="product-link" href="solitaire-necklace.html">Read the Full Pick</a>
       </div>
     </article>
 
-    <article class="piece">
-      <img src="images/vnox-main-1.webp" alt="VNOX black and gold statement ring">
-      <div class="piece-text">
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Statement detail</span>
+        <img src="images/vnox-main-1.webp" alt="Black and gold statement ring product image">
+      </div>
+      <div class="product-copy">
         <h3>VNOX Statement Ring</h3>
-        <p>A bold black-and-gold accent for outfits that need one confident detail.</p>
-        <a href="https://amzn.to/3R10qth" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        <p>A bolder black-and-gold accent for outfits that need one confident jewelry detail.</p>
+        <ul class="product-notes">
+          <li>Better treated as a style statement than an everyday basic.</li>
+          <li>Dedicated page should focus on outfit pairing and visual impact.</li>
+        </ul>
+        <a class="product-link" href="vnox-statement-ring.html">Read the Full Pick</a>
       </div>
     </article>
 
-    <article class="piece">
-      <img src="images/gilded-main-5.webp" alt="Elegant jewelry gift box">
-      <div class="piece-text">
+    <article class="product-card">
+      <div class="product-media">
+        <span class="label">Gift presentation</span>
+        <img src="images/gilded-main-5.webp" alt="Elegant jewelry gift box presentation">
+      </div>
+      <div class="product-copy">
         <h3>Gift Presentation</h3>
-        <p>Curated pieces with a cleaner, more premium feel than ordinary product picks.</p>
-        <a href="#everyday">Explore Collection</a>
+        <p>A useful content angle for turning product pages into more persuasive buying guides.</p>
+        <ul class="product-notes">
+          <li>Can support gift guides, seasonal pins, and occasion-based SEO.</li>
+          <li>Use it to connect products to real shopping intent.</li>
+        </ul>
+        <a class="product-link" href="jewelry-gift-guide.html">Explore Gift Ideas</a>
       </div>
     </article>
+  </div>
+</section>
+
+<section class="disclosure-section" aria-label="Affiliate disclosure">
+  <div class="disclosure-box">
+    <strong>Affiliate disclosure:</strong> Neatladies is an Amazon affiliate-style editorial guide. We may earn a commission when visitors click through and purchase from Amazon. Neatladies does not process orders, sell products directly, handle shipping, or control Amazon product listings.
   </div>
 </section>
 
@@ -297,18 +1168,27 @@
     <a href="terms.html">Terms</a>
   </div>
 
-  <div class="disclosure">
-    Affiliate disclosure: Neatladies may earn a commission when you purchase through links on this site. This does not change your price.
+  <div class="footer-note">
+    Curated jewelry inspiration for soft luxury styling. Product pages are built to help readers understand the look before continuing to Amazon.
   </div>
 </footer>
 
 <script>
-  document.querySelectorAll('a[href*="amzn.to"]').forEach(function(link){
+  document.querySelectorAll('a[href*=".html"]').forEach(function(link){
     link.addEventListener('click', function(){
       if (typeof pintrk === 'function') {
-        pintrk('track', 'checkout', {
-          value: 0,
-          currency: 'USD'
+        pintrk('track', 'lead', {
+          lead_type: 'internal_product_page_click'
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon."]').forEach(function(link){
+    link.addEventListener('click', function(){
+      if (typeof pintrk === 'function') {
+        pintrk('track', 'lead', {
+          lead_type: 'amazon_affiliate_outbound'
         });
       }
     });
