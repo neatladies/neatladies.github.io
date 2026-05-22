@@ -1179,24 +1179,36 @@ h2{
 }
 
   
-/* Final nav transparency fix only */
+
+/* Final correction: index-style transparent dark nav only */
+.announcement{
+  display:none !important;
+}
+
 .site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(10, 7, 5, 0.42) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  border-bottom: 1px solid rgba(217,179,109,.16) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  background:
+    linear-gradient(90deg, rgba(16,11,8,.88), rgba(47,30,20,.82)) !important;
+  backdrop-filter: blur(18px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
+  border-bottom: 1px solid rgba(239,212,162,.16) !important;
   box-shadow: none !important;
 }
 
-.nav,
+.nav{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
 .nav-shell,
 .nav-wrap,
 .header-inner{
   background: transparent !important;
   box-shadow: none !important;
+  border: 0 !important;
 }
 
 </style>
