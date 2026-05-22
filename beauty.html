@@ -219,7 +219,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(255, 248, 245, 0.22);
+      background: rgba(255, 248, 245, 0.82);
       border-bottom: 1px solid rgba(43, 21, 29, 0.08);
     }
 
@@ -1178,7 +1178,28 @@ h2{
   .hero-inner{min-height:640px!important;padding-top:72px!important;}
 }
 
-  </style>
+  
+/* Final nav transparency fix only */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 7, 5, 0.42) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(217,179,109,.16) !important;
+  box-shadow: none !important;
+}
+
+.nav,
+.nav-shell,
+.nav-wrap,
+.header-inner{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+</style>
 </head>
 
 <body>
