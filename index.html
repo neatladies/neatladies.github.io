@@ -59,13 +59,37 @@
 
     gtag('config', 'G-MV7FDWW9PV');
   </script>
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV7FDWW9PV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MV7FDWW9PV');
+  </script>
 
-  <!--
-    Pinterest Tag base code will be added here after Pinterest provides the Tag ID.
-    Do not publish a fake Pinterest Tag ID.
-  -->
+  <!-- Pinterest Tag -->
+  <script>
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+    window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+    n=window.pintrk;n.queue=[],n.version="3.0";var
+    t=document.createElement("script");t.async=!0;t.src=e;var
+    r=document.getElementsByTagName("script")[0];
+    r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+    pintrk('load', '2613680139544');
+    pintrk('page');
+    pintrk('track', 'pagevisit', {
+      event_id: 'pagevisit_' + Date.now()
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+    src="https://ct.pinterest.com/v3/?event=init&tid=2613680139544&noscript=1" />
+  </noscript>
+  <!-- End Pinterest Tag -->
 
-  <style>
+
+<style>
     :root{--black:#100b08;--cream:#f8efe4;--gold:#c89449;--soft-gold:#efd4a2;--muted:#725947;--line:rgba(67,42,26,.15);--ink:#24130d;--footer:#100c09}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;width:100%}
      .site-header{
@@ -122,7 +146,7 @@
     }
 
     .footer-brand img{
-      width:440px;
+      width:390px;
       max-width:100%;
       margin:0 0 22px;
       filter:drop-shadow(0 0 18px rgba(232,181,82,.18));
@@ -315,7 +339,7 @@
           <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
         </div>
 
-        <a class="pinterest-button" href="#" data-track="cta" aria-label="Follow Neatladies on Pinterest">
+        <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="cta" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
           Follow us on Pinterest
         </a>
@@ -351,6 +375,7 @@
       function getCleanText(element) {
         return (element.getAttribute('data-product') ||
           element.getAttribute('data-collection') ||
+          element.getAttribute('data-cta') ||
           element.getAttribute('aria-label') ||
           element.textContent ||
           element.href ||
@@ -436,6 +461,12 @@
             cta_name: label,
             link_url: href,
             page_title: document.title,
+            page_location: window.location.href
+          });
+
+          sendPinterestLead({
+            lead_type: 'cta_click',
+            cta_name: label,
             page_location: window.location.href
           });
         }
