@@ -68,18 +68,202 @@
   <style>
     :root{--black:#100b08;--cream:#f8efe4;--gold:#c89449;--soft-gold:#efd4a2;--muted:#725947;--line:rgba(67,42,26,.15);--ink:#24130d;--footer:#100c09}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;width:100%}
-    .site-header{position:fixed;inset:0 0 auto 0;z-index:50;height:78px;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgba(16,11,8,.90);border-bottom:1px solid rgba(239,212,162,.16);backdrop-filter:blur(16px)}
-    .logo{height:78px;display:flex;align-items:center;flex:0 0 auto}.logo img{width:216px;max-height:64px;object-fit:contain}
+     .site-header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      height:94px;
+      padding:0 5.2%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      background:rgba(16,11,8,.91);
+      border-bottom:1px solid rgba(239,212,162,.16);
+      backdrop-filter:blur(16px);
+    }
+     .logo{
+      height:94px;
+      display:flex;
+      align-items:center;
+      flex:0 0 auto;
+    } .logo img{
+      width:286px;
+      max-height:84px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 14px rgba(232,181,82,.22));
+    }
     .nav{display:flex;align-items:center;gap:30px;flex-wrap:wrap}.nav a{color:var(--soft-gold);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;white-space:nowrap;transition:.22s ease}.nav a:hover{opacity:.58}.nav .pill{border:1px solid rgba(239,212,162,.35);padding:9px 15px;border-radius:999px}
-    .hero{position:relative;min-height:100vh;overflow:hidden;background:#100b08;display:flex;align-items:center;padding:134px 5.5% 76px;isolation:isolate}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;transform:scale(1.01);background:#100b08}.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(16,11,8,.90) 0%,rgba(16,11,8,.78) 30%,rgba(16,11,8,.46) 53%,rgba(16,11,8,.14) 82%),radial-gradient(circle at 22% 35%,rgba(200,148,73,.18),transparent 30%),linear-gradient(180deg,rgba(16,11,8,.18) 0%,rgba(16,11,8,.24) 100%)}
+    .hero{position:relative;min-height:100vh;overflow:hidden;background:#100b08;display:flex;align-items:center;padding:152px 5.5% 76px;isolation:isolate}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;transform:scale(1.01);background:#100b08}.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(16,11,8,.90) 0%,rgba(16,11,8,.78) 30%,rgba(16,11,8,.46) 53%,rgba(16,11,8,.14) 82%),radial-gradient(circle at 22% 35%,rgba(200,148,73,.18),transparent 30%),linear-gradient(180deg,rgba(16,11,8,.18) 0%,rgba(16,11,8,.24) 100%)}
     .hero-content{position:relative;z-index:2;max-width:720px;color:#fff2d7}.eyebrow{display:block;color:#d8a75e;font-size:.72rem;font-weight:800;letter-spacing:.23em;text-transform:uppercase;margin-bottom:20px}h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,6.5vw,7.15rem);line-height:.86;letter-spacing:-.055em;max-width:780px;margin-bottom:28px;text-wrap:balance}.hero-content p{max-width:620px;color:#e4cfb2;font-size:1.04rem;line-height:1.92;margin-bottom:34px}.actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:14px 25px;border-radius:999px;background:linear-gradient(135deg,#e4bb73,#bd7e35);color:#1a100a;border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 42px rgba(0,0,0,.22);font-size:.72rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;transition:.22s ease}.btn:hover{transform:translateY(-2px)}.btn.secondary{background:rgba(255,255,255,.055);color:#f0d6a4;border-color:rgba(239,212,162,.35);box-shadow:none}.scroll-cue{position:absolute;left:5.5%;bottom:34px;z-index:2;color:#dcc6a8;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.82}.scroll-cue::after{content:"";display:inline-block;width:54px;height:1px;background:rgba(239,212,162,.5);margin-left:12px;vertical-align:middle}
     section{padding:94px 6%}.section-head{max-width:830px;margin:0 auto 54px;text-align:center}.section-head .eyebrow{margin-bottom:16px}h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2.85rem,5vw,4.85rem);line-height:.96;letter-spacing:-.04em;color:var(--ink);text-wrap:balance}.section-head p{color:var(--muted);line-height:1.9;margin-top:18px;font-size:1rem}
     .collections-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);background:rgba(255,250,243,.45)}.collection{min-height:306px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,250,243,.50);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s ease}.collection:hover{background:#fff8ef;transform:translateY(-3px);box-shadow:0 20px 60px rgba(45,28,17,.08)}.collection small{display:block;color:#a97332;font-size:.68rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}.collection h3{font-family:"Cormorant Garamond",serif;font-size:2.55rem;line-height:.96;letter-spacing:-.035em;margin-bottom:14px;color:#2b1b12}.collection p{color:#725947;line-height:1.75;font-size:.94rem;max-width:300px}.collection span{margin-top:28px;display:inline-flex;align-items:center;gap:10px;color:#2b1b12;font-size:.7rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.collection span::after{content:"";width:38px;height:1px;background:#2b1b12;transition:.22s ease}.collection:hover span::after{width:58px}
     .feature{background:#fff8ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.feature-layout{max-width:1160px;margin:auto;display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}.feature-visual{min-height:540px;border-radius:42px;overflow:hidden;background:radial-gradient(circle at 70% 24%,rgba(255,255,255,.45),transparent 24%),linear-gradient(135deg,#e7d0b8,#b98951 46%,#2a1a11);box-shadow:0 28px 80px rgba(45,28,17,.16);position:relative}.feature-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.2),transparent 35%),radial-gradient(circle at 54% 62%,rgba(239,212,162,.45),transparent 20%)}.feature-text h2{margin-bottom:18px}.feature-text p{color:var(--muted);line-height:1.9;max-width:620px}.feature-list{display:grid;gap:0;margin:30px 0 0;border-top:1px solid var(--line)}.feature-list a{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);transition:.22s ease}.feature-list a:hover{padding-left:8px}.feature-list strong{display:block;font-family:"Cormorant Garamond",serif;font-size:1.85rem;line-height:1;margin-bottom:6px;color:#2b1b12}.feature-list span{display:block;color:#715947;line-height:1.6;font-size:.92rem}.feature-list small{color:#a97332;font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;white-space:nowrap}
     .dark{background:var(--black);color:#fff2d7}.dark h2{color:#fff2d7}.dark .section-head p{color:#d3ba9a}.principles{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.principle{padding-top:28px;border-top:1px solid rgba(239,212,162,.28)}.principle strong{display:block;font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1;color:#fff2d7;margin-bottom:12px}.principle p{color:#cdb391;line-height:1.8;font-size:.92rem}
-    footer{padding:56px 6%;text-align:center;background:var(--footer);color:#d8b981}footer img{width:306px;max-width:84vw;margin:0 auto 25px}.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:23px;margin-bottom:20px}.footer-links a{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;opacity:.92}.footer-links a:hover{opacity:.6}.footer-note{max-width:760px;margin:0 auto 14px;color:#bca27d;line-height:1.75;font-size:.81rem}.footer-disclosure{max-width:850px;margin:auto;color:#9f8561;line-height:1.7;font-size:.76rem}.footer-disclosure strong{color:#c8aa78}
-    @media(max-width:1050px){.site-header{height:auto;min-height:78px;padding:10px 5% 12px;flex-direction:column;gap:8px}.logo{height:auto}.logo img{width:178px;max-height:60px}.nav{justify-content:center;gap:14px}.nav a{font-size:.58rem;letter-spacing:.1em}.hero{padding-top:166px;min-height:92vh}.hero::before{background:linear-gradient(90deg,rgba(16,11,8,.9) 0%,rgba(16,11,8,.75) 38%,rgba(16,11,8,.42) 70%,rgba(16,11,8,.18) 100%),linear-gradient(180deg,rgba(16,11,8,.16),rgba(16,11,8,.28))}.collections-grid{grid-template-columns:repeat(2,1fr)}.feature-layout{grid-template-columns:1fr}.feature-visual{min-height:420px}.principles{grid-template-columns:1fr}}
-    @media(max-width:760px){.site-header{min-height:74px;padding:10px 18px 13px}.logo img{width:164px;max-height:56px}.nav{gap:12px}.nav a{font-size:.55rem}.nav .pill{padding:7px 10px}.hero{min-height:88vh;padding:154px 22px 58px;align-items:flex-end}.hero-video{object-position:center right}.hero::before{background:linear-gradient(180deg,rgba(16,11,8,.18) 0%,rgba(16,11,8,.48) 42%,rgba(16,11,8,.9) 100%),linear-gradient(90deg,rgba(16,11,8,.58),rgba(16,11,8,.16))}.eyebrow{font-size:.65rem}h1{font-size:3.25rem;line-height:.92}.hero-content p{font-size:.96rem}.actions{align-items:stretch}.btn{width:100%}.scroll-cue{display:none}section{padding:72px 22px}.section-head{margin-bottom:40px}h2{font-size:2.9rem}.collections-grid{grid-template-columns:1fr}.collection{min-height:245px;padding:28px}.feature-list a{grid-template-columns:1fr;gap:8px}footer img{width:272px}}
+    footer{
+      background:
+        radial-gradient(circle at 10% 12%, rgba(200,148,73,.12), transparent 26%),
+        linear-gradient(180deg,#080604 0%,#030302 100%);
+      color:#d8b981;
+      border-top:1px solid rgba(239,212,162,.12);
+    }
+
+    .site-footer{
+      padding:62px 5.5% 34px;
+    }
+
+    .footer-grid{
+      max-width:1240px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(340px,1.25fr) .75fr .75fr;
+      gap:76px;
+      align-items:start;
+    }
+
+    .footer-brand img{
+      width:440px;
+      max-width:100%;
+      margin:0 0 22px;
+      filter:drop-shadow(0 0 18px rgba(232,181,82,.18));
+    }
+
+    .footer-brand p{
+      max-width:520px;
+      color:#d7c2a3;
+      line-height:1.82;
+      font-size:.94rem;
+      margin-bottom:18px;
+    }
+
+    .footer-disclosure{
+      max-width:560px;
+      color:#a98f68;
+      line-height:1.72;
+      font-size:.79rem;
+      margin-bottom:30px;
+    }
+
+    .footer-disclosure strong{
+      color:#d4b477;
+    }
+
+    .pinterest-button{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:46px;
+      padding:13px 20px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#e0b770,#b77b35);
+      color:#160d08;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      transition:.22s ease;
+    }
+
+    .pinterest-button:hover{
+      transform:translateY(-2px);
+      box-shadow:0 22px 48px rgba(0,0,0,.34);
+    }
+
+    .pinterest-button .pin-mark{
+      width:22px;
+      height:22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:#160d08;
+      color:#e8c27a;
+      font-weight:900;
+      font-size:.82rem;
+      line-height:1;
+    }
+
+    .footer-col h3{
+      color:#fff0cf;
+      font-size:.74rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:24px;
+    }
+
+    .footer-col a{
+      display:block;
+      color:#cbb18f;
+      line-height:1.3;
+      font-size:.9rem;
+      margin-bottom:17px;
+      transition:.22s ease;
+    }
+
+    .footer-col a:hover{
+      color:#f0d6a4;
+      transform:translateX(4px);
+    }
+
+    .footer-bottom{
+      max-width:1240px;
+      margin:44px auto 0;
+      padding-top:24px;
+      border-top:1px solid rgba(239,212,162,.12);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      color:#8d7558;
+      font-size:.75rem;
+      line-height:1.6;
+    }
+
+    @media(max-width:1050px)@media(max-width:1050px){ .site-header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      height:94px;
+      padding:0 5.2%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      background:rgba(16,11,8,.91);
+      border-bottom:1px solid rgba(239,212,162,.16);
+      backdrop-filter:blur(16px);
+    } .logo{
+      height:94px;
+      display:flex;
+      align-items:center;
+      flex:0 0 auto;
+    } .logo img{
+      width:286px;
+      max-height:84px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 14px rgba(232,181,82,.22));
+    }.nav{justify-content:center;gap:14px}.nav a{font-size:.58rem;letter-spacing:.1em}.hero{padding-top:184px;min-height:92vh}.hero::before{background:linear-gradient(90deg,rgba(16,11,8,.9) 0%,rgba(16,11,8,.75) 38%,rgba(16,11,8,.42) 70%,rgba(16,11,8,.18) 100%),linear-gradient(180deg,rgba(16,11,8,.16),rgba(16,11,8,.28))}.collections-grid{grid-template-columns:repeat(2,1fr)}.feature-layout{grid-template-columns:1fr}.feature-visual{min-height:420px}.principles{grid-template-columns:1fr}}
+    @media(max-width:760px){ .site-header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      height:94px;
+      padding:0 5.2%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      background:rgba(16,11,8,.91);
+      border-bottom:1px solid rgba(239,212,162,.16);
+      backdrop-filter:blur(16px);
+    } .logo img{
+      width:286px;
+      max-height:84px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 14px rgba(232,181,82,.22));
+    }.nav{gap:12px}.nav a{font-size:.55rem}.nav .pill{padding:7px 10px}.hero{min-height:88vh;padding:168px 22px 58px;align-items:flex-end}.hero-video{object-position:center right}.hero::before{background:linear-gradient(180deg,rgba(16,11,8,.18) 0%,rgba(16,11,8,.48) 42%,rgba(16,11,8,.9) 100%),linear-gradient(90deg,rgba(16,11,8,.58),rgba(16,11,8,.16))}.eyebrow{font-size:.65rem}h1{font-size:3.25rem;line-height:.92}.hero-content p{font-size:.96rem}.actions{align-items:stretch}.btn{width:100%}.scroll-cue{display:none}section{padding:72px 22px}.section-head{margin-bottom:40px}h2{font-size:2.9rem}.collections-grid{grid-template-columns:1fr}.collection{min-height:245px;padding:28px}.feature-list a{grid-template-columns:1fr;gap:8px}footer img{width:272px}}
   </style>
 </head>
 <body>
@@ -116,11 +300,51 @@
     <section class="feature"><div class="feature-layout"><div class="feature-visual" aria-hidden="true"></div><div class="feature-text"><span class="eyebrow">Gift direction</span><h2>Small gifts should still feel intentional.</h2><p>Neatladies prioritizes items that look refined, solve a clear gifting need, or add a polished detail to everyday life.</p><div class="feature-list"><a href="small-luxury-gifts.html" data-track="collection" data-collection="Small Luxury Gifts"><div><strong>Small luxury gifts</strong><span>Elegant gifts with a premium feel, without needing to be large or complicated.</span></div><small>Explore</small></a><a href="gifts-for-him.html" data-track="collection" data-collection="Gifts for Him"><div><strong>Gifts for Him</strong><span>A small, controlled section for refined male gifts only — not a full men’s store.</span></div><small>Explore</small></a><a href="editors-picks.html" data-track="collection" data-collection="Editor’s Picks"><div><strong>Editor’s Picks</strong><span>The best cross-category finds when product quality and images are strong enough.</span></div><small>Explore</small></a></div></div></div></section>
     <section class="dark"><div class="section-head"><span class="eyebrow">Homepage direction</span><h2>Only strong finds deserve the front page.</h2><p>The homepage carries the brand direction. Collection pages and product pages handle deeper product detail before visitors continue to Amazon.</p></div><div class="principles"><div class="principle"><strong>Strong visuals first</strong><p>No broken crops, no messy product dumps, and no weak visuals on the index.</p></div><div class="principle"><strong>Clear collection fit</strong><p>Every product should belong to the right collection before it gets pushed forward.</p></div><div class="principle"><strong>Better buying flow</strong><p>Visitors should understand the product in context before they ever continue to Amazon.</p></div></div></section>
   </main>
-  <footer>
-    <img src="images/main-neatladies-logo.webp" alt="Neatladies logo">
-    <div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    <div class="footer-note">Curated finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</div>
-    <div class="footer-disclosure"><strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.</div>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Neatladies homepage">
+          <img src="images/main-neatladies-logo.webp" alt="Neatladies logo">
+        </a>
+
+        <p>
+          Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.
+        </p>
+
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
+
+        <a class="pinterest-button" href="#" data-track="cta" aria-label="Follow Neatladies on Pinterest">
+          <span class="pin-mark">P</span>
+          Follow us on Pinterest
+        </a>
+      </div>
+
+      <div class="footer-col" aria-label="Footer navigation">
+        <h3>Navigation</h3>
+        <a href="#collections" data-track="collection" data-collection="Collections">Collections</a>
+        <a href="beauty.html" data-track="collection" data-collection="Beauty">Beauty</a>
+        <a href="jewelry.html" data-track="collection" data-collection="Jewelry">Jewelry</a>
+        <a href="nails.html" data-track="collection" data-collection="Nails">Nails</a>
+        <a href="small-luxury-gifts.html" data-track="collection" data-collection="Small Luxury Gifts">Small Luxury Gifts</a>
+        <a href="gifts-for-him.html" data-track="collection" data-collection="Gifts for Him">Gifts for Him</a>
+        <a href="editors-picks.html" data-track="collection" data-collection="Editor’s Picks">Editor’s Picks</a>
+      </div>
+
+      <div class="footer-col" aria-label="Legal links">
+        <h3>Legal</h3>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Neatladies. Curated product discovery and editorial shopping guidance.</span>
+      <span>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</span>
+    </div>
   </footer>
   <script>
     (function () {
