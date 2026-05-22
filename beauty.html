@@ -17,9 +17,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" />
   <link rel="canonical" href="https://neatladies.dedyn.io/beauty.html" />
 <meta name="theme-color" content="#2b151d" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -154,6 +151,10 @@
     }
   }
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -938,131 +939,243 @@
       }
     }
   
-/* Final alignment fixes: home-style typography and footer */
-body{
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+/* FINAL NEATLADIES IDENTITY LOCK — matches index/home color, font, header, and footer */
+:root{
+  --black:#100b08;
+  --cream:#f8efe4;
+  --gold:#c89449;
+  --soft-gold:#efd4a2;
+  --muted:#725947;
+  --line:rgba(67,42,26,.15);
+  --ink:#24130d;
+  --footer:#100c09;
+  --deep:#100b08;
+  --plum:#2f1e14;
+  --rose:#a97332;
+  --blush:#efe0cf;
+  --soft:#fff8ef;
+  --white:#fffaf3;
+  --shadow:0 28px 80px rgba(45,28,17,.15);
+  --shadow-soft:0 18px 46px rgba(45,28,17,.10);
 }
-h1,h2,.editorial-card h3{
-  font-family:"Playfair Display",Georgia,serif;
+body{
+  font-family:Inter,sans-serif!important;
+  background:var(--cream)!important;
+  color:var(--ink)!important;
+}
+h1,h2,.editorial-card h3,.product-body h3,.feature-card h3{
+  font-family:"Cormorant Garamond",serif!important;
+}
+.announcement{
+  background:#100b08!important;
+  color:var(--soft-gold)!important;
+  border-bottom:1px solid rgba(239,212,162,.14)!important;
+}
+.site-header{
+  position:sticky!important;
+  top:0!important;
+  z-index:50!important;
+  backdrop-filter:blur(16px)!important;
+  background:rgba(16,11,8,.94)!important;
+  border-bottom:1px solid rgba(239,212,162,.16)!important;
+}
+.nav{
+  min-height:94px!important;
+}
+.brand img{
+  height:auto!important;
+  width:286px!important;
+  max-height:84px!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 0 14px rgba(232,181,82,.22))!important;
+}
+.nav-links a{
+  color:var(--soft-gold)!important;
+  font-size:.68rem!important;
+  letter-spacing:.16em!important;
+  text-transform:uppercase!important;
+  opacity:.92!important;
+  font-weight:700!important;
+  background:transparent!important;
+}
+.nav-links a:hover{
+  opacity:.58!important;
+  color:var(--soft-gold)!important;
+  background:transparent!important;
 }
 .nav-cta{display:none!important;}
-.hero-panel{
-  align-self:center;
+.hero{
+  background:#100b08!important;
 }
-.hero-stat b{
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:22px;
+.hero::before{
+  background:
+    linear-gradient(90deg,rgba(16,11,8,.90) 0%,rgba(16,11,8,.78) 30%,rgba(16,11,8,.46) 53%,rgba(16,11,8,.14) 82%),
+    radial-gradient(circle at 22% 35%,rgba(200,148,73,.18),transparent 30%),
+    url("images/beauty-hero-luxury-vanity.webp") center right / cover no-repeat!important;
+}
+.hero::after{
+  background:linear-gradient(180deg,transparent,var(--cream))!important;
+}
+.hero-inner{
+  grid-template-columns:minmax(0,760px)!important;
+  justify-content:start!important;
+  gap:0!important;
+}
+.hero-panel,.hero-stats,.hero-stat{display:none!important;}
+.eyebrow,.kicker,.product-type{
+  color:#d8a75e!important;
+}
+h1{
+  color:#fff2d7!important;
+  letter-spacing:-.055em!important;
+}
+.hero-copy{
+  color:#e4cfb2!important;
+}
+.btn-primary,.card-link{
+  background:linear-gradient(135deg,#e4bb73,#bd7e35)!important;
+  color:#1a100a!important;
+  border-color:rgba(255,255,255,.14)!important;
+}
+.btn-ghost{
+  background:rgba(255,255,255,.055)!important;
+  color:#f0d6a4!important;
+  border-color:rgba(239,212,162,.35)!important;
+}
+.section,
+.routine-card,
+.seo-block{
+  background:transparent;
+}
+h2{
+  color:var(--ink)!important;
+}
+.product-card,.routine-card,.seo-block,.chip{
+  background:rgba(255,250,243,.72)!important;
+  border-color:var(--line)!important;
+}
+.product-media{
+  background:linear-gradient(135deg,#fff8ef,#efe0cf)!important;
+}
+.badge{
+  background:rgba(16,11,8,.78)!important;
+  color:#efd4a2!important;
 }
 .footer{display:none!important;}
 .site-footer{
-  margin-top:50px;
-  background:
-    radial-gradient(circle at 16% 0%, rgba(184,107,127,.28), transparent 34%),
-    linear-gradient(135deg,#1d1015 0%,#2b151d 52%,#140b0f 100%);
-  color:#fff8f5;
-  padding:72px 0 28px;
-  border-top:1px solid rgba(217,179,109,.18);
+  margin-top:0!important;
+  padding:62px 5.5% 34px!important;
+  background:#100c09!important;
+  color:#d8b981!important;
 }
-.footer-shell{
-  width:min(var(--max),calc(100% - 32px));
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.35fr .72fr .72fr;
-  gap:64px;
-  align-items:start;
+.footer-grid{
+  max-width:1240px!important;
+  margin:0 auto!important;
+  display:grid!important;
+  grid-template-columns:minmax(340px,1.25fr) .75fr .75fr!important;
+  gap:76px!important;
+  align-items:start!important;
 }
-.footer-logo{
-  display:inline-flex;
-  margin-bottom:18px;
+.footer-brand img{
+  width:360px!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0 0 22px!important;
+  filter:drop-shadow(0 0 18px rgba(232,181,82,.18))!important;
 }
-.footer-logo img{
-  width:245px;
-  height:auto;
-  object-fit:contain;
-  filter:drop-shadow(0 12px 24px rgba(217,179,109,.14));
+.footer-brand p{
+  max-width:520px!important;
+  color:#d7c2a3!important;
+  line-height:1.82!important;
+  font-size:.94rem!important;
+  margin:0 0 18px!important;
 }
-.footer-brand-block p{
-  max-width:500px;
-  color:rgba(255,248,245,.76);
-  line-height:1.72;
-  margin:0 0 14px;
-  font-size:15px;
+.footer-disclosure{
+  max-width:560px!important;
+  color:#a98f68!important;
+  line-height:1.72!important;
+  font-size:.79rem!important;
+  margin-bottom:30px!important;
 }
-.footer-brand-block .affiliate-note{
-  font-size:13px;
-  color:rgba(255,248,245,.66);
+.footer-disclosure strong{color:#d4b477!important;}
+.pinterest-button{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  min-height:46px!important;
+  padding:13px 20px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#e0b770,#b77b35)!important;
+  color:#160d08!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  box-shadow:0 18px 38px rgba(0,0,0,.28)!important;
+  font-size:.72rem!important;
+  font-weight:900!important;
+  letter-spacing:.1em!important;
+  text-transform:uppercase!important;
+  transition:.22s ease!important;
 }
-.footer-pinterest{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  margin-top:10px;
-  padding:14px 20px;
-  border-radius:999px;
-  color:#211117;
-  background:linear-gradient(135deg,#f4c978,#d9b36d);
-  box-shadow:0 18px 42px rgba(217,179,109,.22);
-  font-size:12px;
-  font-weight:950;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  transition:.22s ease;
+.pinterest-button:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 22px 48px rgba(0,0,0,.34)!important;
 }
-.footer-pinterest:hover{
-  transform:translateY(-2px);
-  box-shadow:0 24px 56px rgba(217,179,109,.28);
+.pinterest-button .pin-mark{
+  width:22px!important;
+  height:22px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:999px!important;
+  background:#160d08!important;
+  color:#e8c27a!important;
+  font-weight:900!important;
+  font-size:.82rem!important;
+  line-height:1!important;
 }
-.footer-title{
-  color:#f4c978;
-  font-size:11px;
-  font-weight:950;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  margin-bottom:16px;
-}
-.footer-col{
-  display:grid;
-  gap:12px;
+.footer-col h3{
+  color:#fff0cf!important;
+  font-size:.74rem!important;
+  letter-spacing:.18em!important;
+  text-transform:uppercase!important;
+  margin:0 0 24px!important;
 }
 .footer-col a{
-  color:rgba(255,248,245,.72);
-  font-size:14px;
-  font-weight:750;
-  transition:.2s ease;
+  display:block!important;
+  color:#cbb18f!important;
+  line-height:1.3!important;
+  font-size:.9rem!important;
+  margin-bottom:17px!important;
+  transition:.22s ease!important;
 }
 .footer-col a:hover{
-  color:#fff;
-  transform:translateX(3px);
+  color:#f0d6a4!important;
+  transform:translateX(4px)!important;
 }
-.site-footer .footer-bottom{
-  width:min(var(--max),calc(100% - 32px));
-  margin:52px auto 0;
-  padding-top:22px;
-  border-top:1px solid rgba(255,255,255,.11);
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  color:rgba(255,248,245,.48);
-  font-size:12px;
+.footer-bottom{
+  max-width:1240px!important;
+  margin:44px auto 0!important;
+  padding-top:24px!important;
+  border-top:1px solid rgba(239,212,162,.12)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  color:#8d7558!important;
+  font-size:.75rem!important;
+  line-height:1.6!important;
 }
-@media(max-width:980px){
-  .footer-shell{
-    grid-template-columns:1fr;
-    gap:34px;
-  }
-  .footer-logo img{
-    width:220px;
-  }
+@media(max-width:1050px){
+  .footer-grid{grid-template-columns:1fr!important;gap:38px!important;}
+  .footer-bottom{align-items:flex-start!important;flex-direction:column!important;}
+  .brand img{width:230px!important;}
+  .nav{min-height:78px!important;}
 }
-@media(max-width:620px){
-  .footer-logo img{
-    width:205px;
-  }
-  .footer-pinterest{
-    width:100%;
-  }
+@media(max-width:760px){
+  .brand img{width:200px!important;}
+  .nav{align-items:flex-start!important;flex-direction:column!important;padding:14px 0!important;}
+  .nav-links{justify-content:flex-start!important;}
+  .hero-inner{min-height:640px!important;padding-top:72px!important;}
 }
 
   </style>
@@ -1104,27 +1217,7 @@ h1,h2,.editorial-card h3{
             <a class="btn btn-ghost" href="#routine" data-track="hero_routine">See the routine flow</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Beauty routine highlights">
-          <strong>Beauty routine highlights</strong>
-          <p>
-            Start with skin prep, add a polished base, then finish with glow, lashes, and lips — curated in one clean beauty edit.
-          </p>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <b>Prep</b>
-              <span>Skin first</span>
-            </div>
-            <div class="hero-stat">
-              <b>Glow</b>
-              <span>Soft finish</span>
-            </div>
-            <div class="hero-stat">
-              <b>Finish</b>
-              <span>Eyes & lips</span>
-            </div>
-          </div>
-        </aside>
-      </div>
+</div>
     </section>
 
     <section class="section" id="beauty-products">
@@ -1143,7 +1236,7 @@ h1,h2,.editorial-card h3{
           </div>
         </div>
         <p>
-          Browse by beauty step: skin prep, base, glow, lashes, and lips — each pick is presented with a clean, polished shopping path.
+          Browse by beauty step: skin prep, base, glow, lashes, and lips — each pick opens a focused product page.
         </p>
       </div>
 
@@ -1338,20 +1431,20 @@ h1,h2,.editorial-card h3{
               <li><b>3</b><span>Prime, even the complexion, add glow, then finish lips and lashes.</span></li>
             </ul>
             <div class="beauty-note">
-              A polished routine starts with clear steps: cleanse, protect, prime, even the complexion, add glow, then finish with lashes and lips.
+              Neatladies product pages are written as editorial affiliate pages, not direct product listings. Visitors get context first, then choose whether to continue to Amazon.
             </div>
           </div>
         </article>
 
         <article class="editorial-card">
           <div class="editorial-content">
-            <p class="kicker">Beauty edit</p>
-            <h3>A beauty edit built to feel refined, not crowded.</h3>
+            <p class="kicker">Collection strategy</p>
+            <h3>More products can be added without closing the page.</h3>
             <p>
-              The collection is arranged like a real routine, so every product has a clear role instead of feeling like a random list.
+              The layout is built as an expandable beauty hub. New skincare, makeup, nails, fragrance-style visuals, and giftable beauty picks can be added as new cards while keeping the page clean and premium.
             </p>
             <p>
-              From skincare prep to finishing touches, the page keeps the experience calm, visual, and easy to browse.
+              This page should remain a gateway. Individual product pages should carry the stronger conversion sections, Amazon buttons, detailed images, product benefits, and outbound click tracking.
             </p>
           </div>
         </article>
@@ -1363,52 +1456,58 @@ h1,h2,.editorial-card h3{
         <p class="kicker">Neatladies beauty edit</p>
         <h2>Curated beauty favorites for everyday polish.</h2>
         <p>
-          This Neatladies beauty collection brings together makeup, skincare, SPF, glow enhancers, lip gloss, BB cream, mascara, primer, and Korean cleansing oil into one polished shopping path.
+          This Neatladies beauty collection brings together makeup, skincare, SPF, glow enhancers, lip gloss, BB cream, mascara, primer, and Korean cleansing oil into one polished shopping path. Instead of sending visitors straight to Amazon from a category page, each product opens a focused Neatladies product page with clearer context, stronger visuals, and a more confident buying journey.
         </p>
         <p>
-          The page is designed for discovery: compare beauty routine steps, browse product categories, and choose the product that fits the look or routine you are building.
+          The page is designed for discovery: visitors can compare beauty routine steps, browse product categories, and choose the product that fits their goal before moving forward.
         </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-shell">
-      <div class="footer-brand-block">
-        <a class="footer-logo" href="/" aria-label="Neatladies home footer" data-track="footer_logo">
-          <img src="images/main-neatladies-logo.webp" alt="Neatladies logo" />
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="Neatladies homepage" data-track="footer_logo">
+          <img src="images/main-neatladies-logo.webp" alt="Neatladies logo">
         </a>
+
         <p>
-          Neatladies curates polished beauty, jewelry, nails, gifts, and refined finds with an elegant editorial shopping experience.
+          Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.
         </p>
-        <p class="affiliate-note">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn from qualifying purchases when visitors click through to retailer pages. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </p>
-        <a class="footer-pinterest pinterest-track" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener noreferrer" data-track="footer_pinterest">
-          ● Follow us on Pinterest
+
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
+
+        <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
+          <span class="pin-mark">P</span>
+          Follow us on Pinterest
         </a>
       </div>
 
-      <div class="footer-col">
-        <div class="footer-title">Navigation</div>
-        <a href="/" data-track="footer_home">Home</a>
-        <a href="/beauty.html" data-track="footer_beauty">Beauty</a>
-        <a href="/jewelry.html" data-track="footer_jewelry">Jewelry</a>
-        <a href="/nails.html" data-track="footer_nails">Nails</a>
-        <a href="/gifts.html" data-track="footer_gifts">Gifts</a>
+      <div class="footer-col" aria-label="Footer navigation">
+        <h3>Navigation</h3>
+        <a href="/#collections" data-track="footer_collections" data-collection="Collections">Collections</a>
+        <a href="/beauty.html" data-track="footer_beauty" data-collection="Beauty">Beauty</a>
+        <a href="/jewelry.html" data-track="footer_jewelry" data-collection="Jewelry">Jewelry</a>
+        <a href="/nails.html" data-track="footer_nails" data-collection="Nails">Nails</a>
+        <a href="/small-luxury-gifts.html" data-track="footer_small_luxury_gifts" data-collection="Small Luxury Gifts">Small Luxury Gifts</a>
+        <a href="/gifts-for-him.html" data-track="footer_gifts_for_him" data-collection="Gifts for Him">Gifts for Him</a>
+        <a href="/editors-picks.html" data-track="footer_editors_picks" data-collection="Editor’s Picks">Editor’s Picks</a>
       </div>
 
-      <div class="footer-col">
-        <div class="footer-title">Legal</div>
+      <div class="footer-col" aria-label="Legal links">
+        <h3>Legal</h3>
         <a href="/about.html" data-track="footer_about">About</a>
         <a href="/contact.html" data-track="footer_contact">Contact</a>
-        <a href="/privacy-policy.html" data-track="footer_privacy">Privacy Policy</a>
-        <a href="/terms-of-use.html" data-track="footer_terms">Terms of Use</a>
+        <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
+        <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Neatladies. Curated product discovery and editorial shopping guidance.</span>
+      <span>© 2026 Neatladies. Curated product discovery and editorial shopping guidance.</span>
       <span>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</span>
     </div>
   </footer>
@@ -1424,14 +1523,14 @@ h1,h2,.editorial-card h3{
         }
       }
 
+      
       document.querySelectorAll('a[href*="amazon."], a[href*="amzn.to"]').forEach(function (el) {
         el.addEventListener('click', function () {
           const label = el.getAttribute('data-product') || el.textContent.trim() || 'amazon_outbound';
           sendGA('amazon_outbound_click', {
             event_category: 'affiliate',
             event_label: label,
-            link_url: el.href,
-            transport_type: 'beacon'
+            link_url: el.href
           });
           neatladiesTrackPinterest('lead', {
             event_id: 'amazon_' + label.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
@@ -1442,23 +1541,21 @@ h1,h2,.editorial-card h3{
 
       document.querySelectorAll('[data-track]').forEach(function (el) {
         el.addEventListener('click', function () {
-          const label = el.getAttribute('data-track') || 'tracked_click';
+          const label = el.getAttribute('data-track');
           sendGA('neatladies_click', {
             event_category: 'engagement',
             event_label: label,
-            link_url: el.href || '',
-            transport_type: 'beacon'
+            link_url: el.href || ''
           });
 
-          if (label.indexOf('pinterest') !== -1) {
+          if (label && label.indexOf('pinterest') !== -1) {
             neatladiesTrackPinterest('lead', {
-              event_id: 'pinterest_profile_click',
               lead_type: 'pinterest_profile_click',
               event_label: label
             });
           }
 
-          if (label.indexOf('product_') === 0) {
+          if (label && label.indexOf('product_') === 0) {
             neatladiesTrackPinterest('pagevisit', {
               page_type: 'beauty_collection_product_click',
               event_label: label
@@ -1476,6 +1573,8 @@ h1,h2,.editorial-card h3{
         item_category: 'beauty',
         page_title: 'Neatladies Beauty Collection'
       });
+});
     })();
-  </script></body>
+  </script>
+</body>
 </html>
