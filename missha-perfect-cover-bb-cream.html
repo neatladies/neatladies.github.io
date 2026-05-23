@@ -182,19 +182,21 @@
       isolation:isolate;
       overflow:hidden;
       padding:138px 5.5% 76px;
-      background:#100b08;
+      background:
+        url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat,
+        #100b08;
     }
 
     .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      z-index:-2;
+      z-index:0;
       background:
         linear-gradient(90deg,rgba(16,11,8,.94) 0%,rgba(55,8,8,.82) 32%,rgba(104,15,19,.42) 56%,rgba(104,15,19,.08) 84%),
         radial-gradient(circle at 20% 36%,rgba(200,148,73,.18),transparent 30%),
-        radial-gradient(circle at 5% 82%,rgba(143,18,24,.28),transparent 25%),
-        url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat;
+        radial-gradient(circle at 5% 82%,rgba(143,18,24,.28),transparent 25%);
+      pointer-events:none;
     }
 
     .hero::after{
@@ -202,14 +204,14 @@
       position:absolute;
       inset:auto 0 0 0;
       height:180px;
-      z-index:-1;
+      z-index:1;
       background:linear-gradient(180deg,transparent,var(--cream));
       pointer-events:none;
     }
 
     .hero-content{
       position:relative;
-      z-index:1;
+      z-index:2;
       max-width:670px;
       color:#fff2d7;
     }
@@ -525,12 +527,17 @@
       .logo img{width:230px;max-height:84px;filter:drop-shadow(0 0 14px rgba(232,181,82,.22))}
       .nav{justify-content:center;gap:14px}
       .nav a{font-size:.58rem;letter-spacing:.1em}
-      .hero{padding-top:184px;min-height:92vh}
+      .hero{
+        padding-top:184px;
+        min-height:92vh;
+        background:
+          url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat,
+          #100b08;
+      }
       .hero::before{
         background:
           linear-gradient(180deg,rgba(16,11,8,.22) 0%,rgba(16,11,8,.48) 45%,rgba(16,11,8,.92) 100%),
-          linear-gradient(90deg,rgba(16,11,8,.72),rgba(16,11,8,.10)),
-          url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat;
+          linear-gradient(90deg,rgba(16,11,8,.72),rgba(16,11,8,.10));
       }
       .zigzag,.zigzag.reverse{grid-template-columns:1fr;gap:30px;padding:58px 0}
       .zigzag.reverse .zigzag-copy,.zigzag.reverse .zigzag-media{order:initial}
@@ -553,11 +560,17 @@
       .logo img{width:210px;max-height:68px}
       .nav{gap:12px}
       .nav a{font-size:.55rem}
-      .hero{min-height:88vh;padding:170px 22px 58px;align-items:flex-end}
+      .hero{
+        min-height:88vh;
+        padding:170px 22px 58px;
+        align-items:flex-end;
+        background:
+          url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat,
+          #100b08;
+      }
       .hero::before{
         background:
-          linear-gradient(180deg,rgba(16,11,8,.12) 0%,rgba(16,11,8,.56) 46%,rgba(16,11,8,.94) 100%),
-          url("images/neat-nissha-hero-clean-red.webp") center right / cover no-repeat;
+          linear-gradient(180deg,rgba(16,11,8,.12) 0%,rgba(16,11,8,.56) 46%,rgba(16,11,8,.94) 100%);
       }
       .eyebrow{font-size:.65rem}
       h1{font-size:3.25rem;line-height:.92}
