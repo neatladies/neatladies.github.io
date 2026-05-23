@@ -38,6 +38,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV7FDWW9PV"></script>
@@ -373,36 +374,33 @@
 
     .amazon-button{
       margin-top:34px;
-      min-height:52px;
+      min-height:56px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:11px;
-      padding:15px 27px;
+      padding:15px 30px;
       border-radius:999px;
-      background:linear-gradient(135deg,#e4bb73,#bd7e35);
-      color:#1a100a;
-      border:1px solid rgba(255,255,255,.16);
-      box-shadow:0 22px 52px rgba(0,0,0,.30);
-      font-size:.76rem;
+      background:linear-gradient(135deg,#ff9900 0%,#ffb545 46%,#fff2cc 135%);
+      color:#111827;
+      border:1px solid rgba(255,181,69,.88);
+      box-shadow:0 0 22px rgba(255,153,0,.28),0 18px 46px rgba(16,11,8,.34);
+      font-size:.78rem;
       font-weight:900;
       letter-spacing:.13em;
       text-transform:uppercase;
       transition:.22s ease;
     }
 
-    .amazon-button:hover{transform:translateY(-2px);box-shadow:0 28px 64px rgba(0,0,0,.36)}
-    .amazon-mark{
-      width:22px;
-      height:22px;
-      border-radius:999px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:#1a100a;
-      color:#e8c27a;
-      font-weight:900;
-      font-size:.78rem;
+    .amazon-button:hover{
+      transform:translateY(-3px);
+      filter:brightness(1.05);
+      box-shadow:0 0 34px rgba(255,153,0,.46),0 24px 58px rgba(16,11,8,.42);
+    }
+
+    .amazon-button i{
+      font-size:1.08rem;
+      color:#111827;
       line-height:1;
     }
 
@@ -660,7 +658,7 @@
         <h2>Ready for a softer first cleanse?</h2>
         <p>Bring Anua Heartleaf Pore Control Cleansing Oil into your evening routine when you want makeup, sunscreen, and daily buildup to melt away with a calm, lightweight finish.</p>
         <a class="amazon-button" href="https://amzn.to/42PnuxO" target="_blank" rel="nofollow sponsored noopener" data-track="amazon_final_cta" data-product="Anua Heartleaf Pore Control Cleansing Oil">
-          <span class="amazon-mark">a</span>
+          <i class="fab fa-amazon" aria-hidden="true"></i>
           View on Amazon
         </a>
       </div>
