@@ -17,6 +17,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" />
   <meta name="theme-color" content="#100b08" />
 
+  <link rel="preload" as="image" href="/images/neat-nails-lashes-hero.webp" fetchpriority="high" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -477,8 +479,9 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
       max-width:1240px;
       margin:0 auto;
       display:grid;
-      grid-template-columns:minmax(340px, 1.25fr) .75fr .75fr;
-      gap:76px;
+      grid-template-columns:minmax(340px, 1.15fr) .8fr .75fr;
+      column-gap:76px;
+      row-gap:28px;
       align-items:start;
     }
 
@@ -499,14 +502,23 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
     }
 
     .footer-disclosure {
-      max-width:560px;
-      color:#a98f68;
+      max-width:620px;
+      color:#b79a70;
       line-height:1.72;
       font-size:.79rem;
-      margin-bottom:30px;
+      padding:20px 24px;
+      border-radius:22px;
+      border:1px solid rgba(239,212,162,.14);
+      background:rgba(255,250,243,.035);
     }
 
-    .footer-disclosure strong { color:#d4b477; }
+    .footer-disclosure-wrap {
+      grid-column:2 / 4;
+      justify-self:start;
+      margin-top:-10px;
+    }
+
+    .footer-disclosure strong { color:#f0d6a4; }
 
     .pinterest-button {
       display:inline-flex;
@@ -614,6 +626,11 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
       .footer-grid {
         grid-template-columns:1fr;
         gap:38px;
+      }
+
+      .footer-disclosure-wrap {
+        grid-column:auto;
+        margin-top:0;
       }
 
       .footer-bottom {
@@ -827,10 +844,6 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
           Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.
         </p>
 
-        <div class="footer-disclosure">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </div>
-
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
           Follow us on Pinterest
@@ -854,6 +867,10 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+      </div>
+
+      <div class="footer-disclosure footer-disclosure-wrap">
+        <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
       </div>
     </div>
 
