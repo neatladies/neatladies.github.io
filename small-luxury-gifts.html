@@ -121,7 +121,6 @@
       --white:#fffaf3;
       --soft:#fff8ef;
       --line:rgba(67,42,26,.15);
-      --shadow:0 28px 80px rgba(45,28,17,.15);
       --shadow-soft:0 18px 46px rgba(45,28,17,.10);
       --max:1180px;
     }
@@ -415,9 +414,21 @@
       filter:drop-shadow(0 18px 28px rgba(52,31,17,.16));
     }
 
+    .gift-media.jewelry-fit {
+      padding:16px;
+    }
+
+    .gift-media.jewelry-fit img {
+      width:auto;
+      height:auto;
+      max-width:96%;
+      max-height:96%;
+      object-fit:contain;
+      object-position:center;
+      filter:drop-shadow(0 14px 24px rgba(52,31,17,.12));
+    }
+
     .gift-media.focus-top img { object-position:center top; }
-    .gift-media.focus-right img { object-position:right center; }
-    .gift-media.focus-left img { object-position:left center; }
 
     .gift-body {
       position:relative;
@@ -696,11 +707,7 @@
         font-size:13px;
       }
 
-      .gift-dropdown {
-        left:0;
-        right:auto;
-      }
-
+      .gift-dropdown { left:0; right:auto; }
       .hero { min-height:680px; }
 
       .hero-inner {
@@ -775,7 +782,7 @@
         </a>
 
         <a class="gift-card" href="/swarovski-infinity-heart-bracelet.html" data-track="product_card_click" data-product="Swarovski Infinity Heart Bracelet">
-          <div class="gift-media cover focus-top">
+          <div class="gift-media contain jewelry-fit">
             <img src="images/neat-heart-main_81.webp" alt="Swarovski Infinity Heart Bracelet" loading="lazy">
           </div>
           <div class="gift-body">
@@ -787,7 +794,7 @@
         </a>
 
         <a class="gift-card" href="/swarovski-drop-earrings.html" data-track="product_card_click" data-product="Swarovski Stilla Drop Earrings">
-          <div class="gift-media cover">
+          <div class="gift-media contain jewelry-fit">
             <img src="images/neat-drop-main_71.webp" alt="Swarovski Stilla Drop Earrings" loading="lazy">
           </div>
           <div class="gift-body">
@@ -824,7 +831,7 @@
 
         <a class="gift-card" href="/vionami-rare-flower-candle.html" data-track="product_card_click" data-product="VIONAMI Rare Flower Luxury Candle">
           <div class="gift-media cover">
-            <img src="images/neat-candle-main-01.webp" alt="VIONAMI Rare Flower Luxury Candle" loading="lazy">
+            <img src="images/neat-candle-main-01.webpbp" alt="VIONAMI Rare Flower Luxury Candle" loading="lazy">
           </div>
           <div class="gift-body">
             <p class="gift-type">Scented candle</p>
