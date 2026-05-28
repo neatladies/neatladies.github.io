@@ -121,6 +121,7 @@
 
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
+
     body {
       margin:0;
       font-family:Inter, sans-serif;
@@ -128,6 +129,7 @@
       color:var(--ink);
       overflow-x:hidden;
     }
+
     img { max-width:100%; display:block; }
     a { color:inherit; text-decoration:none; }
     h1,h2,h3 { font-family:"Cormorant Garamond", serif; }
@@ -500,8 +502,8 @@
       max-width:1240px;
       margin:0 auto;
       display:grid;
-      grid-template-columns:minmax(320px, 1.05fr) .72fr .72fr minmax(280px, .95fr);
-      gap:46px;
+      grid-template-columns:minmax(340px, 1.22fr) .78fr .9fr;
+      gap:76px;
       align-items:start;
     }
 
@@ -514,11 +516,11 @@
     }
 
     .footer-brand p {
-      max-width:430px;
+      max-width:470px;
       color:#d7c2a3;
       line-height:1.82;
       font-size:.94rem;
-      margin:0 0 20px;
+      margin:0 0 24px;
     }
 
     .pinterest-button {
@@ -539,6 +541,11 @@
       transition:.22s ease;
     }
 
+    .pinterest-button:hover {
+      transform:translateY(-2px);
+      box-shadow:0 22px 48px rgba(0,0,0,.34);
+    }
+
     .pin-mark {
       width:22px;
       height:22px;
@@ -553,8 +560,7 @@
       line-height:1;
     }
 
-    .footer-col h3,
-    .footer-disclosure h3 {
+    .footer-col h3 {
       color:#fff0cf;
       font-size:.74rem;
       letter-spacing:.18em;
@@ -578,17 +584,16 @@
     }
 
     .footer-disclosure {
-      align-self:end;
-      padding:22px;
-      border-radius:24px;
-      border:1px solid rgba(239,212,162,.16);
-      background:rgba(255,248,239,.035);
+      max-width:420px;
+      margin-top:28px;
       color:#a98f68;
       line-height:1.72;
       font-size:.79rem;
     }
 
-    .footer-disclosure strong { color:#d4b477; }
+    .footer-disclosure strong {
+      color:#d4b477;
+    }
 
     .footer-bottom {
       max-width:1240px;
@@ -617,9 +622,10 @@
 
       .footer-grid {
         grid-template-columns:1fr 1fr;
+        gap:42px;
       }
 
-      .footer-disclosure {
+      .footer-brand {
         grid-column:1 / -1;
       }
     }
@@ -647,15 +653,20 @@
     }
 
     @media (max-width:720px) {
-      .footer-grid { grid-template-columns:1fr; }
+      .footer-grid {
+        grid-template-columns:1fr;
+      }
+
       .footer-bottom {
         align-items:flex-start;
         flex-direction:column;
       }
+
       .split-image,
       .split-image img {
         min-height:380px;
       }
+
       .final-image img {
         height:360px;
       }
@@ -858,11 +869,10 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
-      </div>
 
-      <div class="footer-disclosure">
-        <h3>Disclosure</h3>
-        <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
       </div>
     </div>
 
