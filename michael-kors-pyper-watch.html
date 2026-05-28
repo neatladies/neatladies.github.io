@@ -377,11 +377,33 @@
     .split-image.contain {
       padding:28px;
       background:linear-gradient(135deg, #fff8ef, #ead8c5);
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
 
     .split-image.contain img {
+      width:auto;
+      height:auto;
+      min-height:0;
+      max-width:360px;
+      max-height:430px;
       object-fit:contain;
-      min-height:460px;
+      object-position:center;
+      margin:auto;
+    }
+
+    .split.watch-profile-section {
+      grid-template-columns:.82fr 1.18fr;
+    }
+
+    .split.watch-profile-section .split-image.contain {
+      min-height:500px;
+    }
+
+    .split.watch-profile-section .split-image.contain img {
+      max-width:310px;
+      max-height:440px;
     }
 
     .split-copy { padding:10px 0; }
@@ -586,6 +608,7 @@
 
     @media (max-width:1080px) {
       .split,
+      .split.watch-profile-section,
       .final-inner { grid-template-columns:1fr; }
       .split.reverse .split-image,
       .split.reverse .split-copy { order:initial; }
@@ -609,6 +632,11 @@
       .footer-bottom { align-items:flex-start; flex-direction:column; }
       .split-image,
       .split-image img { min-height:380px; }
+      .split-image.contain img,
+      .split.watch-profile-section .split-image.contain img {
+        max-width:260px;
+        max-height:360px;
+      }
       .final-image img { height:360px; }
     }
 
@@ -713,7 +741,7 @@
           </div>
         </section>
 
-        <section class="split">
+        <section class="split watch-profile-section">
           <div class="split-image contain">
             <img src="images/neat-pyper-main_11.webp" alt="Side profile of Michael Kors Pyper gold-tone watch case" loading="lazy" />
           </div>
