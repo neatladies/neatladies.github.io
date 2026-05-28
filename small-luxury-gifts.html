@@ -120,7 +120,6 @@
       --white:#fffaf3;
       --soft:#fff8ef;
       --line:rgba(67,42,26,.15);
-      --shadow:0 28px 80px rgba(45,28,17,.15);
       --shadow-soft:0 18px 46px rgba(45,28,17,.10);
       --max:1180px;
     }
@@ -313,17 +312,9 @@
       padding:92px 0;
     }
 
-    .intro-panel {
-      margin-top:-68px;
-      position:relative;
-      z-index:4;
-      border-radius:36px;
-      padding:clamp(34px, 6vw, 68px);
-      background:
-        radial-gradient(circle at 88% 10%, rgba(239,212,162,.30), transparent 30%),
-        linear-gradient(135deg, rgba(255,250,243,.96), rgba(255,248,239,.9));
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
+    .section-head {
+      max-width:780px;
+      margin-bottom:42px;
     }
 
     .kicker {
@@ -335,7 +326,6 @@
       font-weight:950;
     }
 
-    .intro-panel h2,
     .section-head h2 {
       margin:0;
       color:var(--ink);
@@ -345,24 +335,10 @@
       font-size:clamp(34px, 5vw, 64px);
     }
 
-    .intro-panel p,
     .section-head p {
       color:var(--muted);
       line-height:1.72;
       font-size:16px;
-    }
-
-    .intro-panel p {
-      max-width:780px;
-      margin:20px 0 0;
-    }
-
-    .section-head {
-      max-width:780px;
-      margin-bottom:42px;
-    }
-
-    .section-head p {
       margin:18px 0 0;
     }
 
@@ -403,13 +379,9 @@
       transition:.32s ease;
     }
 
-    .product-card:hover .product-media img {
-      transform:scale(1.045);
-    }
+    .product-card:hover .product-media img { transform:scale(1.045); }
 
-    .product-body {
-      padding:24px 22px 26px;
-    }
+    .product-body { padding:24px 22px 26px; }
 
     .product-type {
       margin:0 0 10px;
@@ -612,33 +584,15 @@
 
     @media (max-width:1080px) {
       .product-grid { grid-template-columns:repeat(2, 1fr); }
-
-      .editorial-inner {
-        grid-template-columns:1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns:1fr 1fr;
-        gap:42px;
-      }
-
+      .editorial-inner { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:42px; }
       .footer-brand { grid-column:1 / -1; }
     }
 
     @media (max-width:980px) {
-      .nav {
-        min-height:auto;
-        padding:14px 0;
-        flex-wrap:wrap;
-      }
-
+      .nav { min-height:auto; padding:14px 0; flex-wrap:wrap; }
       .brand img { width:230px; }
-
-      .nav-links {
-        order:3;
-        width:100%;
-        justify-content:flex-start;
-      }
+      .nav-links { order:3; width:100%; justify-content:flex-start; }
 
       .hero::before {
         background:
@@ -649,29 +603,15 @@
 
     @media (max-width:720px) {
       .product-grid { grid-template-columns:1fr; }
-
       .product-media { height:320px; }
-
       .footer-grid { grid-template-columns:1fr; }
-
-      .footer-bottom {
-        align-items:flex-start;
-        flex-direction:column;
-      }
+      .footer-bottom { align-items:flex-start; flex-direction:column; }
     }
 
     @media (max-width:620px) {
       .brand img { width:200px; }
-
-      .nav {
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .nav-links {
-        justify-content:flex-start;
-        gap:6px;
-      }
+      .nav { align-items:flex-start; flex-direction:column; }
+      .nav-links { justify-content:flex-start; gap:6px; }
 
       .nav-links a,
       .gift-toggle {
@@ -679,11 +619,7 @@
         font-size:13px;
       }
 
-      .gift-dropdown {
-        left:0;
-        right:auto;
-      }
-
+      .gift-dropdown { left:0; right:auto; }
       .hero { min-height:680px; }
 
       .hero-inner {
@@ -692,10 +628,7 @@
       }
 
       h1 { font-size:clamp(42px, 12vw, 62px); }
-
       .section { padding:64px 0; }
-
-      .intro-panel { margin-top:-44px; }
     }
   </style>
 </head>
@@ -734,16 +667,6 @@
             A refined edit of beauty treats, jewelry, fragrance, candles, cozy home pieces, and elegant accessories chosen for thoughtful gifting without feeling ordinary.
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="intro-panel">
-        <p class="kicker">Curated gift guide</p>
-        <h2>Eight polished picks, no filler products.</h2>
-        <p>
-          This collection keeps only the strongest small luxury gifts from the final edit. Each pick has its own page with a closer look, styling notes, and a clear reason it belongs in the guide.
-        </p>
       </div>
     </section>
 
@@ -861,7 +784,7 @@
           <p class="kicker">Why this edit works</p>
           <h2>Small gifts should still feel intentional.</h2>
           <p>
-            The best small luxury gifts are not just expensive-looking. They feel useful, pretty, easy to understand, and ready to give without over-explaining.
+            The best small luxury gifts feel useful, pretty, easy to understand, and ready to give without over-explaining.
           </p>
         </div>
 
