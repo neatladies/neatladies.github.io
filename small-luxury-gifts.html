@@ -39,6 +39,7 @@
   <meta property="og:description" content="A refined edit of small luxury gifts with beauty, jewelry, fragrance, candles, cozy home finds, and elegant accessories." />
   <meta property="og:url" content="https://neatladies.dedyn.io/small-luxury-gifts.html" />
   <meta property="og:image" content="https://neatladies.dedyn.io/images/neat-small-gifts-hero.webp" />
+  <meta property="og:image:alt" content="Small luxury gifts arranged in a warm elegant Neatladies hero scene." />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Small Luxury Gifts for Women | Neatladies" />
@@ -120,11 +121,13 @@
       --white:#fffaf3;
       --soft:#fff8ef;
       --line:rgba(67,42,26,.15);
+      --shadow:0 28px 80px rgba(45,28,17,.15);
       --shadow-soft:0 18px 46px rgba(45,28,17,.10);
       --max:1180px;
     }
 
     * { box-sizing:border-box; }
+
     html { scroll-behavior:smooth; }
 
     body {
@@ -159,7 +162,11 @@
       gap:22px;
     }
 
-    .brand { display:inline-flex; align-items:center; min-width:168px; }
+    .brand {
+      display:inline-flex;
+      align-items:center;
+      min-width:168px;
+    }
 
     .brand img {
       width:286px;
@@ -197,7 +204,11 @@
     .nav-links a:hover,
     .gift-toggle:hover { opacity:.68; }
 
-    .gift-menu { position:relative; display:inline-flex; align-items:center; }
+    .gift-menu {
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+    }
 
     .gift-dropdown {
       position:absolute;
@@ -313,8 +324,8 @@
     }
 
     .section-head {
-      max-width:780px;
-      margin-bottom:42px;
+      max-width:800px;
+      margin-bottom:46px;
     }
 
     .kicker {
@@ -332,7 +343,7 @@
       line-height:.96;
       letter-spacing:-.055em;
       text-wrap:balance;
-      font-size:clamp(34px, 5vw, 64px);
+      font-size:clamp(38px, 5vw, 68px);
     }
 
     .section-head p {
@@ -340,76 +351,120 @@
       line-height:1.72;
       font-size:16px;
       margin:18px 0 0;
+      max-width:720px;
     }
 
-    .product-grid {
+    .luxury-grid {
       display:grid;
       grid-template-columns:repeat(4, 1fr);
       gap:24px;
     }
 
-    .product-card {
+    .gift-card {
       position:relative;
-      overflow:hidden;
-      border-radius:30px;
-      background:rgba(255,250,243,.82);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow-soft);
-      transition:.24s ease;
+      display:flex;
+      flex-direction:column;
       min-height:100%;
-    }
-
-    .product-card:hover {
-      transform:translateY(-6px);
-      box-shadow:0 28px 70px rgba(45,28,17,.16);
-    }
-
-    .product-media {
-      position:relative;
-      height:286px;
       overflow:hidden;
-      background:linear-gradient(135deg, #fff8ef, #ead8c5);
+      border-radius:34px;
+      background:rgba(255,250,243,.88);
+      border:1px solid rgba(67,42,26,.14);
+      box-shadow:var(--shadow-soft);
+      transition:transform .24s ease, box-shadow .24s ease, border-color .24s ease;
     }
 
-    .product-media img {
+    .gift-card:hover {
+      transform:translateY(-7px);
+      box-shadow:0 32px 78px rgba(45,28,17,.17);
+      border-color:rgba(200,148,73,.30);
+    }
+
+    .gift-media {
+      position:relative;
+      height:318px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(239,212,162,.24), transparent 36%),
+        linear-gradient(135deg, #fff8ef, #ead8c5);
+    }
+
+    .gift-media::after {
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:42%;
+      background:linear-gradient(180deg, transparent, rgba(16,11,8,.18));
+      pointer-events:none;
+    }
+
+    .gift-media img {
       width:100%;
       height:100%;
-      object-fit:cover;
       object-position:center;
-      transition:.32s ease;
+      transition:transform .36s ease;
     }
 
-    .product-card:hover .product-media img { transform:scale(1.045); }
+    .gift-card:hover .gift-media img { transform:scale(1.035); }
 
-    .product-body { padding:24px 22px 26px; }
+    .gift-media.cover img { object-fit:cover; }
 
-    .product-type {
+    .gift-media.contain {
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .gift-media.contain img {
+      width:auto;
+      height:auto;
+      max-width:92%;
+      max-height:92%;
+      object-fit:contain;
+      filter:drop-shadow(0 18px 28px rgba(52,31,17,.16));
+    }
+
+    .gift-media.focus-top img { object-position:center top; }
+    .gift-media.focus-right img { object-position:right center; }
+    .gift-media.focus-left img { object-position:left center; }
+
+    .gift-body {
+      position:relative;
+      padding:25px 23px 27px;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .gift-type {
       margin:0 0 10px;
       color:#9a5f20;
       font-size:11px;
-      letter-spacing:.14em;
+      letter-spacing:.15em;
       text-transform:uppercase;
       font-weight:950;
     }
 
-    .product-card h3 {
+    .gift-card h3 {
       margin:0;
       color:var(--ink);
-      font-size:clamp(24px, 2.4vw, 32px);
-      line-height:1;
-      letter-spacing:-.035em;
+      font-size:clamp(25px, 2.25vw, 33px);
+      line-height:.98;
+      letter-spacing:-.04em;
     }
 
-    .product-card p {
+    .gift-card p {
       margin:14px 0 0;
       color:var(--muted);
       font-size:14px;
-      line-height:1.65;
+      line-height:1.68;
+      flex:1;
     }
 
     .open-link {
       display:inline-flex;
-      margin-top:18px;
+      width:fit-content;
+      margin-top:20px;
       color:#5f391d;
       font-size:12px;
       font-weight:950;
@@ -424,7 +479,7 @@
         radial-gradient(circle at 20% 15%, rgba(200,148,73,.18), transparent 34%),
         linear-gradient(135deg, #100b08, #2b190f);
       color:var(--white);
-      margin-top:20px;
+      margin-top:18px;
       padding:92px 0;
     }
 
@@ -439,7 +494,7 @@
 
     .editorial-inner h2 {
       color:#fff2d7;
-      font-size:clamp(36px, 5vw, 68px);
+      font-size:clamp(38px, 5vw, 68px);
       line-height:.96;
       letter-spacing:-.055em;
       margin:0;
@@ -582,17 +637,36 @@
       line-height:1.6;
     }
 
+    @media (max-width:1180px) {
+      .luxury-grid { grid-template-columns:repeat(2, 1fr); }
+      .gift-media { height:360px; }
+    }
+
     @media (max-width:1080px) {
-      .product-grid { grid-template-columns:repeat(2, 1fr); }
       .editorial-inner { grid-template-columns:1fr; }
-      .footer-grid { grid-template-columns:1fr 1fr; gap:42px; }
+
+      .footer-grid {
+        grid-template-columns:1fr 1fr;
+        gap:42px;
+      }
+
       .footer-brand { grid-column:1 / -1; }
     }
 
     @media (max-width:980px) {
-      .nav { min-height:auto; padding:14px 0; flex-wrap:wrap; }
+      .nav {
+        min-height:auto;
+        padding:14px 0;
+        flex-wrap:wrap;
+      }
+
       .brand img { width:230px; }
-      .nav-links { order:3; width:100%; justify-content:flex-start; }
+
+      .nav-links {
+        order:3;
+        width:100%;
+        justify-content:flex-start;
+      }
 
       .hero::before {
         background:
@@ -602,16 +676,28 @@
     }
 
     @media (max-width:720px) {
-      .product-grid { grid-template-columns:1fr; }
-      .product-media { height:320px; }
+      .luxury-grid { grid-template-columns:1fr; }
+      .gift-media { height:350px; }
       .footer-grid { grid-template-columns:1fr; }
-      .footer-bottom { align-items:flex-start; flex-direction:column; }
+
+      .footer-bottom {
+        align-items:flex-start;
+        flex-direction:column;
+      }
     }
 
     @media (max-width:620px) {
       .brand img { width:200px; }
-      .nav { align-items:flex-start; flex-direction:column; }
-      .nav-links { justify-content:flex-start; gap:6px; }
+
+      .nav {
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .nav-links {
+        justify-content:flex-start;
+        gap:6px;
+      }
 
       .nav-links a,
       .gift-toggle {
@@ -619,7 +705,11 @@
         font-size:13px;
       }
 
-      .gift-dropdown { left:0; right:auto; }
+      .gift-dropdown {
+        left:0;
+        right:auto;
+      }
+
       .hero { min-height:680px; }
 
       .hero-inner {
@@ -629,6 +719,7 @@
 
       h1 { font-size:clamp(42px, 12vw, 62px); }
       .section { padding:64px 0; }
+      .gift-media { height:310px; }
     }
   </style>
 </head>
@@ -675,101 +766,101 @@
         <p class="kicker">The collection</p>
         <h2>Gift ideas made to feel considered.</h2>
         <p>
-          Choose from beauty, jewelry, fragrance, warm home accents, and polished organizers — all selected for presentation, usefulness, and feminine visual appeal.
+          Beauty, jewelry, fragrance, warm home accents, and polished organizers — selected for presentation, usefulness, and feminine visual appeal.
         </p>
       </div>
 
-      <div class="product-grid">
-        <a class="product-card" href="/sol-de-janeiro-jet-set-travel-shower-kit.html" data-track="product_card_click" data-product="Sol de Janeiro Jet Set Travel Shower Kit">
-          <div class="product-media">
+      <div class="luxury-grid">
+        <a class="gift-card" href="/sol-de-janeiro-jet-set-travel-shower-kit.html" data-track="product_card_click" data-product="Sol de Janeiro Jet Set Travel Shower Kit">
+          <div class="gift-media cover">
             <img src="images/neat-janeiro-main-01.webp" alt="Sol de Janeiro Jet Set Travel Shower Kit" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Beauty gift set</p>
+          <div class="gift-body">
+            <p class="gift-type">Beauty gift set</p>
             <h3>Sol de Janeiro Jet Set</h3>
-            <p>A bright travel-ready body care set with a pink pouch and sunny beauty energy.</p>
+            <p>A bright travel-ready body care set with sunny color, a pink pouch, and instant gift appeal.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/swarovski-infinity-heart-bracelet.html" data-track="product_card_click" data-product="Swarovski Infinity Heart Bracelet">
-          <div class="product-media">
-            <img src="images/neat-heart-main_41.webp" alt="Swarovski Infinity Heart Bracelet" loading="lazy">
+        <a class="gift-card" href="/swarovski-infinity-heart-bracelet.html" data-track="product_card_click" data-product="Swarovski Infinity Heart Bracelet">
+          <div class="gift-media cover focus-top">
+            <img src="images/neat-heart-main_11.webp" alt="Swarovski Infinity Heart Bracelet" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Jewelry gift</p>
+          <div class="gift-body">
+            <p class="gift-type">Jewelry gift</p>
             <h3>Swarovski Heart Bracelet</h3>
-            <p>A rose-gold tone heart bracelet with clear crystal shine and romantic gift appeal.</p>
+            <p>A rose-gold tone heart bracelet with crystal shine and a romantic, easy-to-gift finish.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/swarovski-drop-earrings.html" data-track="product_card_click" data-product="Swarovski Stilla Drop Earrings">
-          <div class="product-media">
-            <img src="images/neat-drop-main_01.webp" alt="Swarovski Stilla Drop Earrings" loading="lazy">
+        <a class="gift-card" href="/swarovski-drop-earrings.html" data-track="product_card_click" data-product="Swarovski Stilla Drop Earrings">
+          <div class="gift-media cover">
+            <img src="images/neat-drop-main_31.webp" alt="Swarovski Stilla Drop Earrings" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Crystal earrings</p>
+          <div class="gift-body">
+            <p class="gift-type">Crystal earrings</p>
             <h3>Swarovski Drop Earrings</h3>
-            <p>Clean crystal drop earrings with polished sparkle for dressy little moments.</p>
+            <p>Clean crystal drop earrings with refined sparkle for dinners, holidays, and dressy moments.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/ysl-mini-perfume-set.html" data-track="product_card_click" data-product="YSL Mini Perfume Travel Set">
-          <div class="product-media">
+        <a class="gift-card" href="/ysl-mini-perfume-set.html" data-track="product_card_click" data-product="Yves Saint Laurent Mini Perfume Travel Set">
+          <div class="gift-media contain">
             <img src="images/neat-yves-main_01.webp" alt="Yves Saint Laurent Mini Perfume Travel Set" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Fragrance discovery</p>
+          <div class="gift-body">
+            <p class="gift-type">Fragrance discovery</p>
             <h3>Yves Saint Laurent Mini Set</h3>
-            <p>Four iconic mini fragrances for travel, discovery, and elegant scent gifting.</p>
+            <p>Four iconic mini fragrances for travel, discovery, and polished scent gifting.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/luxury-fur-throw-blanket.html" data-track="product_card_click" data-product="Luxury Faux Fur Throw Blanket">
-          <div class="product-media">
-            <img src="images/neat-fur-main_31.webp" alt="Luxury faux fur throw blanket" loading="lazy">
+        <a class="gift-card" href="/luxury-fur-throw-blanket.html" data-track="product_card_click" data-product="Luxury Faux Fur Throw Blanket">
+          <div class="gift-media cover">
+            <img src="images/neat-fur-main_71.webp" alt="Luxury faux fur throw blanket" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Cozy home gift</p>
+          <div class="gift-body">
+            <p class="gift-type">Cozy home gift</p>
             <h3>Luxury Faux Fur Throw</h3>
-            <p>A cream-white plush throw made for warm rooms, soft corners, and comforting gifts.</p>
+            <p>A cream-white plush throw for warm rooms, soft corners, and comforting home gifts.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/vionami-rare-flower-candle.html" data-track="product_card_click" data-product="VIONAMI Rare Flower Luxury Candle">
-          <div class="product-media">
-            <img src="images/neat-candle-main-41.webp" alt="VIONAMI Rare Flower Luxury Candle" loading="lazy">
+        <a class="gift-card" href="/vionami-rare-flower-candle.html" data-track="product_card_click" data-product="VIONAMI Rare Flower Luxury Candle">
+          <div class="gift-media cover">
+            <img src="images/neat-candle-main-51.webp" alt="VIONAMI Rare Flower Luxury Candle" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Scented candle</p>
+          <div class="gift-body">
+            <p class="gift-type">Scented candle</p>
             <h3>VIONAMI Rare Flower Candle</h3>
-            <p>A floral candle gift with decorative glass styling and warm evening atmosphere.</p>
+            <p>A floral candle gift with decorative glass styling and a warm evening atmosphere.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/vlando-jewelry-box-organizer.html" data-track="product_card_click" data-product="VLANDO Jewelry Box Organizer">
-          <div class="product-media">
-            <img src="images/neat-vlando-main_01.webp" alt="VLANDO Jewelry Box Organizer" loading="lazy">
+        <a class="gift-card" href="/vlando-jewelry-box-organizer.html" data-track="product_card_click" data-product="VLANDO Jewelry Box Organizer">
+          <div class="gift-media cover">
+            <img src="images/neat-vlando-main_31.webp" alt="VLANDO Jewelry Box Organizer" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Jewelry organizer</p>
+          <div class="gift-body">
+            <p class="gift-type">Jewelry organizer</p>
             <h3>VLANDO Jewelry Box</h3>
-            <p>A cloud-white organizer with glass lid, gold handles, drawers, and soft compartments.</p>
+            <p>A cloud-white organizer with a glass lid, gold handles, drawers, and soft compartments.</p>
             <span class="open-link">View product</span>
           </div>
         </a>
 
-        <a class="product-card" href="/michael-kors-pyper-watch.html" data-track="product_card_click" data-product="Michael Kors Pyper Watch Gift Set">
-          <div class="product-media">
-            <img src="images/neat-pyper-main_31.webp" alt="Michael Kors Pyper Watch Gift Set" loading="lazy">
+        <a class="gift-card" href="/michael-kors-pyper-watch.html" data-track="product_card_click" data-product="Michael Kors Pyper Watch Gift Set">
+          <div class="gift-media contain">
+            <img src="images/neat-pyper-main_41.webp" alt="Michael Kors Pyper Watch Gift Set" loading="lazy">
           </div>
-          <div class="product-body">
-            <p class="product-type">Watch gift set</p>
+          <div class="gift-body">
+            <p class="gift-type">Watch gift set</p>
             <h3>Michael Kors Pyper Watch</h3>
             <p>A black-and-gold watch set with bracelet and earrings for everyday polish.</p>
             <span class="open-link">View product</span>
@@ -784,7 +875,7 @@
           <p class="kicker">Why this edit works</p>
           <h2>Small gifts should still feel intentional.</h2>
           <p>
-            The best small luxury gifts feel useful, pretty, easy to understand, and ready to give without over-explaining.
+            The strongest small luxury gifts feel useful, beautiful, easy to understand, and ready to give without over-explaining.
           </p>
         </div>
 
