@@ -157,13 +157,19 @@
 
     .dropdown{position:relative}
 
+    .dropdown > a{
+      display:inline-flex;
+      align-items:center;
+      cursor:pointer;
+    }
+
     .dropdown-menu{
       position:absolute;
       top:100%;
       right:0;
       min-width:210px;
       padding:14px;
-      margin-top:14px;
+      margin-top:0;
       background:rgba(16,11,8,.96);
       border:1px solid rgba(239,212,162,.22);
       border-radius:18px;
@@ -172,7 +178,8 @@
       gap:10px;
     }
 
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{display:flex}
 
     .hero{
       min-height:100vh;
