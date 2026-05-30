@@ -158,22 +158,37 @@
 
     .dropdown{position:relative}
 
+    .dropdown > a{
+      cursor:pointer;
+    }
+
+    .dropdown::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      top:100%;
+      height:14px;
+    }
+
     .dropdown-menu{
       position:absolute;
-      top:100%;
+      top:calc(100% + 10px);
       right:0;
       min-width:210px;
       padding:14px;
-      margin-top:14px;
       background:rgba(16,11,8,.96);
       border:1px solid rgba(239,212,162,.22);
       border-radius:18px;
       display:none;
       flex-direction:column;
       gap:10px;
+      z-index:70;
+      box-shadow:0 18px 44px rgba(0,0,0,.28);
     }
 
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{display:flex}
 
     .hero{
       min-height:100vh;
@@ -484,7 +499,7 @@
         <a href="/nails.html" data-track="nav_nails">Nails</a>
 
         <div class="dropdown">
-          <a href="#" aria-haspopup="true">Gifts</a>
+          <a href="javascript:void(0)" aria-haspopup="true" data-track="nav_gifts">Gifts</a>
           <div class="dropdown-menu">
             <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
             <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
