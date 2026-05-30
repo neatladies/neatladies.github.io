@@ -181,6 +181,58 @@
     }
     .nav a:hover{opacity:.58}
 
+    .nav-gifts{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .gifts-trigger{
+      cursor:default;
+    }
+
+    .gifts-menu{
+      position:absolute;
+      top:100%;
+      right:0;
+      min-width:220px;
+      padding:10px;
+      border-radius:18px;
+      background:rgba(16,11,8,.96);
+      border:1px solid rgba(239,212,162,.18);
+      box-shadow:0 22px 54px rgba(0,0,0,.28);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(8px);
+      transition:.22s ease;
+      z-index:60;
+    }
+
+    .nav-gifts:hover .gifts-menu,
+    .nav-gifts:focus-within .gifts-menu{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+
+    .gifts-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:12px;
+      color:var(--soft-gold);
+      font-size:.66rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .gifts-menu a:hover{
+      background:rgba(239,212,162,.08);
+      opacity:1;
+    }
+
+
     .hero{
       position:relative;
       min-height:100vh;
@@ -455,7 +507,12 @@
       color:#a98f68;
       line-height:1.72;
       font-size:.79rem;
-      margin-bottom:30px;
+      margin:18px 0 0;
+      border:0;
+      background:transparent;
+      border-radius:0;
+      padding:0;
+      box-shadow:none;
     }
 
     .footer-disclosure strong{color:#d4b477}
@@ -595,7 +652,13 @@
       <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
       <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
       <a href="/nails.html" data-track="nav_nails">Nails</a>
-      <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+      <div class="nav-gifts">
+        <a class="gifts-trigger" href="#" data-track="nav_gifts" aria-haspopup="true" aria-expanded="false">Gifts</a>
+        <div class="gifts-menu" aria-label="Gifts menu">
+          <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+          <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts for Him</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -698,10 +761,6 @@
 
         <p>Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</p>
 
-        <div class="footer-disclosure">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </div>
-
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
           Follow us on Pinterest
@@ -725,6 +784,9 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
       </div>
     </div>
 
