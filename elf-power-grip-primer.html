@@ -182,6 +182,13 @@
 
     .nav a:hover{opacity:.58}
 
+    .nav-gifts{position:relative;display:inline-flex;align-items:center}
+    .nav-gifts > a{cursor:pointer}
+    .nav-gifts-menu{position:absolute;top:100%;right:0;min-width:220px;padding:12px 0;margin-top:0;background:rgba(16,11,8,.96);border:1px solid rgba(239,212,162,.18);border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.28);display:none;z-index:80}
+    .nav-gifts-menu a{display:block;padding:12px 16px;color:var(--soft-gold);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.92;white-space:nowrap}
+    .nav-gifts-menu a:hover{opacity:.58}
+    .nav-gifts:hover .nav-gifts-menu,.nav-gifts:focus-within .nav-gifts-menu{display:block}
+
     .hero{
       position:relative;
       min-height:100vh;
@@ -452,11 +459,15 @@
     }
 
     .footer-disclosure{
-      max-width:560px;
+      margin-top:16px;
       color:#a98f68;
-      line-height:1.72;
+      line-height:1.7;
       font-size:.79rem;
-      margin-bottom:30px;
+      border:0;
+      background:transparent;
+      border-radius:0;
+      padding:0;
+      box-shadow:none;
     }
 
     .footer-disclosure strong{color:#d4b477}
@@ -596,7 +607,13 @@
       <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
       <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
       <a href="/nails.html" data-track="nav_nails">Nails</a>
-      <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+      <div class="nav-gifts">
+        <a href="#" data-track="nav_gifts" aria-haspopup="true" aria-expanded="false">Gifts</a>
+        <div class="nav-gifts-menu" aria-label="Gifts submenu">
+          <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+          <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -710,9 +727,6 @@
 
         <p>Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</p>
 
-        <div class="footer-disclosure">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </div>
 
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
@@ -737,6 +751,8 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+
+        <div class="footer-disclosure"><strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.</div>
       </div>
     </div>
 
