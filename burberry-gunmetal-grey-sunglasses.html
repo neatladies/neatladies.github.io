@@ -152,15 +152,17 @@
       right:0;
       min-width:210px;
       padding:14px;
-      margin-top:14px;
+      margin-top:0;
       background:rgba(16,11,8,.96);
       border:1px solid rgba(239,212,162,.22);
       border-radius:18px;
       display:none;
       flex-direction:column;
       gap:10px;
+      z-index:80;
     }
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{display:flex}
 
     .hero{
       min-height:100vh;
