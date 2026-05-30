@@ -352,18 +352,16 @@
     .product-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:30px;
+      gap:28px;
     }
 
     .product-card{
       position:relative;
       overflow:hidden;
-      border-radius:32px;
-      background:
-        radial-gradient(circle at top left,rgba(239,212,162,.28),transparent 34%),
-        linear-gradient(145deg,#fff8ef,#ead9c2);
+      border-radius:30px;
+      background:linear-gradient(180deg,#fff8ef 0%,#f0dfc9 100%);
       border:1px solid rgba(200,148,73,.22);
-      box-shadow:0 24px 70px rgba(36,19,13,.12);
+      box-shadow:0 22px 60px rgba(36,19,13,.11);
       transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
       min-height:100%;
       display:flex;
@@ -371,75 +369,47 @@
     }
 
     .product-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 30px 88px rgba(36,19,13,.18);
+      transform:translateY(-5px);
+      box-shadow:0 28px 78px rgba(36,19,13,.16);
       border-color:rgba(200,148,73,.42);
     }
 
     .product-media{
       position:relative;
-      height:390px;
-      padding:0;
+      height:330px;
+      padding:22px;
       display:flex;
       align-items:center;
       justify-content:center;
       overflow:hidden;
       background:
-        radial-gradient(circle at 50% 42%, rgba(239,212,162,.24), transparent 45%),
-        linear-gradient(145deg,#2f1e14 0%,#3a281d 46%,#100b08 100%);
-    }
-
-    .product-media::before{
-      content:"";
-      position:absolute;
-      inset:22px;
-      border-radius:26px;
-      background:
-        radial-gradient(circle at center,rgba(255,250,243,.12),transparent 56%),
-        linear-gradient(135deg,rgba(255,250,243,.07),rgba(200,148,73,.04));
-      border:1px solid rgba(239,212,162,.12);
-      pointer-events:none;
+        radial-gradient(circle at 50% 45%, rgba(255,250,243,.96) 0%, rgba(246,230,209,.88) 44%, rgba(217,189,155,.46) 100%);
+      border-bottom:1px solid rgba(200,148,73,.16);
     }
 
     .product-media.dark{
       background:
-        radial-gradient(circle at 50% 42%, rgba(239,212,162,.20), transparent 44%),
-        linear-gradient(145deg,#24130d 0%,#3c281c 48%,#0e0906 100%);
+        radial-gradient(circle at 50% 44%, rgba(105,75,52,.45) 0%, rgba(45,30,20,.84) 58%, rgba(16,11,8,.96) 100%);
     }
 
     .product-media img{
-      position:relative;
-      z-index:1;
       width:100%;
       height:100%;
       object-fit:contain;
       object-position:center;
-      padding:16px;
-      transform:scale(1.18);
-      filter:drop-shadow(0 24px 28px rgba(0,0,0,.28));
+      filter:drop-shadow(0 18px 22px rgba(36,19,13,.18));
       mix-blend-mode:normal;
     }
 
-    .product-card:nth-child(1) .product-media img{transform:scale(1.28);}
-    .product-card:nth-child(2) .product-media img{transform:scale(1.24);}
-    .product-card:nth-child(3) .product-media img{transform:scale(1.34);}
-    .product-card:nth-child(4) .product-media img{transform:scale(1.30);}
-    .product-card:nth-child(5) .product-media img{transform:scale(1.34);}
-    .product-card:nth-child(6) .product-media img{transform:scale(1.25);}
-    .product-card:nth-child(7) .product-media img{transform:scale(1.22);}
-    .product-card:nth-child(8) .product-media img{transform:scale(1.24);}
-    .product-card:nth-child(9) .product-media img{transform:scale(1.20);}
-    .product-card:nth-child(10) .product-media img{transform:scale(1.22);}
-    .product-card:nth-child(11) .product-media img{transform:scale(1.24);}
-    .product-card:nth-child(12) .product-media img{transform:scale(1.20);}
+    .product-media.dark img{
+      filter:drop-shadow(0 20px 26px rgba(0,0,0,.32));
+    }
 
     .product-content{
-      padding:28px 28px 30px;
+      padding:25px 25px 27px;
       display:flex;
       flex-direction:column;
       flex:1;
-      background:linear-gradient(180deg,#fff8ef 0%,#f1e2cf 100%);
-      border-top:1px solid rgba(200,148,73,.18);
     }
 
     .tag{
@@ -598,7 +568,7 @@
       .hero h1{font-size:56px}
       .product-grid{grid-template-columns:1fr}
       .footer-inner{grid-template-columns:1fr}
-      .product-media{height:350px}
+      .product-media{height:300px}
     }
   </style>
 </head>
@@ -682,7 +652,7 @@
 
       <div class="product-grid">
         <a class="product-card" href="/azzaro-the-most-wanted-parfum.html" data-track="product_card_click" data-product="Azzaro The Most Wanted">
-          <div class="product-media dark">
+          <div class="product-media">
             <img src="images/neat-azzaro-main_01.webp" alt="Azzaro The Most Wanted Parfum bottle and box" />
           </div>
           <div class="product-content">
@@ -706,7 +676,7 @@
         </a>
 
         <a class="product-card" href="/gucci-guilty-gift-set-for-men.html" data-track="product_card_click" data-product="Gucci Guilty Gift Set">
-          <div class="product-media dark">
+          <div class="product-media">
             <img src="images/neat-gucci-main-01.webp" alt="Gucci Guilty gift set for men" />
           </div>
           <div class="product-content">
@@ -766,7 +736,7 @@
         </a>
 
         <a class="product-card" href="/novium-hoverpen-interstellar-mars-magma.html" data-track="product_card_click" data-product="Novium Hoverpen">
-          <div class="product-media dark">
+          <div class="product-media">
             <img src="images/neat-magma-main-01.webp" alt="Novium Hoverpen Interstellar Mars Magma" />
           </div>
           <div class="product-content">
