@@ -150,10 +150,24 @@
       text-transform:uppercase;
     }
 
-    .nav-links a{opacity:.88}
-    .nav-links a:hover{color:var(--soft-gold);opacity:1}
+    .nav-links a,
+    .gift-toggle{opacity:.88}
+
+    .nav-links a:hover,
+    .gift-toggle:hover{color:var(--soft-gold);opacity:1}
 
     .dropdown{position:relative}
+
+    .gift-toggle{
+      color:var(--cream);
+      font:inherit;
+      letter-spacing:inherit;
+      text-transform:inherit;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      padding:0;
+    }
 
     .dropdown-menu{
       position:absolute;
@@ -168,9 +182,11 @@
       display:none;
       flex-direction:column;
       gap:10px;
+      z-index:100;
     }
 
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{display:flex}
 
     .hero{
       min-height:100vh;
@@ -475,8 +491,8 @@
         <a href="/nails.html" data-track="nav_nails">Nails</a>
 
         <div class="dropdown">
-          <a href="#" aria-haspopup="true">Gifts</a>
-          <div class="dropdown-menu">
+          <button class="gift-toggle" type="button" aria-haspopup="true" aria-expanded="false">Gifts</button>
+          <div class="dropdown-menu" aria-label="Gift collections">
             <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
             <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
           </div>
