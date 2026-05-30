@@ -141,6 +141,44 @@
       opacity: 1;
     }
 
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      cursor: default;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 210px;
+      padding: 14px;
+      margin-top: 14px;
+      background: rgba(16, 11, 8, 0.96);
+      border: 1px solid rgba(239, 212, 162, 0.22);
+      border-radius: 18px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
     .hero {
       min-height: 68vh;
       padding: 150px 22px 90px;
@@ -358,7 +396,13 @@
         <a href="beauty.html" data-track="internal_navigation" data-destination="beauty">Beauty</a>
         <a href="jewelry.html" data-track="internal_navigation" data-destination="jewelry">Jewelry</a>
         <a href="nails.html" data-track="internal_navigation" data-destination="nails">Nails</a>
-        <a href="gifts.html" data-track="internal_navigation" data-destination="gifts">Gifts</a>
+        <div class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" data-track="internal_navigation" data-destination="gifts_dropdown">Gifts</a>
+          <div class="dropdown-menu">
+            <a href="small-luxury-gifts.html" data-track="internal_navigation" data-destination="small-luxury-gifts">Small Luxury Gifts</a>
+            <a href="gifts-for-him.html" data-track="internal_navigation" data-destination="gifts-for-him">Gifts for Him</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -428,9 +472,6 @@
           Neatladies is an editorial shopping guide for elegant beauty, jewelry, nails,
           gifts, and feminine everyday details.
         </p>
-        <p style="margin-top:14px;">
-          As an Amazon Associate, Neatladies may earn from qualifying purchases.
-        </p>
         <a class="pinterest-link" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener noreferrer" data-track="footer_pinterest">
           Follow on Pinterest
         </a>
@@ -454,6 +495,9 @@
           <a href="privacy-policy.html" data-track="internal_navigation" data-destination="privacy-policy">Privacy Policy</a>
           <a href="terms-of-use.html" data-track="internal_navigation" data-destination="terms-of-use">Terms of Use</a>
         </div>
+        <p class="footer-disclosure">
+          As an Amazon Associate, Neatladies may earn from qualifying purchases.
+        </p>
       </div>
     </div>
 
