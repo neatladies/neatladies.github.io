@@ -129,7 +129,7 @@
     img{display:block;width:100%}
     .site-header{position:fixed;inset:0 0 auto 0;z-index:50;min-height:88px;padding:0 5.2%;display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(90deg,rgba(16,11,8,.88),rgba(47,30,20,.82));border-bottom:1px solid rgba(239,212,162,.16);backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%)}
     .logo{min-height:88px;display:flex;align-items:center;flex:0 0 auto}.logo img{width:250px;max-height:74px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(232,181,82,.18))}
-    .nav{display:flex;align-items:center;gap:30px;flex-wrap:wrap}.nav a{color:var(--soft-gold);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;white-space:nowrap;transition:.22s ease;font-weight:700}.nav a:hover{opacity:.58}
+    .nav{display:flex;align-items:center;gap:30px;flex-wrap:wrap}.nav a{color:var(--soft-gold);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;white-space:nowrap;transition:.22s ease;font-weight:700}.nav a:hover{opacity:.58}.nav-gifts{position:relative;display:inline-flex;align-items:center}.nav-gifts-toggle{cursor:default}.nav-gifts-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:220px;padding:12px;margin-top:0;background:rgba(16,11,8,.97);border:1px solid rgba(239,212,162,.20);border-radius:18px;box-shadow:0 22px 48px rgba(0,0,0,.28);display:none;flex-direction:column;gap:10px;z-index:80}.nav-gifts:hover .nav-gifts-menu,.nav-gifts:focus-within .nav-gifts-menu{display:flex}.nav-gifts-menu a{display:block;padding:10px 12px;border-radius:12px}
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;isolation:isolate;overflow:hidden;padding:138px 5.5% 76px;background:#100b08}
     .hero::before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(90deg,rgba(16,11,8,.95) 0%,rgba(16,11,8,.86) 28%,rgba(16,11,8,.56) 54%,rgba(16,11,8,.08) 88%),radial-gradient(circle at 18% 36%,rgba(200,148,73,.20),transparent 32%),var(--hero),var(--fallback);background-position:center,center,center right,center right;background-size:cover,cover,cover,cover;background-repeat:no-repeat,no-repeat,no-repeat,no-repeat}
     .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:180px;z-index:-1;background:linear-gradient(180deg,transparent,var(--cream));pointer-events:none}.hero-content{position:relative;z-index:1;max-width:660px;color:#fff2d7}.eyebrow{display:block;color:#d8a75e;font-size:.72rem;font-weight:800;letter-spacing:.23em;text-transform:uppercase;margin-bottom:20px}h1,h2,h3{font-family:"Cormorant Garamond",serif}h1{font-size:clamp(3.6rem,7vw,7.7rem);line-height:.88;font-weight:700;letter-spacing:-.05em;max-width:760px;margin-bottom:28px}.hero p{font-size:clamp(1.03rem,1.45vw,1.27rem);line-height:1.9;color:rgba(255,242,215,.88);max-width:610px;margin-bottom:38px}.hero-actions{display:flex;flex-wrap:wrap;gap:14px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;border:1px solid rgba(239,212,162,.28);font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;transition:.25s ease}.btn-primary{background:linear-gradient(135deg,#efd4a2,#c89449);color:#20120b;border-color:transparent;box-shadow:0 18px 46px rgba(200,148,73,.28)}.btn-ghost{color:#f7e4bd;background:rgba(255,255,255,.05)}.btn:hover{transform:translateY(-2px);filter:saturate(1.08)}
@@ -152,7 +152,13 @@
       <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
       <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
       <a href="/nails.html" data-track="nav_nails">Nails</a>
-      <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+      <span class="nav-gifts">
+        <a class="nav-gifts-toggle" href="#" data-track="nav_gifts" aria-haspopup="true" aria-expanded="false">Gifts</a>
+        <span class="nav-gifts-menu" aria-label="Gifts menu">
+          <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+          <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
+        </span>
+      </span>
     </nav>
   </header>
 
@@ -270,10 +276,6 @@
 
         <p>Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</p>
 
-        <div class="footer-disclosure">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </div>
-
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
           Follow us on Pinterest
@@ -297,6 +299,9 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
       </div>
     </div>
 
