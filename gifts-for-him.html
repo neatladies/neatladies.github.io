@@ -170,7 +170,11 @@
     .nav-links a{opacity:.88}
     .nav-links a:hover{color:var(--soft-gold);opacity:1}
 
-    .dropdown{position:relative}
+    .dropdown{
+      position:relative;
+      padding-bottom:14px;
+      margin-bottom:-14px;
+    }
 
     .dropdown-menu{
       position:absolute;
@@ -178,16 +182,20 @@
       right:0;
       min-width:210px;
       padding:14px;
-      margin-top:14px;
+      margin-top:0;
       background:rgba(16,11,8,.96);
       border:1px solid rgba(239,212,162,.22);
       border-radius:18px;
       display:none;
       flex-direction:column;
       gap:10px;
+      z-index:999;
     }
 
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{
+      display:flex;
+    }
 
     .hero{
       min-height:100vh;
@@ -860,9 +868,8 @@
         <h3>Legal</h3>
         <a href="/privacy-policy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms</a>
-        <a href="/disclaimer.html" data-track="footer_disclaimer">Disclaimer</a>
-        <a href="/affiliate-disclosure.html" data-track="footer_affiliate">Affiliate Disclosure</a>
-        <a href="/cookie-policy.html" data-track="footer_cookies">Cookie Policy</a>
+        <a href="/about.html" data-track="footer_about">About</a>
+        <a href="/contact.html" data-track="footer_contact">Contact</a>
 
         <p class="disclosure">
           As an Amazon Associate, Neatladies may earn from qualifying purchases. Product availability, prices, and details may change on Amazon without notice.
