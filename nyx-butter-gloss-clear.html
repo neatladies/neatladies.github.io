@@ -172,7 +172,8 @@
 
     .nav{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
 
-    .nav a{
+    .nav a,
+    .gift-toggle{
       color:var(--soft-gold);
       font-size:.68rem;
       letter-spacing:.16em;
@@ -181,9 +182,57 @@
       white-space:nowrap;
       transition:.22s ease;
       font-weight:700;
+      background:transparent;
+      border:0;
+      padding:0;
+      cursor:pointer;
+      font-family:Inter,sans-serif;
     }
 
-    .nav a:hover{opacity:.58}
+    .nav a:hover,
+    .gift-toggle:hover{opacity:.58}
+
+    .gift-menu{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+    }
+
+    .gift-dropdown{
+      position:absolute;
+      top:calc(100% + 16px);
+      right:0;
+      min-width:230px;
+      padding:12px;
+      border-radius:22px;
+      background:rgba(16,11,8,.96);
+      border:1px solid rgba(239,212,162,.22);
+      box-shadow:0 24px 60px rgba(0,0,0,.34);
+      display:none;
+      z-index:80;
+    }
+
+    .gift-menu:hover .gift-dropdown,
+    .gift-menu:focus-within .gift-dropdown{
+      display:block;
+    }
+
+    .gift-dropdown a{
+      display:block;
+      padding:12px 14px;
+      border-radius:16px;
+      color:var(--soft-gold);
+      font-size:.68rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-weight:700;
+      opacity:.94;
+    }
+
+    .gift-dropdown a:hover{
+      background:rgba(239,212,162,.08);
+      opacity:1;
+    }
 
     .hero{
       position:relative;
@@ -557,7 +606,7 @@
       .site-header{min-height:94px;background:rgba(16,11,8,.91)}
       .logo img{width:230px;max-height:84px;filter:drop-shadow(0 0 14px rgba(232,181,82,.22))}
       .nav{justify-content:center;gap:14px}
-      .nav a{font-size:.58rem;letter-spacing:.1em}
+      .nav a,.gift-toggle{font-size:.58rem;letter-spacing:.1em}
       .hero{
         padding-top:184px;
         min-height:92vh;
@@ -591,7 +640,7 @@
       .logo{min-height:auto}
       .logo img{width:210px;max-height:68px}
       .nav{gap:12px}
-      .nav a{font-size:.55rem}
+      .nav a,.gift-toggle{font-size:.55rem}
       .hero{
         min-height:88vh;
         padding:170px 22px 58px;
@@ -635,7 +684,13 @@
       <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
       <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
       <a href="/nails.html" data-track="nav_nails">Nails</a>
-      <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+      <div class="gift-menu">
+        <button class="gift-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-track="nav_gifts">Gifts</button>
+        <div class="gift-dropdown" aria-label="Gift collections">
+          <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+          <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts for Him</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -727,10 +782,6 @@
 
         <p>Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</p>
 
-        <div class="footer-disclosure">
-          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
-        </div>
-
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest">
           <span class="pin-mark">P</span>
           Follow us on Pinterest
@@ -754,6 +805,10 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+
+        <div class="footer-disclosure">
+          <strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.
+        </div>
       </div>
     </div>
 
