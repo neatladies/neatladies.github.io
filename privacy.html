@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Privacy Policy | Neatladies</title>
-  <meta name="description" content="Read the Neatladies privacy policy, including information about analytics, affiliate links, cookies, and third-party services." />
+  <title>About Neatladies | Elegant Finds for Beauty, Jewelry, Nails & Gifts</title>
+  <meta name="description" content="Learn about Neatladies, a refined editorial shopping guide for beauty, jewelry, nails, lashes, gifts, and elegant feminine finds." />
   <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://neatladies.dedyn.io/privacy.html" />
+  <link rel="canonical" href="https://neatladies.dedyn.io/about.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Privacy Policy | Neatladies" />
-  <meta property="og:description" content="Privacy information for Neatladies, including analytics, affiliate links, cookies, and third-party services." />
-  <meta property="og:url" content="https://neatladies.dedyn.io/privacy.html" />
+  <meta property="og:title" content="About Neatladies" />
+  <meta property="og:description" content="A refined editorial guide for elegant beauty, jewelry, nails, gifts, and feminine everyday finds." />
+  <meta property="og:url" content="https://neatladies.dedyn.io/about.html" />
   <meta property="og:image" content="https://neatladies.dedyn.io/images/main-neatladies-logo.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | Neatladies" />
-  <meta name="twitter:description" content="Privacy information for Neatladies, including analytics, affiliate links, cookies, and third-party services." />
+  <meta name="twitter:title" content="About Neatladies" />
+  <meta name="twitter:description" content="A refined editorial guide for elegant beauty, jewelry, nails, gifts, and feminine everyday finds." />
   <meta name="twitter:image" content="https://neatladies.dedyn.io/images/main-neatladies-logo.webp" />
 
   <link rel="icon" href="images/favicon.ico" />
@@ -53,7 +53,7 @@
     !function(e){if(!window.pintrk){window.pintrk=function(){
     window.pintrk.queue.push(Array.prototype.slice.call(arguments))};
     var n=window.pintrk;n.queue=[],n.version="3.0";
-    var t=document.createElement("script");t.async=!0;t.src=e;
+    var t=document.createElement("script");t.async=!0,t.src=e;
     var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}
     ("https://s.pinimg.com/ct/core.js");
     pintrk("load", "2613680139544");
@@ -78,25 +78,32 @@
       --white: #fffaf3;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: "Inter", sans-serif;
       background: var(--cream);
       color: var(--ink);
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .site-header {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 50;
-      background: linear-gradient(180deg, rgba(16,11,8,.92), rgba(16,11,8,.72));
+      background: linear-gradient(180deg, rgba(16, 11, 8, 0.92), rgba(16, 11, 8, 0.72));
       backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(239,212,162,.16);
+      border-bottom: 1px solid rgba(239, 212, 162, 0.16);
     }
 
     .nav {
@@ -120,26 +127,71 @@
       align-items: center;
       gap: 26px;
       color: var(--cream);
-      font-size: .9rem;
-      letter-spacing: .04em;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
     }
 
-    .nav-links a { opacity: .9; transition: color .25s ease, opacity .25s ease; }
-    .nav-links a:hover { color: var(--soft-gold); opacity: 1; }
+    .nav-links a {
+      opacity: 0.9;
+      transition: color 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--soft-gold);
+      opacity: 1;
+    }
+
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      cursor: default;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 210px;
+      padding: 14px;
+      margin-top: 14px;
+      background: rgba(16, 11, 8, 0.96);
+      border: 1px solid rgba(239, 212, 162, 0.22);
+      border-radius: 18px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
 
     .hero {
-      min-height: 58vh;
-      padding: 150px 22px 82px;
+      min-height: 68vh;
+      padding: 150px 22px 90px;
       background:
-        linear-gradient(135deg, rgba(16,11,8,.92), rgba(47,30,20,.76)),
-        radial-gradient(circle at 72% 28%, rgba(200,148,73,.22), transparent 35%);
+        linear-gradient(135deg, rgba(16, 11, 8, 0.92), rgba(47, 30, 20, 0.76)),
+        radial-gradient(circle at 70% 30%, rgba(200, 148, 73, 0.22), transparent 35%);
       color: var(--cream);
       display: flex;
       align-items: center;
     }
 
     .hero-inner {
-      max-width: 940px;
+      max-width: 980px;
       margin: 0 auto;
       text-align: center;
     }
@@ -147,79 +199,87 @@
     .eyebrow {
       color: var(--soft-gold);
       text-transform: uppercase;
-      letter-spacing: .22em;
-      font-size: .78rem;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
       font-weight: 700;
       margin-bottom: 18px;
     }
 
     h1 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 7vw, 6.2rem);
-      line-height: .95;
+      font-size: clamp(3rem, 7vw, 6.6rem);
+      line-height: 0.95;
       margin-bottom: 24px;
       font-weight: 700;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
-      color: rgba(248,239,228,.9);
-      font-size: 1.06rem;
+      color: rgba(248, 239, 228, 0.9);
+      font-size: 1.08rem;
     }
 
-    main { padding: 78px 22px; }
+    main {
+      padding: 80px 22px;
+    }
 
     .content-wrap {
-      max-width: 980px;
+      max-width: 1050px;
       margin: 0 auto;
     }
 
-    .legal-card {
+    .editorial-card {
       background: var(--white);
-      border: 1px solid rgba(200,148,73,.24);
+      border: 1px solid rgba(200, 148, 73, 0.24);
       border-radius: 30px;
       padding: clamp(34px, 6vw, 70px);
-      box-shadow: 0 24px 70px rgba(36,19,13,.08);
+      box-shadow: 0 24px 70px rgba(36, 19, 13, 0.08);
     }
 
-    .updated {
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 28px;
-      font-size: .92rem;
-    }
-
-    .legal-section {
-      padding: 28px 0;
-      border-top: 1px solid rgba(200,148,73,.18);
-    }
-
-    .legal-section:first-of-type {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .legal-section h2 {
+    .editorial-card h2,
+    .section h2 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(2.2rem, 4vw, 4rem);
       line-height: 1.05;
-      margin-bottom: 14px;
+      margin-bottom: 22px;
       color: var(--ink);
     }
 
-    .legal-section p,
-    .legal-section li {
+    .editorial-card p,
+    .section p {
       color: var(--brown);
       font-size: 1rem;
-      max-width: 780px;
+      max-width: 760px;
     }
 
-    .legal-section ul {
-      margin-top: 14px;
-      padding-left: 22px;
+    .sections {
+      margin-top: 70px;
       display: grid;
-      gap: 8px;
+      gap: 34px;
+    }
+
+    .section {
+      background: var(--milk);
+      border-radius: 28px;
+      padding: clamp(30px, 5vw, 58px);
+      border: 1px solid rgba(200, 148, 73, 0.2);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      border: 1px solid rgba(200, 148, 73, 0.34);
+      color: var(--warm);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      background: rgba(239, 212, 162, 0.2);
     }
 
     .site-footer {
@@ -242,16 +302,16 @@
     }
 
     .footer-brand p {
-      color: rgba(248,239,228,.76);
+      color: rgba(248, 239, 228, 0.76);
       max-width: 390px;
-      font-size: .92rem;
+      font-size: 0.92rem;
     }
 
     .footer-title {
       color: var(--soft-gold);
       text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: .78rem;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
       font-weight: 700;
       margin-bottom: 16px;
     }
@@ -259,50 +319,62 @@
     .footer-links {
       display: grid;
       gap: 10px;
-      color: rgba(248,239,228,.84);
-      font-size: .92rem;
+      color: rgba(248, 239, 228, 0.84);
+      font-size: 0.92rem;
     }
 
-    .footer-links a:hover { color: var(--soft-gold); }
+    .footer-links a:hover {
+      color: var(--soft-gold);
+    }
 
     .pinterest-link {
       display: inline-flex;
       margin-top: 22px;
       padding: 11px 18px;
       border-radius: 999px;
-      border: 1px solid rgba(239,212,162,.35);
+      border: 1px solid rgba(239, 212, 162, 0.35);
       color: var(--soft-gold);
       font-weight: 700;
-      font-size: .88rem;
+      font-size: 0.88rem;
     }
 
     .footer-bottom {
       max-width: 1180px;
       margin: 38px auto 0;
       padding-top: 20px;
-      border-top: 1px solid rgba(248,239,228,.12);
-      color: rgba(248,239,228,.58);
-      font-size: .78rem;
+      border-top: 1px solid rgba(248, 239, 228, 0.12);
+      color: rgba(248, 239, 228, 0.58);
+      font-size: 0.78rem;
     }
 
     @media (max-width: 760px) {
-      .nav { align-items: flex-start; }
+      .nav {
+        align-items: flex-start;
+      }
+
       .nav-links {
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: 12px 18px;
       }
-      .logo img { width: 124px; }
-      .footer-grid { grid-template-columns: 1fr; }
+
+      .logo img {
+        width: 124px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "PrivacyPolicy",
-    "name": "Privacy Policy",
-    "url": "https://neatladies.dedyn.io/privacy.html",
+    "@type": "AboutPage",
+    "name": "About Neatladies",
+    "url": "https://neatladies.dedyn.io/about.html",
+    "description": "About Neatladies, a refined editorial shopping guide for beauty, jewelry, nails, lashes, gifts, and elegant feminine finds.",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Neatladies",
@@ -312,7 +384,7 @@
   </script>
 </head>
 
-<body>
+<body id="top">
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="logo" href="index.html" data-track="internal_navigation" data-destination="home">
@@ -324,93 +396,71 @@
         <a href="beauty.html" data-track="internal_navigation" data-destination="beauty">Beauty</a>
         <a href="jewelry.html" data-track="internal_navigation" data-destination="jewelry">Jewelry</a>
         <a href="nails.html" data-track="internal_navigation" data-destination="nails">Nails</a>
+        <div class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" data-track="internal_navigation" data-destination="gifts_dropdown">Gifts</a>
+          <div class="dropdown-menu">
+            <a href="small-luxury-gifts.html" data-track="internal_navigation" data-destination="small-luxury-gifts">Small Luxury Gifts</a>
+            <a href="gifts-for-him.html" data-track="internal_navigation" data-destination="gifts-for-him">Gifts for Him</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Privacy Policy</div>
-      <h1>How Neatladies handles privacy.</h1>
+      <div class="eyebrow">About Neatladies</div>
+      <h1>Elegant finds, chosen with care.</h1>
       <p>
-        This page explains how Neatladies may collect, use, and protect basic information
-        when visitors browse the website.
+        Neatladies is a curated editorial space for feminine beauty, refined accessories,
+        polished nails, thoughtful gifts, and everyday details with a softer finish.
       </p>
     </div>
   </section>
 
   <main>
     <div class="content-wrap">
-      <article class="legal-card">
-        <p class="updated">Last updated: May 2026</p>
+      <section class="editorial-card">
+        <h2>A calmer way to discover beautiful things.</h2>
+        <p>
+          Neatladies was created to make product discovery feel more selective, more useful,
+          and less crowded. Instead of overwhelming lists, the site focuses on carefully
+          presented finds across beauty, jewelry, nails, lashes, gifts, and elegant lifestyle details.
+        </p>
+      </section>
 
-        <section class="legal-section">
-          <h2>Overview</h2>
+      <div class="sections">
+        <section class="section">
+          <h2>What we focus on</h2>
           <p>
-            Neatladies is an editorial shopping guide. Visitors can browse the site without
-            creating an account or submitting personal information. Basic technical and analytics
-            data may be collected to understand site performance and improve the browsing experience.
+            We highlight pieces with visual appeal, practical use, and a refined everyday feel.
+            Each page is built to help readers understand the product before leaving for the retailer.
+          </p>
+          <div class="chips">
+            <span class="chip">Beauty</span>
+            <span class="chip">Jewelry</span>
+            <span class="chip">Nails</span>
+            <span class="chip">Lashes</span>
+            <span class="chip">Gifts</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>How we write</h2>
+          <p>
+            Our pages are designed like short editorial guides: clear, visual, and easy to scan.
+            We avoid fake reviews, inflated claims, and noisy shopping language.
           </p>
         </section>
 
-        <section class="legal-section">
-          <h2>Information we may collect</h2>
+        <section class="section">
+          <h2>Affiliate transparency</h2>
           <p>
-            Neatladies may collect limited non-sensitive information through analytics tools,
-            tracking tags, browser data, and normal website logs.
-          </p>
-          <ul>
-            <li>Pages visited on the website</li>
-            <li>Clicks on internal links, category links, product links, or affiliate links</li>
-            <li>Device, browser, approximate location, and referral information</li>
-            <li>Basic technical data used to keep the website working properly</li>
-          </ul>
-        </section>
-
-        <section class="legal-section">
-          <h2>Analytics and tracking</h2>
-          <p>
-            Neatladies uses services such as Google Analytics and Pinterest Tag to measure visits,
-            page interactions, and outbound clicks. These tools may use cookies or similar technologies
-            to provide aggregated reporting.
+            Neatladies may earn from qualifying purchases through affiliate links. This helps support
+            the site, while the editorial style remains focused on clarity, presentation, and reader value.
           </p>
         </section>
-
-        <section class="legal-section">
-          <h2>Affiliate links</h2>
-          <p>
-            Neatladies participates in affiliate programs. When visitors click affiliate links,
-            third-party retailers or affiliate platforms may use cookies or tracking technologies
-            to attribute qualifying purchases.
-          </p>
-        </section>
-
-        <section class="legal-section">
-          <h2>Third-party websites</h2>
-          <p>
-            Product links may lead to external websites such as Amazon or other retailers.
-            Neatladies is not responsible for the privacy practices, policies, or content of
-            third-party websites. Visitors should review the privacy policy of any external site
-            they choose to visit.
-          </p>
-        </section>
-
-        <section class="legal-section">
-          <h2>Cookies</h2>
-          <p>
-            Cookies may be used by analytics, advertising, affiliate, or third-party services.
-            Visitors can control or disable cookies through their browser settings.
-          </p>
-        </section>
-
-        <section class="legal-section">
-          <h2>Contact</h2>
-          <p>
-            For questions about this privacy policy, contact Neatladies at:
-            <a href="mailto:contact@neatladies.dedyn.io" data-track="contact_email_click">contact@neatladies.dedyn.io</a>
-          </p>
-        </section>
-      </article>
+      </div>
     </div>
   </main>
 
@@ -421,9 +471,6 @@
         <p>
           Neatladies is an editorial shopping guide for elegant beauty, jewelry, nails,
           gifts, and feminine everyday details.
-        </p>
-        <p style="margin-top:14px;">
-          As an Amazon Associate, Neatladies may earn from qualifying purchases.
         </p>
         <a class="pinterest-link" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener noreferrer" data-track="footer_pinterest">
           Follow on Pinterest
@@ -443,11 +490,14 @@
       <div>
         <div class="footer-title">Legal</div>
         <div class="footer-links">
-          <a href="about.html" data-track="internal_navigation" data-destination="about">About</a>
+          <a href="#top" data-track="internal_navigation" data-destination="about-top">About</a>
           <a href="contact.html" data-track="internal_navigation" data-destination="contact">Contact</a>
           <a href="privacy.html" data-track="internal_navigation" data-destination="privacy-policy">Privacy Policy</a>
           <a href="terms.html" data-track="internal_navigation" data-destination="terms-of-use">Terms of Use</a>
         </div>
+        <p class="footer-disclosure">
+          As an Amazon Associate, Neatladies may earn from qualifying purchases.
+        </p>
       </div>
     </div>
 
@@ -466,7 +516,7 @@
 
       if (window.gtag) {
         gtag("event", trackName, {
-          event_category: "site_interaction",
+          event_category: "navigation",
           event_label: destination
         });
       }
