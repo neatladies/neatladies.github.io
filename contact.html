@@ -217,6 +217,75 @@
       overflow-wrap: anywhere;
     }
 
+
+    .business-details-section {
+      padding: 0 22px 80px;
+      margin-top: -24px;
+    }
+
+    .business-details-card {
+      background:
+        linear-gradient(135deg, rgba(255,250,243,.98), rgba(255,248,239,.96)),
+        radial-gradient(circle at 12% 0%, rgba(200,148,73,.18), transparent 34%);
+      border: 1px solid rgba(200,148,73,.26);
+      border-radius: 30px;
+      padding: clamp(28px, 5vw, 48px);
+      box-shadow: 0 22px 60px rgba(36,19,13,.08);
+    }
+
+    .business-details-card h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .business-details-card > p {
+      color: var(--brown);
+      max-width: 760px;
+      font-size: 1rem;
+      margin-bottom: 26px;
+    }
+
+    .business-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .business-detail-item {
+      background: rgba(255,248,239,.9);
+      border: 1px solid rgba(200,148,73,.18);
+      border-radius: 20px;
+      padding: 18px 18px 17px;
+    }
+
+    .business-detail-item.full {
+      grid-column: 1 / -1;
+    }
+
+    .business-detail-label {
+      display: block;
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .business-detail-value {
+      color: var(--warm);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .business-detail-value a {
+      color: var(--warm);
+      border-bottom: 1px solid rgba(200,148,73,.38);
+    }
+
     .info-grid {
       margin-top: 34px;
       display: grid;
@@ -308,6 +377,7 @@
       }
       .logo img { width: 124px; }
       .info-grid { grid-template-columns: 1fr; }
+      .business-details-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -365,12 +435,6 @@
           process orders, ship items, or handle retailer returns.
         </p>
 
-        <div class="email-box">
-          <strong>Email</strong>
-          <a href="mailto:neatladies.dedyn.io" data-track="contact_email_click">
-            walid-nour@live.com
-          </a>
-        </div>
 
         <div class="info-grid">
           <section class="info-box">
@@ -392,6 +456,59 @@
       </section>
     </div>
   </main>
+
+
+  <section class="business-details-section" aria-labelledby="business-details-title">
+    <div class="content-wrap">
+      <div class="business-details-card">
+        <h2 id="business-details-title">Business and contact details</h2>
+        <p>
+          The details below are provided for website ownership, business verification,
+          and official contact purposes. Replace the placeholder values with the
+          same information listed in the Payoneer account before submitting this page.
+        </p>
+
+        <div class="business-details-grid">
+          <div class="business-detail-item">
+            <span class="business-detail-label">Full name</span>
+            <span class="business-detail-value">Walid Mostafa Noureldeen</span>
+          </div>
+
+          <div class="business-detail-item">
+            <span class="business-detail-label">Website / Business name</span>
+            <span class="business-detail-value">Neatladies</span>
+          </div>
+
+          <div class="business-detail-item full">
+            <span class="business-detail-label">Business type</span>
+            <span class="business-detail-value">Affiliate marketing / Amazon product recommendation website</span>
+          </div>
+
+          <div class="business-detail-item">
+            <span class="business-detail-label">Email</span>
+            <span class="business-detail-value">
+              <a href="mailto:Add-your-Payoneer-email-here" data-track="contact_email_click">walid-nour@live.com</a>
+            </span>
+          </div>
+
+          <div class="business-detail-item">
+            <span class="business-detail-label">Phone</span>
+            <span class="business-detail-value">+201067020510</span>
+          </div>
+
+          <div class="business-detail-item full">
+            <span class="business-detail-label">Primary address</span>
+            <span class="business-detail-value">63 ElMahdi Ibn Baraka St., Nasr City, Cairo, Egypt</span>
+          </div>
+
+          <div class="business-detail-item full">
+            <span class="business-detail-label">Website URL</span>
+            <span class="business-detail-value">https://neatladies.dedyn.io/contact.html</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="footer-grid">
