@@ -121,7 +121,53 @@
     .brand img { width:286px; max-height:84px; height:auto; object-fit:contain; filter:drop-shadow(0 0 14px rgba(232,181,82,.22)); }
     .nav-links { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
     .nav-links a { color:var(--soft-gold); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; opacity:.92; font-weight:700; padding:10px 14px; border-radius:999px; transition:.22s ease; }
-    .nav-links a:hover { opacity:.58; }
+    .nav-links a:hover,
+    .gift-toggle:hover { opacity:.58; }
+
+    .gift-menu { position:relative; display:inline-flex; align-items:center; }
+
+    .gift-toggle {
+      color:var(--soft-gold);
+      font-size:.68rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      opacity:.92;
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:999px;
+      transition:.22s ease;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      font-family:Inter,sans-serif;
+    }
+
+    .gift-dropdown {
+      position:absolute;
+      top:calc(100% + 10px);
+      right:0;
+      min-width:230px;
+      padding:12px;
+      border-radius:22px;
+      background:rgba(16,11,8,.96);
+      border:1px solid rgba(239,212,162,.22);
+      box-shadow:0 24px 60px rgba(0,0,0,.34);
+      display:none;
+      z-index:80;
+    }
+
+    .gift-menu:hover .gift-dropdown,
+    .gift-menu:focus-within .gift-dropdown { display:block; }
+
+    .gift-dropdown a {
+      display:block;
+      padding:12px 14px;
+      border-radius:16px;
+      color:var(--soft-gold);
+      font-size:.72rem;
+      letter-spacing:.1em;
+      line-height:1.25;
+    }
 
     .hero { position:relative; min-height:710px; overflow:hidden; isolation:isolate; background:var(--black); color:var(--white); }
     .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg,rgba(16,11,8,.94) 0%,rgba(16,11,8,.82) 32%,rgba(16,11,8,.46) 58%,rgba(16,11,8,.14) 100%),radial-gradient(circle at 22% 34%,rgba(200,148,73,.22),transparent 34%),url("images/neat-dish-main-11.webp") center right/cover no-repeat; }
@@ -193,7 +239,7 @@
       .brand img { width:200px; }
       .nav { align-items:flex-start; flex-direction:column; }
       .nav-links { justify-content:flex-start; gap:6px; }
-      .nav-links a { padding:9px 10px; font-size:13px; }
+      .nav-links a,.gift-toggle { padding:9px 10px; font-size:13px; }
       .hero { min-height:680px; }
       .hero-inner { min-height:680px; padding:62px 0 104px; }
       .hero-actions { align-items:stretch; }
@@ -214,7 +260,13 @@
         <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
         <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
         <a href="/nails.html" data-track="nav_nails">Nails</a>
-        <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+        <div class="gift-menu">
+          <button class="gift-toggle" type="button" aria-haspopup="true" aria-expanded="false">Gifts</button>
+          <div class="gift-dropdown" aria-label="Gift collections">
+            <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+            <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -318,7 +370,6 @@
       <div class="footer-brand">
         <a href="/" aria-label="Neatladies homepage" data-track="footer_logo"><img src="images/main-neatladies-logo.webp" alt="Neatladies logo"></a>
         <p>Neatladies curates elegant finds for beauty, jewelry, nails, small luxury gifts, gifts for him, and editor’s picks.</p>
-        <div class="footer-disclosure"><strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.</div>
         <a class="pinterest-button" href="https://pl.pinterest.com/ladiesneat/" target="_blank" rel="noopener sponsored" data-track="footer_pinterest" aria-label="Follow Neatladies on Pinterest"><span class="pin-mark">P</span>Follow us on Pinterest</a>
       </div>
       <div class="footer-col" aria-label="Footer navigation">
@@ -337,6 +388,7 @@
         <a href="/contact.html" data-track="footer_contact">Contact</a>
         <a href="/privacy.html" data-track="footer_privacy">Privacy Policy</a>
         <a href="/terms.html" data-track="footer_terms">Terms of Use</a>
+        <div class="footer-disclosure"><strong>Affiliate disclosure:</strong> Neatladies may earn a commission when visitors click through and purchase from Amazon. Neatladies does not sell products directly, process payments, ship orders, or manage returns.</div>
       </div>
     </div>
     <div class="footer-bottom"><span>© 2026 Neatladies. Curated product discovery and editorial shopping guidance.</span><span>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</span></div>
