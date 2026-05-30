@@ -192,7 +192,8 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
       flex-wrap:wrap;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .gift-toggle {
       color:var(--soft-gold);
       font-size:.68rem;
       letter-spacing:.16em;
@@ -202,9 +203,49 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
       padding:10px 14px;
       border-radius:999px;
       transition:.22s ease;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      font-family:Inter, sans-serif;
     }
 
-    .nav-links a:hover { opacity:.58; }
+    .nav-links a:hover,
+    .gift-toggle:hover { opacity:.58; }
+
+    .gift-menu {
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      padding-bottom:14px;
+      margin-bottom:-14px;
+    }
+
+    .gift-dropdown {
+      position:absolute;
+      top:100%;
+      right:0;
+      min-width:230px;
+      padding:12px;
+      border-radius:22px;
+      background:rgba(16,11,8,.96);
+      border:1px solid rgba(239,212,162,.22);
+      box-shadow:0 24px 60px rgba(0,0,0,.34);
+      display:none;
+      z-index:80;
+    }
+
+    .gift-menu:hover .gift-dropdown,
+    .gift-menu:focus-within .gift-dropdown { display:block; }
+
+    .gift-dropdown a {
+      display:block;
+      padding:12px 14px;
+      border-radius:16px;
+      color:var(--soft-gold);
+      font-size:.72rem;
+      letter-spacing:.1em;
+      white-space:nowrap;
+    }
 
     .hero {
       position:relative;
@@ -506,10 +547,6 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
       color:#b79a70;
       line-height:1.72;
       font-size:.79rem;
-      padding:20px 24px;
-      border-radius:22px;
-      border:1px solid rgba(239,212,162,.14);
-      background:rgba(255,250,243,.035);
     }
 
     .footer-disclosure-wrap {
@@ -657,9 +694,15 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
         gap:6px;
       }
 
-      .nav-links a {
+      .nav-links a,
+      .gift-toggle {
         padding:9px 10px;
         font-size:13px;
+      }
+
+      .gift-dropdown {
+        left:0;
+        right:auto;
       }
 
       .hero { min-height:680px; }
@@ -688,7 +731,13 @@ href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;7
         <a href="/beauty.html" data-track="nav_beauty">Beauty</a>
         <a href="/jewelry.html" data-track="nav_jewelry">Jewelry</a>
         <a href="/nails.html" data-track="nav_nails">Nails</a>
-        <a href="/gifts.html" data-track="nav_gifts">Gifts</a>
+        <div class="gift-menu">
+          <button class="gift-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-track="nav_gifts">Gifts</button>
+          <div class="gift-dropdown" aria-label="Gift collections">
+            <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
+            <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts for Him</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
