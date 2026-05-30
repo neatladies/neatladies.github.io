@@ -157,6 +157,8 @@
 
     .dropdown{position:relative}
 
+    .dropdown > a{cursor:pointer}
+
     .dropdown-menu{
       position:absolute;
       top:100%;
@@ -172,7 +174,9 @@
       gap:10px;
     }
 
-    .dropdown:hover .dropdown-menu{display:flex}
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown.open .dropdown-menu{display:flex}
 
     .hero{
       min-height:100vh;
@@ -483,7 +487,7 @@
         <a href="/nails.html" data-track="nav_nails">Nails</a>
 
         <div class="dropdown">
-          <a href="#" aria-haspopup="true">Gifts</a>
+          <a href="javascript:void(0)" aria-haspopup="true" aria-expanded="false" data-track="nav_gifts">Gifts</a>
           <div class="dropdown-menu">
             <a href="/small-luxury-gifts.html" data-track="nav_small_luxury_gifts">Small Luxury Gifts</a>
             <a href="/gifts-for-him.html" data-track="nav_gifts_for_him">Gifts For Him</a>
@@ -684,6 +688,23 @@
 
   <script>
     document.addEventListener('click', function (event) {
+      const dropdownTrigger = event.target.closest('.dropdown > a[aria-haspopup="true"]');
+      document.querySelectorAll('.dropdown.open').forEach(function (dropdown) {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('open');
+          const trigger = dropdown.querySelector('a[aria-haspopup="true"]');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (dropdownTrigger) {
+        event.preventDefault();
+        const dropdown = dropdownTrigger.closest('.dropdown');
+        const isOpen = dropdown.classList.toggle('open');
+        dropdownTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        return;
+      }
+
       const tracked = event.target.closest('[data-track]');
       if (!tracked) return;
 
